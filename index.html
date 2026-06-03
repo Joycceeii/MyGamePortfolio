@@ -30,12 +30,13 @@
             --font-calligraphy: "Ma Shan Zheng", "ZCOOL KuaiLe", cursive;
             --font-body: "Varela Round", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", sans-serif;
             --font-nav: "ZCOOL KuaiLe", "Varela Round", sans-serif;
-            --nav-height: 76px;
+            --nav-height: 72px;
             --content-width: 900px;
             --content-width-tablet: 90%;
             --content-width-mobile: 95%;
             --radius-large: 28px;
             --radius-medium: 20px;
+            --radius-pill: 25px;
             --shadow-soft: 0 16px 38px rgba(74, 58, 87, 0.14);
             --shadow-small: 0 8px 18px rgba(74, 58, 87, 0.12);
             --transition-fast: 180ms ease;
@@ -85,47 +86,34 @@
             cursor: pointer;
         }
 
-        /* ==================== 中英文显示规则：默认中文，英文隐藏 ==================== */
+        /* ==================== 中英文默认状态：中文显示，英文隐藏 ==================== */
         .en {
             display: none;
-        }
-
-        body.lang-en .zh {
-            display: none !important;
-        }
-
-        body.lang-en .en {
-            display: inline;
-        }
-
-        body.lang-en p.en,
-        body.lang-en div.en,
-        body.lang-en h1.en,
-        body.lang-en h2.en,
-        body.lang-en h3.en,
-        body.lang-en li.en {
-            display: block;
         }
 
         /* ==================== 固定顶部导航栏 ==================== */
         .site-nav {
             position: fixed;
-            top: 14px;
-            left: 50%;
-            z-index: 9999;
-            width: min(calc(100% - 28px), 1160px);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
             min-height: var(--nav-height);
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            padding: 12px 16px;
-            border: 2px dashed rgba(47, 42, 51, 0.16);
-            border-radius: 999px;
-            background: rgba(255, 253, 247, 0.9);
+            justify-content: center;
+            padding: 10px 18px;
+            background: rgba(255, 253, 247, 0.92);
             box-shadow: var(--shadow-soft);
             backdrop-filter: blur(14px);
-            transform: translateX(-50%);
+        }
+
+        .nav-inner {
+            width: min(100%, 1160px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
         }
 
         .nav-logo {
@@ -171,7 +159,7 @@
             display: inline-flex;
             gap: 4px;
             padding: 5px;
-            border-radius: 999px;
+            border-radius: var(--radius-pill);
             background: #fff4d8;
             box-shadow: inset 0 0 0 1px rgba(47, 42, 51, 0.08);
         }
@@ -179,8 +167,9 @@
         .language-toggle button,
         .nav-links a,
         .btn-enter,
-        .btn-top {
-            border-radius: 999px;
+        .btn-top,
+        .page-tabs button {
+            border-radius: var(--radius-pill);
             transition: transform var(--transition-bounce), box-shadow var(--transition-fast), background var(--transition-fast);
         }
 
@@ -234,6 +223,7 @@
         .nav-links a:hover,
         .btn-enter:hover,
         .btn-top:hover,
+        .page-tabs button:hover,
         .hamburger:hover,
         .contact-link:hover {
             transform: translateY(-3px) scale(1.03);
@@ -311,11 +301,6 @@
             font-size: clamp(1rem, 2.6vw, 1.25rem);
         }
 
-        .tagline .en {
-            margin-top: 6px;
-            font-size: 0.96em;
-        }
-
         .btn-enter {
             display: inline-flex;
             align-items: center;
@@ -328,13 +313,13 @@
             font-weight: 700;
         }
 
-        /* ==================== 通用项目板块：背景层 + 空白内容容器 ==================== */
+        /* ==================== 通用项目板块：背景层 + 内容容器 + 自动分页 ==================== */
         .project-section,
         .section-about {
             position: relative;
             min-height: 88vh;
             padding: 112px 22px 118px;
-            scroll-margin-top: 104px;
+            scroll-margin-top: calc(var(--nav-height) + 18px);
             overflow: hidden;
         }
 
@@ -353,7 +338,7 @@
             width: min(100%, var(--content-width));
             min-height: 470px;
             margin: 0 auto;
-            padding: clamp(28px, 5vw, 54px);
+            padding: clamp(24px, 4vw, 42px);
             border: 2px dashed rgba(47, 42, 51, 0.18);
             border-radius: var(--radius-large);
             background: rgba(255, 253, 247, 0.78);
@@ -370,6 +355,63 @@
             border-radius: 50%;
             opacity: 0.82;
             /* 🔧 替换：如需手绘分隔线图片，可在这里设置 background-image */
+        }
+
+        .page-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 2px dashed rgba(47, 42, 51, 0.12);
+        }
+
+        .page-tabs button {
+            padding: 9px 16px;
+            background: #ffffff;
+            box-shadow: var(--shadow-small);
+            color: var(--muted);
+            font-family: var(--font-nav);
+        }
+
+        .page-tabs button.active {
+            color: #ffffff;
+            background: var(--ink);
+        }
+
+        .project-page {
+            display: none;
+            min-height: 520px;
+            border-radius: var(--radius-medium);
+        }
+
+        .project-page.active {
+            display: block;
+        }
+
+        .page-placeholder {
+            min-height: 520px;
+            display: grid;
+            place-items: center;
+            padding: 48px 24px;
+            border: 2px dashed rgba(47, 42, 51, 0.12);
+            border-radius: var(--radius-medium);
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .page-placeholder h2 {
+            margin-bottom: 10px;
+            font-family: var(--font-title);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            color: var(--ink);
+        }
+
+        .page-placeholder p {
+            max-width: 560px;
+            margin: 0 auto;
         }
 
         .btn-top {
@@ -401,12 +443,15 @@
         .project-shuimo .section-content {
             border-color: rgba(32, 32, 32, 0.2);
             background: rgba(255, 253, 247, 0.74);
-            font-family: var(--font-calligraphy);
+        }
+
+        .project-shuimo .page-tabs button.active {
+            background: var(--shuimo-ink);
         }
 
         /* ==================== 项目2/项目3：柔和手绘风格专属预留 ==================== */
         .project-handdrawn .section-bg {
-            /* 🔧 替换：项目2/3 背景图 */
+            /* 🔧 替换：项目2 背景图 */
             background-image:
                 linear-gradient(rgba(254, 249, 239, 0.62), rgba(254, 249, 239, 0.84)),
                 repeating-linear-gradient(-8deg, rgba(255, 214, 165, 0.26) 0 2px, transparent 2px 18px),
@@ -467,7 +512,7 @@
             display: inline-block;
             margin-bottom: 24px;
             padding: 8px 16px;
-            border-radius: 999px;
+            border-radius: var(--radius-pill);
             background: var(--accent-green);
             box-shadow: var(--shadow-small);
             color: var(--muted);
@@ -497,7 +542,7 @@
 
         .skills li {
             padding: 9px 14px;
-            border-radius: 999px;
+            border-radius: var(--radius-pill);
             background: #ffffff;
             box-shadow: var(--shadow-small);
         }
@@ -533,7 +578,7 @@
             align-items: center;
             gap: 8px;
             padding: 11px 15px;
-            border-radius: 999px;
+            border-radius: var(--radius-pill);
             background: #ffffff;
             box-shadow: var(--shadow-small);
             transition: transform var(--transition-bounce);
@@ -550,6 +595,7 @@
             .btn-enter:hover,
             .btn-top:hover,
             .nav-links a:hover,
+            .page-tabs button:hover,
             .contact-link:hover {
                 animation: soft-bounce 420ms ease;
             }
@@ -575,9 +621,7 @@
             }
 
             .site-nav {
-                top: 10px;
-                align-items: flex-start;
-                border-radius: 28px;
+                padding: 10px 14px;
             }
 
             .hamburger {
@@ -587,8 +631,8 @@
             .nav-menu {
                 position: absolute;
                 top: calc(100% + 10px);
-                right: 0;
-                width: min(100%, 330px);
+                right: 14px;
+                width: min(calc(100vw - 28px), 330px);
                 padding: 14px;
                 display: none;
                 flex-direction: column;
@@ -634,7 +678,23 @@
             .section-content {
                 width: var(--content-width-mobile);
                 min-height: 380px;
-                padding: 24px;
+                padding: 20px;
+            }
+
+            .page-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 14px;
+            }
+
+            .page-tabs button {
+                flex: 0 0 auto;
+            }
+
+            .project-page,
+            .page-placeholder {
+                min-height: 420px;
             }
 
             .about-card,
@@ -666,34 +726,36 @@
 <body>
     <!-- ==================== 固定顶部导航栏 ==================== -->
     <nav class="site-nav" aria-label="主导航">
-        <a class="nav-logo" href="#welcome" aria-label="返回欢迎页">
-            <span class="nav-logo-img">
-                <!-- 🔧 替换：Logo 小图，示例：<img src="images/logo-small.png" alt="Logo"> -->
-            </span>
-            <span class="nav-name">
-                <!-- 🔧 替换：导航栏名字文字 -->
-                <span class="zh">你的名字</span>
-                <span class="en">Your Name</span>
-            </span>
-        </a>
+        <div class="nav-inner">
+            <a class="nav-logo" href="#welcome" aria-label="返回欢迎页">
+                <span class="nav-logo-img">
+                    <!-- 🔧 替换：Logo 小图，示例：<img src="images/logo-small.png" alt="Logo"> -->
+                </span>
+                <span class="nav-name">
+                    <!-- 🔧 替换：导航栏名字文字 -->
+                    <span class="zh">你的名字</span>
+                    <span class="en" style="display:none;">Your Name</span>
+                </span>
+            </a>
 
-        <button class="hamburger" type="button" aria-label="打开导航菜单" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button class="hamburger" type="button" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <div class="nav-menu">
-            <div class="language-toggle" aria-label="语言切换">
-                <button class="lang-btn active" type="button" data-lang="zh">中文</button>
-                <button class="lang-btn" type="button" data-lang="en">English</button>
-            </div>
+            <div class="nav-menu">
+                <div class="language-toggle" aria-label="语言切换">
+                    <button class="lang-btn active" type="button" data-lang="zh" onclick="switchLang('zh')">中文</button>
+                    <button class="lang-btn" type="button" data-lang="en" onclick="switchLang('en')">English</button>
+                </div>
 
-            <div class="nav-links">
-                <a href="#project1" data-target="project1"><span class="zh">《白蛇传》</span><span class="en">White Snake</span></a>
-                <a href="#project2" data-target="project2"><span class="zh">项目2</span><span class="en">Project 2</span></a>
-                <a href="#project3" data-target="project3"><span class="zh">项目3</span><span class="en">Project 3</span></a>
-                <a href="#about" data-target="about"><span class="zh">个人简介</span><span class="en">About</span></a>
+                <div class="nav-links">
+                    <a href="#project1" data-target="project1"><span class="zh">《白蛇传》</span><span class="en" style="display:none;">White Snake</span></a>
+                    <a href="#project2" data-target="project2"><span class="zh">项目2</span><span class="en" style="display:none;">Project 2</span></a>
+                    <a href="#project3" data-target="project3"><span class="zh">项目3</span><span class="en" style="display:none;">Project 3</span></a>
+                    <a href="#about" data-target="about"><span class="zh">个人简介</span><span class="en" style="display:none;">About</span></a>
+                </div>
             </div>
         </div>
     </nav>
@@ -702,70 +764,189 @@
     <header id="welcome" class="welcome-section">
         <div class="welcome-inner">
             <div class="welcome-logo">
-                <!-- 🔧 替换：Logo 图片，示例：<img src="images/welcome-logo.png" alt="你的名字"> -->
+                <!-- 🔧 替换：Logo 图片 -->
+                <!-- 示例：<img src="images/welcome-logo.png" alt="你的名字"> -->
                 <span class="zh">游戏作品集</span>
-                <span class="en">Game Design Portfolio</span>
+                <span class="en" style="display:none;">Game Design Portfolio</span>
             </div>
 
-            <div class="tagline">
-                <!-- 🔧 替换：中文 Tagline -->
-                <p class="zh">用系统、叙事与互动，设计能被玩家记住的体验。</p>
-                <!-- 🔧 替换：英文 Tagline -->
-                <p class="en">Designing memorable play through systems, narrative, and interaction.</p>
-            </div>
+            <!-- 🔧 替换：Tagline 中英文文字 -->
+            <p class="zh tagline">用系统、叙事与互动，设计能被玩家记住的体验。</p>
+            <p class="en tagline" style="display:none;">Designing memorable play through systems, narrative, and interaction.</p>
 
             <a class="btn-enter" href="#project1">
                 <span class="zh">进入</span>
-                <span class="en">Enter</span>
+                <span class="en" style="display:none;">Enter</span>
             </a>
         </div>
     </header>
 
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- ==================== 项目1：《白蛇传》水墨风项目板块 ==================== -->
+    <!-- ==================== 项目1：《白蛇传》水墨风项目板块，内置自动分页 ==================== -->
     <section id="project1" class="project-section project-shuimo" aria-label="项目1：《白蛇传》">
-        <div class="section-bg" aria-hidden="true"></div>
-        <div class="section-content">
-            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
+        <div class="section-bg">
+            <!-- 🔧 替换：项目1 水墨背景图，在 CSS 的 .project-shuimo .section-bg 中设置 background-image -->
         </div>
-        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+
+        <div class="section-content">
+            <!-- 页面标签栏：JS 会自动读取下面有多少个 .project-page，并生成按钮 -->
+            <div class="page-tabs" data-project="project1"></div>
+
+            <div class="project-page page-1 active">
+                <!-- 🔧 粘贴 Figma 导出的第1页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2>《白蛇传》 Page 1</h2>
+                        <p class="zh">【替换为真实内容】这里放项目封面、核心概念、游戏一句话介绍。</p>
+                        <p class="en" style="display:none;">[Replace] Add project cover, core concept, and one-sentence pitch here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-2">
+                <!-- 🔧 粘贴 Figma 导出的第2页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2>《白蛇传》 Page 2</h2>
+                        <p class="zh">【替换为真实内容】这里放玩法机制、关卡结构、交互设计说明。</p>
+                        <p class="en" style="display:none;">[Replace] Add mechanics, level structure, and interaction design notes here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-3">
+                <!-- 🔧 粘贴 Figma 导出的第3页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2>《白蛇传》 Page 3</h2>
+                        <p class="zh">【替换为真实内容】这里放测试反馈、迭代过程、反思总结。</p>
+                        <p class="en" style="display:none;">[Replace] Add playtest feedback, iteration process, and reflection here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 如何添加新页：复制一个 .project-page，改成 page-4；刷新页面后标签按钮会自动出现。 -->
+        </div>
+
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en" style="display:none;">Top</span></a>
     </section>
 
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- ==================== 项目2：手绘风项目板块 ==================== -->
+    <!-- ==================== 项目2：手绘风项目板块，内置自动分页 ==================== -->
     <section id="project2" class="project-section project-handdrawn" aria-label="项目2">
-        <div class="section-bg" aria-hidden="true"></div>
-        <div class="section-content">
-            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
+        <div class="section-bg">
+            <!-- 🔧 替换：项目2 背景图，在 CSS 的 .project-handdrawn .section-bg 中设置 background-image -->
         </div>
-        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+
+        <div class="section-content">
+            <div class="page-tabs" data-project="project2"></div>
+
+            <div class="project-page page-1 active">
+                <!-- 🔧 粘贴 Figma 导出的第1页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目2 Page 1</span><span class="en" style="display:none;">Project 2 Page 1</span></h2>
+                        <p class="zh">【替换为真实内容】这里放项目2封面和核心介绍。</p>
+                        <p class="en" style="display:none;">[Replace] Add Project 2 cover and core introduction here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-2">
+                <!-- 🔧 粘贴 Figma 导出的第2页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目2 Page 2</span><span class="en" style="display:none;">Project 2 Page 2</span></h2>
+                        <p class="zh">【替换为真实内容】这里放玩法系统、UI、流程图或关卡内容。</p>
+                        <p class="en" style="display:none;">[Replace] Add systems, UI, flowcharts, or level content here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-3">
+                <!-- 🔧 粘贴 Figma 导出的第3页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目2 Page 3</span><span class="en" style="display:none;">Project 2 Page 3</span></h2>
+                        <p class="zh">【替换为真实内容】这里放迭代记录、最终成果、项目反思。</p>
+                        <p class="en" style="display:none;">[Replace] Add iteration notes, final result, and reflection here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 如何添加新页：复制一个 .project-page，改成 page-4；刷新页面后标签按钮会自动出现。 -->
+        </div>
+
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en" style="display:none;">Top</span></a>
     </section>
 
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- ==================== 项目3：手绘风项目板块 ==================== -->
+    <!-- ==================== 项目3：手绘风项目板块，内置自动分页 ==================== -->
     <section id="project3" class="project-section project-handdrawn" aria-label="项目3">
-        <div class="section-bg" aria-hidden="true"></div>
-        <div class="section-content">
-            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
+        <div class="section-bg">
+            <!-- 🔧 替换：项目3 背景图，在 CSS 的 #project3 .section-bg 中设置 background-image -->
         </div>
-        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+
+        <div class="section-content">
+            <div class="page-tabs" data-project="project3"></div>
+
+            <div class="project-page page-1 active">
+                <!-- 🔧 粘贴 Figma 导出的第1页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目3 Page 1</span><span class="en" style="display:none;">Project 3 Page 1</span></h2>
+                        <p class="zh">【替换为真实内容】这里放项目3封面和核心介绍。</p>
+                        <p class="en" style="display:none;">[Replace] Add Project 3 cover and core introduction here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-2">
+                <!-- 🔧 粘贴 Figma 导出的第2页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目3 Page 2</span><span class="en" style="display:none;">Project 3 Page 2</span></h2>
+                        <p class="zh">【替换为真实内容】这里放设计过程、系统说明、视觉实验。</p>
+                        <p class="en" style="display:none;">[Replace] Add design process, system notes, and visual experiments here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-page page-3">
+                <!-- 🔧 粘贴 Figma 导出的第3页 HTML -->
+                <div class="page-placeholder">
+                    <div>
+                        <h2><span class="zh">项目3 Page 3</span><span class="en" style="display:none;">Project 3 Page 3</span></h2>
+                        <p class="zh">【替换为真实内容】这里放成果展示、玩家反馈、总结。</p>
+                        <p class="en" style="display:none;">[Replace] Add final outcome, player feedback, and reflection here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 如何添加新页：复制一个 .project-page，改成 page-4；刷新页面后标签按钮会自动出现。 -->
+        </div>
+
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en" style="display:none;">Top</span></a>
     </section>
 
     <div class="section-divider" aria-hidden="true"></div>
 
     <!-- ==================== 个人简介：面向美国研究生招生官 ==================== -->
     <section id="about" class="section-about" aria-label="个人简介">
-        <div class="section-bg" aria-hidden="true"></div>
+        <div class="section-bg">
+            <!-- 🔧 替换：个人简介背景或装饰图，可在 CSS 的 .section-about 中添加背景图 -->
+        </div>
+
         <div class="section-content">
             <div class="about-card">
                 <aside class="about-sidebar">
                     <div class="about-avatar">
                         <!-- 🔧 替换：个人头像，示例：<img src="images/avatar.jpg" alt="你的头像"> -->
                         <span class="zh">头像</span>
-                        <span class="en">Avatar</span>
+                        <span class="en" style="display:none;">Avatar</span>
                     </div>
                 </aside>
 
@@ -773,32 +954,32 @@
                     <h2 class="about-name">
                         <!-- 🔧 替换：姓名 -->
                         <span class="zh">你的名字</span>
-                        <span class="en">Your Name</span>
+                        <span class="en" style="display:none;">Your Name</span>
                     </h2>
 
                     <p class="about-role">
                         <!-- 🔧 替换：简短头衔，建议突出 Game Designer / Interactive Storyteller / Technical Designer 等方向 -->
                         <span class="zh">游戏设计师 / 互动叙事创作者 / 研究生申请者</span>
-                        <span class="en">Game Designer / Interactive Storyteller / Graduate Applicant</span>
+                        <span class="en" style="display:none;">Game Designer / Interactive Storyteller / Graduate Applicant</span>
                     </p>
 
                     <section class="about-block">
-                        <h3><span class="zh">个人陈述</span><span class="en">Statement</span></h3>
+                        <h3><span class="zh">个人陈述</span><span class="en" style="display:none;">Statement</span></h3>
                         <!-- 🔧 替换：个人陈述第 1 段，建议说明你的设计兴趣、方法和申请方向 -->
                         <p class="zh">【替换为真实内容】我关注游戏机制、叙事结构与玩家情感之间的关系，希望通过作品展示我的设计思考和迭代能力。</p>
-                        <p class="en">[Replace with real content] I explore the relationship between game systems, narrative structure, and player emotion through iterative design.</p>
+                        <p class="en" style="display:none;">[Replace with real content] I explore the relationship between game systems, narrative structure, and player emotion through iterative design.</p>
 
                         <!-- 🔧 替换：个人陈述第 2 段，建议说明代表项目和你的职责 -->
                         <p class="zh">【替换为真实内容】在我的项目中，我负责玩法原型、关卡节奏、交互反馈、用户测试整理等工作，并持续将观察转化为设计改进。</p>
-                        <p class="en">[Replace with real content] My project work includes gameplay prototyping, level pacing, interaction feedback, playtest analysis, and design iteration.</p>
+                        <p class="en" style="display:none;">[Replace with real content] My project work includes gameplay prototyping, level pacing, interaction feedback, playtest analysis, and design iteration.</p>
 
                         <!-- 🔧 替换：个人陈述第 3 段，可说明研究生阶段目标 -->
                         <p class="zh">【替换为真实内容】研究生阶段，我希望继续探索具有文化表达、系统深度和可访问性的游戏体验。</p>
-                        <p class="en">[Replace with real content] In graduate study, I hope to further explore games with cultural expression, systemic depth, and accessible interaction.</p>
+                        <p class="en" style="display:none;">[Replace with real content] In graduate study, I hope to further explore games with cultural expression, systemic depth, and accessible interaction.</p>
                     </section>
 
                     <section class="about-block">
-                        <h3><span class="zh">技能列表</span><span class="en">Skills</span></h3>
+                        <h3><span class="zh">技能列表</span><span class="en" style="display:none;">Skills</span></h3>
                         <!-- 🔧 替换：技能标签，可按 Game Engines / Programming / Design Tools / Art Tools 分类扩展 -->
                         <ul class="skills">
                             <li>Unity</li>
@@ -813,7 +994,7 @@
                     </section>
 
                     <section class="about-block">
-                        <h3><span class="zh">经历时间线</span><span class="en">Timeline</span></h3>
+                        <h3><span class="zh">经历时间线</span><span class="en" style="display:none;">Timeline</span></h3>
                         <div class="timeline">
                             <!-- 🔧 替换：经历 1 -->
                             <article class="timeline-item">
@@ -845,7 +1026,7 @@
                     </section>
 
                     <section class="about-block">
-                        <h3><span class="zh">联系方式</span><span class="en">Contact</span></h3>
+                        <h3><span class="zh">联系方式</span><span class="en" style="display:none;">Contact</span></h3>
                         <div class="contact-list">
                             <!-- 🔧 替换：邮箱地址 -->
                             <a class="contact-link" href="mailto:your-email@example.com"><span class="icon">✉</span> your-email@example.com</a>
@@ -858,98 +1039,164 @@
                 </main>
             </div>
         </div>
-        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en" style="display:none;">Top</span></a>
     </section>
 
     <script>
-        /* ==================== 获取常用 DOM 元素 ==================== */
-        const body = document.body;
-        const nav = document.querySelector(".site-nav");
-        const hamburger = document.querySelector(".hamburger");
-        const langButtons = document.querySelectorAll(".lang-btn");
-        const navLinks = document.querySelectorAll(".nav-links a");
-        const observedSections = document.querySelectorAll("#project1, #project2, #project3, #about");
+        /* ==================== 全局状态：记录当前语言 ==================== */
+        let currentLang = "zh";
 
-        /* ==================== 语言切换：中文默认显示，英文点击后显示 ==================== */
-        langButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const selectedLang = button.dataset.lang;
+        /* ==================== 语言切换函数：按要求命名为 switchLang() ==================== */
+        function switchLang(lang) {
+            currentLang = lang;
 
-                // 英文模式：给 body 添加 lang-en；中文模式：移除 lang-en。
-                body.classList.toggle("lang-en", selectedLang === "en");
+            // 1. 中文模式显示 .zh，隐藏 .en；英文模式反过来。
+            document.querySelectorAll(".zh").forEach((element) => {
+                element.style.display = lang === "zh" ? "" : "none";
+            });
 
-                // 更新语言按钮的高亮状态。
-                langButtons.forEach((item) => {
-                    item.classList.toggle("active", item.dataset.lang === selectedLang);
+            document.querySelectorAll(".en").forEach((element) => {
+                element.style.display = lang === "en" ? "" : "none";
+            });
+
+            // 2. 更新语言按钮高亮。
+            document.querySelectorAll(".lang-btn").forEach((button) => {
+                button.classList.toggle("active", button.dataset.lang === lang);
+            });
+        }
+
+        /* ==================== 项目自动分页：根据 .project-page 数量生成标签按钮 ==================== */
+        function initProjectPagination() {
+            document.querySelectorAll(".page-tabs").forEach((tabs) => {
+                const projectId = tabs.dataset.project;
+                const section = document.getElementById(projectId);
+                const pages = section.querySelectorAll(".project-page");
+
+                tabs.innerHTML = "";
+
+                pages.forEach((page, index) => {
+                    const pageNumber = index + 1;
+                    const button = document.createElement("button");
+                    button.type = "button";
+                    button.dataset.page = String(pageNumber);
+
+                    // 按钮文本也做中英文，切换语言时会跟着隐藏/显示。
+                    button.innerHTML = `
+                        <span class="zh">第${pageNumber}页</span>
+                        <span class="en" style="display:none;">Page ${pageNumber}</span>
+                    `;
+
+                    if (page.classList.contains("active")) {
+                        button.classList.add("active");
+                    }
+
+                    button.addEventListener("click", () => {
+                        pages.forEach((item) => item.classList.remove("active"));
+                        tabs.querySelectorAll("button").forEach((item) => item.classList.remove("active"));
+                        page.classList.add("active");
+                        button.classList.add("active");
+                    });
+
+                    tabs.appendChild(button);
                 });
             });
-        });
+
+            // 标签按钮是 JS 动态生成的，所以生成后需要重新应用当前语言。
+            switchLang(currentLang);
+        }
 
         /* ==================== 移动端汉堡菜单：点击展开或收起 ==================== */
-        hamburger.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("open");
-            hamburger.setAttribute("aria-expanded", String(isOpen));
-        });
+        function initMobileMenu() {
+            const nav = document.querySelector(".site-nav");
+            const hamburger = document.querySelector(".hamburger");
+            const closeTargets = document.querySelectorAll(".nav-links a, .nav-logo, .btn-enter, .btn-top");
 
-        /* ==================== 点击导航后：关闭移动端菜单 ==================== */
-        [...navLinks, document.querySelector(".nav-logo"), document.querySelector(".btn-enter")].forEach((link) => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("open");
-                hamburger.setAttribute("aria-expanded", "false");
+            hamburger.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("open");
+                hamburger.setAttribute("aria-expanded", String(isOpen));
             });
-        });
 
-        /* ==================== 当前板块高亮：滚动时给对应导航项添加 active 类 ==================== */
-        const setActiveNav = (sectionId) => {
-            navLinks.forEach((link) => {
-                link.classList.toggle("active", link.dataset.target === sectionId);
+            closeTargets.forEach((target) => {
+                target.addEventListener("click", () => {
+                    nav.classList.remove("open");
+                    hamburger.setAttribute("aria-expanded", "false");
+                });
             });
-        };
+        }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setActiveNav(entry.target.id);
-                }
+        /* ==================== 当前板块高亮：滚动到对应区域时给导航项添加 active ==================== */
+        function initActiveNav() {
+            const navLinks = document.querySelectorAll(".nav-links a");
+            const observedSections = document.querySelectorAll("#project1, #project2, #project3, #about");
+
+            const setActiveNav = (sectionId) => {
+                navLinks.forEach((link) => {
+                    link.classList.toggle("active", link.dataset.target === sectionId);
+                });
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveNav(entry.target.id);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.35,
+                rootMargin: "-20% 0px -35% 0px"
             });
-        }, {
-            root: null,
-            threshold: 0.45,
-            rootMargin: "-20% 0px -35% 0px"
-        });
 
-        observedSections.forEach((section) => observer.observe(section));
+            observedSections.forEach((section) => observer.observe(section));
 
-        /* ==================== 回到顶部按钮：使用锚点配合 smooth scroll ==================== */
-        document.querySelectorAll(".btn-top").forEach((button) => {
-            button.addEventListener("click", () => {
-                navLinks.forEach((link) => link.classList.remove("active"));
+            document.querySelectorAll(".btn-top").forEach((button) => {
+                button.addEventListener("click", () => {
+                    navLinks.forEach((link) => link.classList.remove("active"));
+                });
             });
+        }
+
+        /* ==================== 页面启动：初始化语言、分页、菜单、高亮 ==================== */
+        document.addEventListener("DOMContentLoaded", () => {
+            initProjectPagination();
+            initMobileMenu();
+            initActiveNav();
+            switchLang("zh");
         });
     </script>
 
     <!--
     ==================== 图片替换清单 ====================
     欢迎页背景         → 建议 1920×1080px  |  CSS选择器: .welcome-section 的 background-image
-    Logo 图片          → 建议 200×60px     |  CSS选择器: .nav-logo img 或 .welcome-logo
+    Logo 图片          → 建议 200×60px     |  CSS选择器: .nav-logo-img img 或 .welcome-logo img
     项目1 背景图       → 建议 1920×1080px  |  CSS选择器: .project-shuimo .section-bg
-    项目2 背景图       → 建议 1920×1080px  |  CSS选择器: #project2 .section-bg
+    项目2 背景图       → 建议 1920×1080px  |  CSS选择器: .project-handdrawn .section-bg
     项目3 背景图       → 建议 1920×1080px  |  CSS选择器: #project3 .section-bg
     个人头像           → 建议 300×300px    |  CSS选择器: .about-avatar img
     手绘分隔线（可选）  → 建议 900×60px     |  在 .section-divider 中使用
-    项目板块排版图      → 宽度 900px，高度自定 | 放入 .section-content 中
+    项目分页内容        → 宽度 900px，高度自定 | 放入对应 .project-page 中
     ====================================================
 
     ==================== 文字替换指南 ====================
     搜索 "🔧 替换" 找到所有需要替换的占位文字
-    包括：Tagline、项目标题、个人简介各部分内容
+    包括：Tagline、导航名称、项目分页内容、个人简介各部分内容
+    ====================================================
+
+    ==================== 项目分页添加方法 ====================
+    1. 找到对应项目的 .section-content
+    2. 复制一个完整的 <div class="project-page page-3">...</div>
+    3. 把 class 里的 page-3 改成 page-4、page-5 等
+    4. 把 Figma 导出的新页面 HTML 粘贴进去
+    5. 刷新浏览器，.page-tabs 会自动生成新按钮
     ====================================================
 
     ==================== Figma 排版工作流 ====================
     1. 在 Figma 中新建 900px 宽的 Frame
-    2. 拖入素材，自由旋转、摆放
-    3. 使用插件 "Figma to HTML" 导出代码片段
-    4. 粘贴到对应板块的 .section-content 中
+    2. 每个项目页单独做一个 Frame，例如 Project1-Page1、Project1-Page2
+    3. 拖入素材，自由旋转、摆放
+    4. 使用插件导出 HTML，或将整页导出 PNG 作为快速方案
+    5. 粘贴到对应项目的 .project-page 中
     ====================================================
     -->
 </body>

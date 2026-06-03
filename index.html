@@ -3,53 +3,954 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的游戏作品集</title>
-    <link rel="stylesheet" href="style.css">
+    <title>个人游戏作品集 | Game Design Portfolio</title>
+
+    <!-- ==================== Google Fonts：标题、书法、英文字体 ==================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Varela+Round&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==================== 全局变量：颜色、字体、尺寸都在这里统一修改 ==================== */
+        :root {
+            --bg-cream: #fef9ef;
+            --bg-paper: #fffdf7;
+            --bg-rice-paper: #f8f2df;
+            --ink: #2f2a33;
+            --muted: #776d7a;
+            --soft-gray: #d8d5cc;
+            --accent-pink: #f2a7b0;
+            --accent-peach: #ffd6a5;
+            --accent-blue: #b8d8f8;
+            --accent-green: #cdeac0;
+            --accent-lilac: #d9c7f4;
+            --shuimo-ink: #202020;
+            --shuimo-gray: #7c817e;
+            --font-title: "ZCOOL KuaiLe", "Ma Shan Zheng", cursive;
+            --font-calligraphy: "Ma Shan Zheng", "ZCOOL KuaiLe", cursive;
+            --font-body: "Varela Round", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+            --font-nav: "ZCOOL KuaiLe", "Varela Round", sans-serif;
+            --nav-height: 76px;
+            --content-width: 900px;
+            --content-width-tablet: 90%;
+            --content-width-mobile: 95%;
+            --radius-large: 28px;
+            --radius-medium: 20px;
+            --shadow-soft: 0 16px 38px rgba(74, 58, 87, 0.14);
+            --shadow-small: 0 8px 18px rgba(74, 58, 87, 0.12);
+            --transition-fast: 180ms ease;
+            --transition-bounce: 220ms cubic-bezier(.2, 1.25, .45, 1);
+        }
+
+        /* ==================== 基础重置 ==================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            color: var(--ink);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            background:
+                radial-gradient(circle at 15% 12%, rgba(242, 167, 176, 0.22), transparent 26%),
+                radial-gradient(circle at 86% 18%, rgba(184, 216, 248, 0.25), transparent 24%),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+                linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+                var(--bg-cream);
+            background-size: auto, auto, 36px 36px, 36px 36px, auto;
+            /* 🔧 替换：如需纸质纹理图片，可在这里添加 background-image */
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            border: 0;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        /* ==================== 中英文显示规则：默认中文，英文隐藏 ==================== */
+        .en {
+            display: none;
+        }
+
+        body.lang-en .zh {
+            display: none !important;
+        }
+
+        body.lang-en .en {
+            display: inline;
+        }
+
+        body.lang-en p.en,
+        body.lang-en div.en,
+        body.lang-en h1.en,
+        body.lang-en h2.en,
+        body.lang-en h3.en,
+        body.lang-en li.en {
+            display: block;
+        }
+
+        /* ==================== 固定顶部导航栏 ==================== */
+        .site-nav {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            z-index: 9999;
+            width: min(calc(100% - 28px), 1160px);
+            min-height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 16px;
+            border: 2px dashed rgba(47, 42, 51, 0.16);
+            border-radius: 999px;
+            background: rgba(255, 253, 247, 0.9);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(14px);
+            transform: translateX(-50%);
+        }
+
+        .nav-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+            font-family: var(--font-nav);
+            font-size: 1.08rem;
+            white-space: nowrap;
+        }
+
+        .nav-logo-img {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 auto;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
+            box-shadow: var(--shadow-small);
+        }
+
+        .nav-logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-toggle {
+            display: inline-flex;
+            gap: 4px;
+            padding: 5px;
+            border-radius: 999px;
+            background: #fff4d8;
+            box-shadow: inset 0 0 0 1px rgba(47, 42, 51, 0.08);
+        }
+
+        .language-toggle button,
+        .nav-links a,
+        .btn-enter,
+        .btn-top {
+            border-radius: 999px;
+            transition: transform var(--transition-bounce), box-shadow var(--transition-fast), background var(--transition-fast);
+        }
+
+        .language-toggle button {
+            padding: 7px 11px;
+            background: transparent;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .language-toggle button.active {
+            background: var(--accent-pink);
+            color: var(--ink);
+            box-shadow: var(--shadow-small);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            padding: 10px 14px;
+            background: var(--bg-paper);
+            box-shadow: var(--shadow-small);
+            font-family: var(--font-nav);
+            font-size: 0.96rem;
+        }
+
+        .nav-links a:nth-child(2) {
+            background: #fff0d8;
+        }
+
+        .nav-links a:nth-child(3) {
+            background: #eaf7df;
+        }
+
+        .nav-links a:nth-child(4) {
+            background: #eaf2ff;
+        }
+
+        .nav-links a.active {
+            color: #ffffff;
+            background: var(--ink);
+            box-shadow: 0 10px 24px rgba(47, 42, 51, 0.22);
+            transform: translateY(-2px);
+        }
+
+        .language-toggle button:hover,
+        .nav-links a:hover,
+        .btn-enter:hover,
+        .btn-top:hover,
+        .hamburger:hover,
+        .contact-link:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .hamburger {
+            display: none;
+            width: 46px;
+            height: 46px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            background: var(--accent-pink);
+            box-shadow: var(--shadow-small);
+            transition: transform var(--transition-bounce);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 21px;
+            height: 2px;
+            margin: 4px auto;
+            border-radius: 2px;
+            background: var(--ink);
+        }
+
+        /* ==================== 欢迎页：全屏居中 ==================== */
+        .welcome-section {
+            position: relative;
+            height: 100vh;
+            min-height: 620px;
+            display: grid;
+            place-items: center;
+            padding: calc(var(--nav-height) + 48px) 22px 38px;
+            overflow: hidden;
+            /* 🔧 替换：欢迎页背景 */
+            background-image:
+                linear-gradient(rgba(254, 249, 239, 0.72), rgba(254, 249, 239, 0.88)),
+                radial-gradient(circle at 24% 38%, rgba(255, 214, 165, 0.56), transparent 28%),
+                radial-gradient(circle at 76% 60%, rgba(205, 234, 192, 0.52), transparent 30%);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .welcome-inner {
+            width: min(100%, 760px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .welcome-logo {
+            width: min(72vw, 390px);
+            min-height: 132px;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            border: 3px dashed rgba(47, 42, 51, 0.18);
+            border-radius: var(--radius-large);
+            background: rgba(255, 253, 247, 0.78);
+            box-shadow: var(--shadow-soft);
+            font-family: var(--font-title);
+            font-size: clamp(2.2rem, 7vw, 4.6rem);
+            line-height: 1.1;
+        }
+
+        .welcome-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tagline {
+            color: var(--muted);
+            font-size: clamp(1rem, 2.6vw, 1.25rem);
+        }
+
+        .tagline .en {
+            margin-top: 6px;
+            font-size: 0.96em;
+        }
+
+        .btn-enter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            padding: 14px 34px;
+            background: var(--accent-pink);
+            box-shadow: var(--shadow-soft);
+            font-family: var(--font-nav);
+            font-weight: 700;
+        }
+
+        /* ==================== 通用项目板块：背景层 + 空白内容容器 ==================== */
+        .project-section,
+        .section-about {
+            position: relative;
+            min-height: 88vh;
+            padding: 112px 22px 118px;
+            scroll-margin-top: 104px;
+            overflow: hidden;
+        }
+
+        .section-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.74;
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+            width: min(100%, var(--content-width));
+            min-height: 470px;
+            margin: 0 auto;
+            padding: clamp(28px, 5vw, 54px);
+            border: 2px dashed rgba(47, 42, 51, 0.18);
+            border-radius: var(--radius-large);
+            background: rgba(255, 253, 247, 0.78);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .section-divider {
+            position: relative;
+            z-index: 2;
+            height: 42px;
+            margin: -21px auto;
+            max-width: 960px;
+            border-top: 3px dashed rgba(47, 42, 51, 0.2);
+            border-radius: 50%;
+            opacity: 0.82;
+            /* 🔧 替换：如需手绘分隔线图片，可在这里设置 background-image */
+        }
+
+        .btn-top {
+            position: absolute;
+            right: clamp(18px, 5vw, 58px);
+            bottom: 30px;
+            z-index: 2;
+            padding: 10px 16px;
+            background: var(--bg-paper);
+            box-shadow: var(--shadow-small);
+            color: var(--muted);
+            font-family: var(--font-nav);
+            font-size: 0.92rem;
+        }
+
+        /* ==================== 项目1：水墨风格专属预留 ==================== */
+        .project-shuimo {
+            background: var(--bg-rice-paper);
+        }
+
+        .project-shuimo .section-bg {
+            /* 🔧 替换：项目1 水墨背景图 */
+            background-image:
+                linear-gradient(rgba(248, 242, 223, 0.58), rgba(248, 242, 223, 0.84)),
+                radial-gradient(circle at 26% 30%, rgba(32, 32, 32, 0.12), transparent 25%),
+                radial-gradient(circle at 76% 60%, rgba(124, 129, 126, 0.16), transparent 31%);
+        }
+
+        .project-shuimo .section-content {
+            border-color: rgba(32, 32, 32, 0.2);
+            background: rgba(255, 253, 247, 0.74);
+            font-family: var(--font-calligraphy);
+        }
+
+        /* ==================== 项目2/项目3：柔和手绘风格专属预留 ==================== */
+        .project-handdrawn .section-bg {
+            /* 🔧 替换：项目2/3 背景图 */
+            background-image:
+                linear-gradient(rgba(254, 249, 239, 0.62), rgba(254, 249, 239, 0.84)),
+                repeating-linear-gradient(-8deg, rgba(255, 214, 165, 0.26) 0 2px, transparent 2px 18px),
+                radial-gradient(circle at 84% 22%, rgba(217, 199, 244, 0.34), transparent 24%);
+        }
+
+        #project3 .section-bg {
+            /* 🔧 替换：项目3 背景图 */
+            background-image:
+                linear-gradient(rgba(254, 249, 239, 0.64), rgba(254, 249, 239, 0.86)),
+                repeating-linear-gradient(7deg, rgba(184, 216, 248, 0.26) 0 2px, transparent 2px 20px),
+                radial-gradient(circle at 18% 78%, rgba(242, 167, 176, 0.34), transparent 24%);
+        }
+
+        /* ==================== 个人简介：面向美国研究生招生官的结构框架 ==================== */
+        .section-about {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(242, 167, 176, 0.24), transparent 22%),
+                radial-gradient(circle at 88% 78%, rgba(184, 216, 248, 0.28), transparent 26%),
+                var(--bg-cream);
+        }
+
+        .about-card {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .about-avatar {
+            width: 180px;
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-peach), var(--accent-blue));
+            box-shadow: var(--shadow-soft);
+            font-family: var(--font-title);
+            text-align: center;
+        }
+
+        .about-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-name {
+            margin-bottom: 8px;
+            font-family: var(--font-title);
+            font-size: clamp(2rem, 5.6vw, 3.4rem);
+            line-height: 1.1;
+        }
+
+        .about-role {
+            display: inline-block;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--accent-green);
+            box-shadow: var(--shadow-small);
+            color: var(--muted);
+        }
+
+        .about-block {
+            margin-top: 28px;
+        }
+
+        .about-block h3 {
+            margin-bottom: 12px;
+            font-family: var(--font-title);
+            font-size: 1.62rem;
+        }
+
+        .about-block p {
+            margin-bottom: 12px;
+            color: var(--muted);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills li {
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: #ffffff;
+            box-shadow: var(--shadow-small);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 16px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 136px 1fr;
+            gap: 16px;
+            padding: 16px;
+            border-radius: var(--radius-medium);
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: var(--shadow-small);
+        }
+
+        .timeline-date {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 15px;
+            border-radius: 999px;
+            background: #ffffff;
+            box-shadow: var(--shadow-small);
+            transition: transform var(--transition-bounce);
+        }
+
+        .icon {
+            width: 1.1em;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* ==================== 动效：按钮和标签轻微弹跳 ==================== */
+        @media (prefers-reduced-motion: no-preference) {
+            .btn-enter:hover,
+            .btn-top:hover,
+            .nav-links a:hover,
+            .contact-link:hover {
+                animation: soft-bounce 420ms ease;
+            }
+
+            @keyframes soft-bounce {
+                0%, 100% { transform: translateY(0) scale(1); }
+                44% { transform: translateY(-5px) scale(1.04); }
+                76% { transform: translateY(1px) scale(0.99); }
+            }
+        }
+
+        /* ==================== 平板端：内容区收窄 ==================== */
+        @media (max-width: 1024px) {
+            .section-content {
+                width: var(--content-width-tablet);
+            }
+        }
+
+        /* ==================== 手机端：汉堡菜单、单列布局、字号缩小 ==================== */
+        @media (max-width: 768px) {
+            :root {
+                --nav-height: 66px;
+            }
+
+            .site-nav {
+                top: 10px;
+                align-items: flex-start;
+                border-radius: 28px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: calc(100% + 10px);
+                right: 0;
+                width: min(100%, 330px);
+                padding: 14px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                border: 2px dashed rgba(47, 42, 51, 0.16);
+                border-radius: 24px;
+                background: rgba(255, 253, 247, 0.97);
+                box-shadow: var(--shadow-soft);
+            }
+
+            .site-nav.open .nav-menu {
+                display: flex;
+            }
+
+            .language-toggle,
+            .nav-links {
+                width: 100%;
+            }
+
+            .language-toggle {
+                justify-content: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-links a {
+                text-align: center;
+            }
+
+            .welcome-section {
+                min-height: 560px;
+                padding-top: 118px;
+            }
+
+            .project-section,
+            .section-about {
+                padding: 92px 14px 96px;
+            }
+
+            .section-content {
+                width: var(--content-width-mobile);
+                min-height: 380px;
+                padding: 24px;
+            }
+
+            .about-card,
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            .about-sidebar {
+                display: grid;
+                place-items: center;
+            }
+
+            .about-avatar {
+                width: 154px;
+            }
+
+            .about-name {
+                text-align: center;
+            }
+
+            .about-role {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- 头部：自我介绍 -->
-    <header>
-        <div class="container">
-            <h1>👋 我是[你的名字]</h1>
-            <p>一名游戏开发者 / 爱好者 | 这里是我的一些作品</p>
+    <!-- ==================== 固定顶部导航栏 ==================== -->
+    <nav class="site-nav" aria-label="主导航">
+        <a class="nav-logo" href="#welcome" aria-label="返回欢迎页">
+            <span class="nav-logo-img">
+                <!-- 🔧 替换：Logo 小图，示例：<img src="images/logo-small.png" alt="Logo"> -->
+            </span>
+            <span class="nav-name">
+                <!-- 🔧 替换：导航栏名字文字 -->
+                <span class="zh">你的名字</span>
+                <span class="en">Your Name</span>
+            </span>
+        </a>
+
+        <button class="hamburger" type="button" aria-label="打开导航菜单" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu">
+            <div class="language-toggle" aria-label="语言切换">
+                <button class="lang-btn active" type="button" data-lang="zh">中文</button>
+                <button class="lang-btn" type="button" data-lang="en">English</button>
+            </div>
+
+            <div class="nav-links">
+                <a href="#project1" data-target="project1"><span class="zh">《白蛇传》</span><span class="en">White Snake</span></a>
+                <a href="#project2" data-target="project2"><span class="zh">项目2</span><span class="en">Project 2</span></a>
+                <a href="#project3" data-target="project3"><span class="zh">项目3</span><span class="en">Project 3</span></a>
+                <a href="#about" data-target="about"><span class="zh">个人简介</span><span class="en">About</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== 欢迎页：首屏展示 ==================== -->
+    <header id="welcome" class="welcome-section">
+        <div class="welcome-inner">
+            <div class="welcome-logo">
+                <!-- 🔧 替换：Logo 图片，示例：<img src="images/welcome-logo.png" alt="你的名字"> -->
+                <span class="zh">游戏作品集</span>
+                <span class="en">Game Design Portfolio</span>
+            </div>
+
+            <div class="tagline">
+                <!-- 🔧 替换：中文 Tagline -->
+                <p class="zh">用系统、叙事与互动，设计能被玩家记住的体验。</p>
+                <!-- 🔧 替换：英文 Tagline -->
+                <p class="en">Designing memorable play through systems, narrative, and interaction.</p>
+            </div>
+
+            <a class="btn-enter" href="#project1">
+                <span class="zh">进入</span>
+                <span class="en">Enter</span>
+            </a>
         </div>
     </header>
 
-    <!-- 作品展示区 -->
-    <section class="portfolio">
-        <div class="container">
-            <h2>🎮 我的游戏作品</h2>
-            <div class="games-grid">
-                <!-- 游戏卡片 1 -->
-                <div class="game-card">
-                    <img src="images/game1.jpg" alt="游戏1截图">
-                    <div class="game-info">
-                        <h3>游戏名称1</h3>
-                        <p>这是一款[游戏类型]，讲述了[一句话介绍]。</p>
-                        <a href="#" target="_blank" class="btn">试玩 / 查看</a>
-                    </div>
-                </div>
+    <div class="section-divider" aria-hidden="true"></div>
 
-                <!-- 游戏卡片 2（复制整个 game-card 块即可添加更多） -->
-                <div class="game-card">
-                    <img src="images/game2.png" alt="游戏2截图">
-                    <div class="game-info">
-                        <h3>游戏名称2</h3>
-                        <p>这是一款[游戏类型]，讲述了[一句话介绍]。</p>
-                        <a href="#" target="_blank" class="btn">试玩 / 查看</a>
-                    </div>
-                </div>
-
-                <!-- 可根据需要继续添加卡片 -->
-            </div>
+    <!-- ==================== 项目1：《白蛇传》水墨风项目板块 ==================== -->
+    <section id="project1" class="project-section project-shuimo" aria-label="项目1：《白蛇传》">
+        <div class="section-bg" aria-hidden="true"></div>
+        <div class="section-content">
+            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
         </div>
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
     </section>
 
-    <!-- 尾部 -->
-    <footer>
-        <div class="container">
-            <p>© 2026 [你的名字] | 联系我：your-email@example.com</p>
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ==================== 项目2：手绘风项目板块 ==================== -->
+    <section id="project2" class="project-section project-handdrawn" aria-label="项目2">
+        <div class="section-bg" aria-hidden="true"></div>
+        <div class="section-content">
+            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
         </div>
-    </footer>
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ==================== 项目3：手绘风项目板块 ==================== -->
+    <section id="project3" class="project-section project-handdrawn" aria-label="项目3">
+        <div class="section-bg" aria-hidden="true"></div>
+        <div class="section-content">
+            <!-- 🔧 在此粘贴 Figma 导出的 HTML 代码，或自由排版 -->
+        </div>
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ==================== 个人简介：面向美国研究生招生官 ==================== -->
+    <section id="about" class="section-about" aria-label="个人简介">
+        <div class="section-bg" aria-hidden="true"></div>
+        <div class="section-content">
+            <div class="about-card">
+                <aside class="about-sidebar">
+                    <div class="about-avatar">
+                        <!-- 🔧 替换：个人头像，示例：<img src="images/avatar.jpg" alt="你的头像"> -->
+                        <span class="zh">头像</span>
+                        <span class="en">Avatar</span>
+                    </div>
+                </aside>
+
+                <main class="about-main">
+                    <h2 class="about-name">
+                        <!-- 🔧 替换：姓名 -->
+                        <span class="zh">你的名字</span>
+                        <span class="en">Your Name</span>
+                    </h2>
+
+                    <p class="about-role">
+                        <!-- 🔧 替换：简短头衔，建议突出 Game Designer / Interactive Storyteller / Technical Designer 等方向 -->
+                        <span class="zh">游戏设计师 / 互动叙事创作者 / 研究生申请者</span>
+                        <span class="en">Game Designer / Interactive Storyteller / Graduate Applicant</span>
+                    </p>
+
+                    <section class="about-block">
+                        <h3><span class="zh">个人陈述</span><span class="en">Statement</span></h3>
+                        <!-- 🔧 替换：个人陈述第 1 段，建议说明你的设计兴趣、方法和申请方向 -->
+                        <p class="zh">【替换为真实内容】我关注游戏机制、叙事结构与玩家情感之间的关系，希望通过作品展示我的设计思考和迭代能力。</p>
+                        <p class="en">[Replace with real content] I explore the relationship between game systems, narrative structure, and player emotion through iterative design.</p>
+
+                        <!-- 🔧 替换：个人陈述第 2 段，建议说明代表项目和你的职责 -->
+                        <p class="zh">【替换为真实内容】在我的项目中，我负责玩法原型、关卡节奏、交互反馈、用户测试整理等工作，并持续将观察转化为设计改进。</p>
+                        <p class="en">[Replace with real content] My project work includes gameplay prototyping, level pacing, interaction feedback, playtest analysis, and design iteration.</p>
+
+                        <!-- 🔧 替换：个人陈述第 3 段，可说明研究生阶段目标 -->
+                        <p class="zh">【替换为真实内容】研究生阶段，我希望继续探索具有文化表达、系统深度和可访问性的游戏体验。</p>
+                        <p class="en">[Replace with real content] In graduate study, I hope to further explore games with cultural expression, systemic depth, and accessible interaction.</p>
+                    </section>
+
+                    <section class="about-block">
+                        <h3><span class="zh">技能列表</span><span class="en">Skills</span></h3>
+                        <!-- 🔧 替换：技能标签，可按 Game Engines / Programming / Design Tools / Art Tools 分类扩展 -->
+                        <ul class="skills">
+                            <li>Unity</li>
+                            <li>Unreal Engine</li>
+                            <li>C#</li>
+                            <li>Blueprints</li>
+                            <li>Game Design</li>
+                            <li>Level Design</li>
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                        </ul>
+                    </section>
+
+                    <section class="about-block">
+                        <h3><span class="zh">经历时间线</span><span class="en">Timeline</span></h3>
+                        <div class="timeline">
+                            <!-- 🔧 替换：经历 1 -->
+                            <article class="timeline-item">
+                                <div class="timeline-date">2026</div>
+                                <div>
+                                    <strong>【替换为真实内容】代表项目 / 课程项目 / 独立游戏</strong>
+                                    <p>【替换为真实内容】描述你的职责、设计目标、工具、测试过程和最终成果。</p>
+                                </div>
+                            </article>
+
+                            <!-- 🔧 替换：经历 2 -->
+                            <article class="timeline-item">
+                                <div class="timeline-date">2025</div>
+                                <div>
+                                    <strong>【替换为真实内容】团队项目 / Game Jam / 实习经历</strong>
+                                    <p>【替换为真实内容】描述团队规模、你的贡献、遇到的问题以及如何解决。</p>
+                                </div>
+                            </article>
+
+                            <!-- 🔧 替换：经历 3 -->
+                            <article class="timeline-item">
+                                <div class="timeline-date">2024</div>
+                                <div>
+                                    <strong>【替换为真实内容】学习经历 / 早期原型 / 展览经历</strong>
+                                    <p>【替换为真实内容】描述你如何建立游戏设计基础，以及这段经历如何影响你的申请方向。</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="about-block">
+                        <h3><span class="zh">联系方式</span><span class="en">Contact</span></h3>
+                        <div class="contact-list">
+                            <!-- 🔧 替换：邮箱地址 -->
+                            <a class="contact-link" href="mailto:your-email@example.com"><span class="icon">✉</span> your-email@example.com</a>
+                            <!-- 🔧 替换：GitHub 链接 -->
+                            <a class="contact-link" href="#" target="_blank" rel="noreferrer"><span class="icon">⌘</span> GitHub</a>
+                            <!-- 🔧 替换：其他作品集 / itch.io / LinkedIn 链接 -->
+                            <a class="contact-link" href="#" target="_blank" rel="noreferrer"><span class="icon">◎</span> Other Link</a>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <a class="btn-top" href="#welcome"><span class="zh">回到顶部</span><span class="en">Top</span></a>
+    </section>
+
+    <script>
+        /* ==================== 获取常用 DOM 元素 ==================== */
+        const body = document.body;
+        const nav = document.querySelector(".site-nav");
+        const hamburger = document.querySelector(".hamburger");
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const observedSections = document.querySelectorAll("#project1, #project2, #project3, #about");
+
+        /* ==================== 语言切换：中文默认显示，英文点击后显示 ==================== */
+        langButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedLang = button.dataset.lang;
+
+                // 英文模式：给 body 添加 lang-en；中文模式：移除 lang-en。
+                body.classList.toggle("lang-en", selectedLang === "en");
+
+                // 更新语言按钮的高亮状态。
+                langButtons.forEach((item) => {
+                    item.classList.toggle("active", item.dataset.lang === selectedLang);
+                });
+            });
+        });
+
+        /* ==================== 移动端汉堡菜单：点击展开或收起 ==================== */
+        hamburger.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        /* ==================== 点击导航后：关闭移动端菜单 ==================== */
+        [...navLinks, document.querySelector(".nav-logo"), document.querySelector(".btn-enter")].forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        /* ==================== 当前板块高亮：滚动时给对应导航项添加 active 类 ==================== */
+        const setActiveNav = (sectionId) => {
+            navLinks.forEach((link) => {
+                link.classList.toggle("active", link.dataset.target === sectionId);
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveNav(entry.target.id);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.45,
+            rootMargin: "-20% 0px -35% 0px"
+        });
+
+        observedSections.forEach((section) => observer.observe(section));
+
+        /* ==================== 回到顶部按钮：使用锚点配合 smooth scroll ==================== */
+        document.querySelectorAll(".btn-top").forEach((button) => {
+            button.addEventListener("click", () => {
+                navLinks.forEach((link) => link.classList.remove("active"));
+            });
+        });
+    </script>
+
+    <!--
+    ==================== 图片替换清单 ====================
+    欢迎页背景         → 建议 1920×1080px  |  CSS选择器: .welcome-section 的 background-image
+    Logo 图片          → 建议 200×60px     |  CSS选择器: .nav-logo img 或 .welcome-logo
+    项目1 背景图       → 建议 1920×1080px  |  CSS选择器: .project-shuimo .section-bg
+    项目2 背景图       → 建议 1920×1080px  |  CSS选择器: #project2 .section-bg
+    项目3 背景图       → 建议 1920×1080px  |  CSS选择器: #project3 .section-bg
+    个人头像           → 建议 300×300px    |  CSS选择器: .about-avatar img
+    手绘分隔线（可选）  → 建议 900×60px     |  在 .section-divider 中使用
+    项目板块排版图      → 宽度 900px，高度自定 | 放入 .section-content 中
+    ====================================================
+
+    ==================== 文字替换指南 ====================
+    搜索 "🔧 替换" 找到所有需要替换的占位文字
+    包括：Tagline、项目标题、个人简介各部分内容
+    ====================================================
+
+    ==================== Figma 排版工作流 ====================
+    1. 在 Figma 中新建 900px 宽的 Frame
+    2. 拖入素材，自由旋转、摆放
+    3. 使用插件 "Figma to HTML" 导出代码片段
+    4. 粘贴到对应板块的 .section-content 中
+    ====================================================
+    -->
 </body>
 </html>

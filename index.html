@@ -435,9 +435,8 @@
         .project-shuimo .section-bg {
             /* 🔧 替换：项目1 水墨背景图 */
             background-image:
-                linear-gradient(rgba(248, 242, 223, 0.58), rgba(248, 242, 223, 0.84)),
-                radial-gradient(circle at 26% 30%, rgba(32, 32, 32, 0.12), transparent 25%),
-                radial-gradient(circle at 76% 60%, rgba(124, 129, 126, 0.16), transparent 31%);
+                linear-gradient(rgba(248, 242, 223, 0.45), rgba(248, 242, 223, 0.78)),
+                url("images/project1-bg.png");
         }
 
         .project-shuimo .section-content {
@@ -447,6 +446,46 @@
 
         .project-shuimo .page-tabs button.active {
             background: var(--shuimo-ink);
+        }
+
+        .white-snake-page {
+            min-height: 520px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
+            gap: clamp(28px, 5vw, 52px);
+            align-items: center;
+            padding: clamp(22px, 4vw, 42px);
+            border-radius: var(--radius-medium);
+            background: var(--bg-rice-paper);
+        }
+
+        .white-snake-media {
+            overflow: hidden;
+        }
+
+        .white-snake-media img {
+            width: 100%;
+            aspect-ratio: 473 / 381;
+            object-fit: contain;
+        }
+
+        .white-snake-copy {
+            color: #000000;
+            font-family: var(--font-title);
+        }
+
+        .white-snake-copy h2 {
+            margin-bottom: 28px;
+            font-size: clamp(1.55rem, 3.5vw, 2rem);
+            font-weight: 400;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        .white-snake-copy p {
+            font-size: clamp(0.95rem, 2vw, 1rem);
+            font-weight: 400;
+            line-height: 1.9;
         }
 
         /* ==================== 项目2/项目3：柔和手绘风格专属预留 ==================== */
@@ -697,6 +736,17 @@
                 min-height: 420px;
             }
 
+            .white-snake-page {
+                grid-template-columns: 1fr;
+                min-height: 420px;
+                padding: 18px;
+            }
+
+            .white-snake-copy h2 {
+                margin-bottom: 18px;
+                text-align: left;
+            }
+
             .about-card,
             .timeline-item {
                 grid-template-columns: 1fr;
@@ -794,12 +844,13 @@
             <div class="page-tabs" data-project="project1"></div>
 
             <div class="project-page page-1 active">
-                <!-- 🔧 粘贴 Figma 导出的第1页 HTML -->
-                <div class="page-placeholder">
-                    <div>
-                        <h2>《白蛇传》 Page 1</h2>
-                        <p class="zh">【替换为真实内容】这里放项目封面、核心概念、游戏一句话介绍。</p>
-                        <p class="en" style="display:none;">[Replace] Add project cover, core concept, and one-sentence pitch here.</p>
+                <div class="white-snake-page">
+                    <div class="white-snake-media">
+                        <img src="images/white-snake-video-frame.png" alt="《白蛇传》游戏画面">
+                    </div>
+                    <div class="white-snake-copy">
+                        <h2>游戏设计目的</h2>
+                        <p>《白蛇传》是一款以中国传统故事白蛇传为背景，融入非遗粤剧的国风水墨2D横板音乐打击游戏。游戏完整叙述了白素贞和许仙相遇相知，却因天道难容最后不得不分离的故事，节选了粤剧《白蛇传·情》最著名的两个片段《西湖相遇》与《水漫金山》，通过节奏打击，击败 boss 等玩法，感受粤剧的音色、美术魅力。</p>
                     </div>
                 </div>
             </div>

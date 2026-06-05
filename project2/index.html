@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 | Joy Li</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="brand" href="../">JOY LI</a>
+            <div class="nav-links">
+                <a href="../whitesnake/">White Snake</a>
+                <a href="../project2/" aria-current="page">Project 2</a>
+                <a href="../project3/">Project 3</a>
+                <a href="../designphilosophy/">Design Philosophy</a>
+            </div>
+            <div class="lang-switch" aria-label="Language">
+                <button type="button" data-lang="en" class="active">EN</button>
+                <span>|</span>
+                <button type="button" data-lang="zh">中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="section-large">
+            <div class="container two-column">
+                <div>
+                    <p class="eyebrow">
+                        <span class="en">Project Case Study</span>
+                        <span class="zh">项目案例</span>
+                    </p>
+                    <h1>Project 2</h1>
+                </div>
+                <div class="measure">
+                    <p class="lead">
+                        <span class="en">This route is prepared as a direct-access project page for Joy Li's second selected interactive experience.</span>
+                        <span class="zh">该页面作为 Joy Li 第二个精选互动体验项目的直接入口。</span>
+                    </p>
+                    <p>
+                        <span class="en">The refactor keeps the architecture ready for a full case study while avoiding invented project claims. When source material is available, this page should follow the same editorial logic: design intention first, player experience second, technical execution in support of the experience.</span>
+                        <span class="zh">本次重构为完整案例保留了页面结构，同时避免编造项目内容。补充项目材料后，本页应延续同样的编辑逻辑：先呈现设计意图，再说明玩家体验，最后让技术执行服务于体验。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container image-frame">
+                <img src="../images/white-snake-video-frame.png" alt="Prepared project visual area">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Joy Li</span>
+            <span>Project 2</span>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll("[data-lang]");
+        const setLang = (lang) => {
+            document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+            document.body.classList.toggle("lang-zh", lang === "zh");
+            buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+            localStorage.setItem("joy-li-lang", lang);
+        };
+        buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.lang)));
+        setLang(localStorage.getItem("joy-li-lang") || "en");
+    </script>
+</body>
+</html>

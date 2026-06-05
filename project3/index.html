@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 | Joy Li</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="brand" href="../">JOY LI</a>
+            <div class="nav-links">
+                <a href="../whitesnake/">White Snake</a>
+                <a href="../project2/">Project 2</a>
+                <a href="../project3/" aria-current="page">Project 3</a>
+                <a href="../designphilosophy/">Design Philosophy</a>
+            </div>
+            <div class="lang-switch" aria-label="Language">
+                <button type="button" data-lang="en" class="active">EN</button>
+                <span>|</span>
+                <button type="button" data-lang="zh">中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="section-large">
+            <div class="container two-column">
+                <div>
+                    <p class="eyebrow">
+                        <span class="en">Project Case Study</span>
+                        <span class="zh">项目案例</span>
+                    </p>
+                    <h1>Project 3</h1>
+                </div>
+                <div class="measure">
+                    <p class="lead">
+                        <span class="en">This direct project page is reserved for a third selected work, keeping the portfolio structure concise and application-focused.</span>
+                        <span class="zh">该项目页用于第三个精选作品，保持作品集结构简洁并服务于申请阅读。</span>
+                    </p>
+                    <p>
+                        <span class="en">The page is intentionally restrained until verified project content is supplied. It should become a focused design case study rather than a project gallery, resume entry, or marketing page.</span>
+                        <span class="zh">在提供可靠项目内容前，本页保持克制。后续应扩展为聚焦设计思考的案例，而不是项目相册、简历条目或宣传页。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container image-frame">
+                <img src="../images/project1-page2-opera.png" alt="Prepared project visual area">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Joy Li</span>
+            <span>Project 3</span>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll("[data-lang]");
+        const setLang = (lang) => {
+            document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+            document.body.classList.toggle("lang-zh", lang === "zh");
+            buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+            localStorage.setItem("joy-li-lang", lang);
+        };
+        buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.lang)));
+        setLang(localStorage.getItem("joy-li-lang") || "en");
+    </script>
+</body>
+</html>

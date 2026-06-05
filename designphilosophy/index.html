@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy | Joy Li</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="brand" href="../">JOY LI</a>
+            <div class="nav-links">
+                <a href="../whitesnake/">White Snake</a>
+                <a href="../project2/">Project 2</a>
+                <a href="../project3/">Project 3</a>
+                <a href="../designphilosophy/" aria-current="page">Design Philosophy</a>
+            </div>
+            <div class="lang-switch" aria-label="Language">
+                <button type="button" data-lang="en" class="active">EN</button>
+                <span>|</span>
+                <button type="button" data-lang="zh">中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="section-large">
+            <div class="container two-column">
+                <div>
+                    <p class="eyebrow">
+                        <span class="en">Design Philosophy</span>
+                        <span class="zh">设计理念</span>
+                    </p>
+                    <h1>
+                        <span class="en">I believe games are not only systems of play, but systems of communication.</span>
+                        <span class="zh">我相信游戏不仅是玩的系统，也是沟通的系统。</span>
+                    </h1>
+                </div>
+                <div class="measure">
+                    <p class="lead">
+                        <span class="en">I design interactive experiences that help people understand stories, cultures, and emotions by acting inside them.</span>
+                        <span class="zh">我设计互动体验，让人通过行动进入故事、文化与情感，并在其中形成理解。</span>
+                    </p>
+                    <p>
+                        <span class="en">For me, game design begins with a human question: what should the player feel, notice, choose, or care about? Technology matters because it makes that relationship precise and responsive.</span>
+                        <span class="zh">对我来说，游戏设计从一个人的问题开始：玩家应该感受到什么、注意到什么、选择什么、在意什么？技术重要，是因为它让这种关系变得精确且可回应。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container philosophy-list">
+                <article class="philosophy-item">
+                    <h2>
+                        <span class="en">Story</span>
+                        <span class="zh">叙事</span>
+                    </h2>
+                    <p>
+                        <span class="en">Games can make stories participatory. I am interested in how rules, rhythm, and interaction can carry narrative meaning.</span>
+                        <span class="zh">游戏能让故事变得可参与。我关注规则、节奏与互动如何承载叙事意义。</span>
+                    </p>
+                </article>
+                <article class="philosophy-item">
+                    <h2>
+                        <span class="en">Culture</span>
+                        <span class="zh">文化</span>
+                    </h2>
+                    <p>
+                        <span class="en">Games can connect people with traditions that might otherwise feel distant. I want culture to become action, attention, and agency, not decoration.</span>
+                        <span class="zh">游戏可以连接那些原本显得遥远的传统。我希望文化成为行动、注意力与能动性，而不是装饰。</span>
+                    </p>
+                </article>
+                <article class="philosophy-item">
+                    <h2>
+                        <span class="en">Experience</span>
+                        <span class="zh">体验</span>
+                    </h2>
+                    <p>
+                        <span class="en">Games create emotional understanding through interaction. I care about moments when a player does not just receive meaning, but helps produce it.</span>
+                        <span class="zh">游戏通过互动创造情感理解。我在意那些玩家不只是接收意义，而是参与生成意义的时刻。</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Joy Li</span>
+            <span>Design Philosophy</span>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll("[data-lang]");
+        const setLang = (lang) => {
+            document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+            document.body.classList.toggle("lang-zh", lang === "zh");
+            buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+            localStorage.setItem("joy-li-lang", lang);
+        };
+        buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.lang)));
+        setLang(localStorage.getItem("joy-li-lang") || "en");
+    </script>
+</body>
+</html>

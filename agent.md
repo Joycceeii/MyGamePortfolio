@@ -106,8 +106,20 @@ The portfolio should feel like a professional graduate application portfolio, no
 The site should communicate:
 
 ```text
-Joy Li designs interactive experiences through storytelling, culture, and play.
+Designing interactive experiences through storytelling, culture, and play.
 ```
+
+Homepage hierarchy:
+
+```text
+Ideas first
+Projects second
+Designer identity third
+```
+
+The homepage should introduce Joy's ideas before introducing Joy as a person.
+
+Projects are the main characters of the portfolio. Joy is the narrator.
 
 Priority order:
 
@@ -255,18 +267,32 @@ index.html
 
 Purpose:
 
-- Introduce Joy Li
+- Introduce Joy's design ideas before Joy's identity
+- Communicate the themes connecting the work
 - Immediately show the three project cards
 - Let admissions reviewers navigate quickly
 
-Hero message:
+Required landing page structure:
 
 ```text
-JOY LI
-Designing Interactive Experiences Through Storytelling, Culture, and Play.
+Hero Statement
+Three Featured Projects
+Small Designer Signature
 ```
 
-Keep the landing page minimal. Do not turn it into an about page, resume page, or long project list.
+Hero statement:
+
+```text
+INTERACTIVE EXPERIENCE DESIGN
+Designing Interactive Experiences Through Storytelling, Culture, and Play.
+I create games and interactive experiences that explore culture, emotion, and human connection through play.
+```
+
+Do not use a giant `JOY LI` hero.
+
+Joy's name should never be the largest visual element on the homepage.
+
+Keep the landing page minimal and intellectually curious. Do not turn it into an about page, resume page, personal branding site, or long project list.
 
 Project cards should link directly to:
 
@@ -274,6 +300,13 @@ Project cards should link directly to:
 whitesnake/
 project2/
 project3/
+```
+
+Designer signature should appear quietly after the featured projects:
+
+```text
+Joy Li
+Interactive Experience Designer
 ```
 
 ## White Snake Page
@@ -290,23 +323,50 @@ Required section order:
 
 ```text
 Hero Video
-Overview
-Design Goal
-Visual Break I: Act I - West Lake Encounter
-Gameplay Design: Act I
-Visual Break II: Act II - Flooding Jinshan Temple
-Gameplay Design: Act II
-Artistic Direction
-Building Systems for Storytelling
-Challenges & Solutions
-Reflection
-Next Steps
+Project Overview
+Why This Project
+Inspiration
+Narrative Experience
+Gameplay Design
+Art Direction
+Development Process
+Technical Challenges
+Notes From Development
+Future Development
 Next Project
 ```
 
 Do not remove or reorder these sections unless the user gives a new direction.
 
 The current implementation uses available still images as placeholders where the blueprint asks for video/GIF/specific screenshots. If the user later provides actual videos, GIFs, or screenshots, replace the placeholders while preserving the same section structure.
+
+Narrative Experience must document this player journey:
+
+```text
+Opening
+Story Scene 01
+Act I Gameplay
+Story Scene 02
+Act II Gameplay
+Ending
+```
+
+Development Process must include placeholders or final materials for:
+
+- prototype screenshots
+- Unity screenshots
+- implementation screenshots
+- code screenshots
+
+Art Direction must account for:
+
+- Bai Suzhen character assets
+- Fahai character assets
+- environment assets
+- ink wash assets
+- UI assets
+
+Notes From Development replaces the old Reflection section. Do not use old question-and-answer headings.
 
 Important White Snake positioning:
 
@@ -338,7 +398,7 @@ When the user provides new project details, turn each page into a long vertical 
 5. Visual/process evidence
 6. Systems or technical support
 7. Challenges and solutions
-8. Reflection
+8. Notes From Development
 9. Next project link
 
 Update navigation labels when final project names are known.

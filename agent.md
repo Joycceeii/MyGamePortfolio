@@ -1,151 +1,501 @@
-# Agent Guide
+# Agent Guide for Joy Li Portfolio
 
-This repository is a single-page personal game design portfolio website for graduate school applications, especially for a game designer applying to programs in the United States.
+This repository is Joy Li's personal interactive experience design portfolio for graduate school applications, primarily CMU Entertainment Technology Center and secondarily USC Games.
 
-## Must Read First
+The current website is a complete redesign. Do not restore the old single-page architecture, old layouts, old CSS system, old pagination system, hamburger menu, decorative hand-drawn style, or previous portfolio structure.
 
-When starting a new AI conversation for this project, read these files before making changes:
+## Read First
 
-- `agent.md`
-- `index.html`
-- `填空指南.md`
-- `Figma网页排版完全指南.md`
-- `README.md`
+Before making design or content changes, read these files in this order:
 
-Then inspect the current folder tree and run:
+1. `joy_li_portfolio_global_blueprint.md`
+2. `white_snake_project_blueprint.md`
+3. `agent.md`
+4. The page file you are editing
+5. `style.css`
 
-```powershell
-git status --short
-```
+The two blueprint files are the source of truth. If existing code conflicts with a blueprint, follow the blueprint unless the user gives a newer instruction in the conversation.
 
-Do not begin editing until you understand the current HTML structure and the user's intended Figma-based workflow.
+## Current Published Site
 
-## Current Project Shape
-
-- Main website file: `index.html`
-- The website is intentionally a single HTML file with embedded `<style>` and `<script>`.
-- `style.css` is legacy/unused by the current `index.html`; do not rely on it unless the user asks to restore external CSS.
-- No build system is configured.
-- The site should work by opening `index.html` directly in a browser.
-- Supporting documentation:
-  - `填空指南.md`: detailed fill-in guide for replacing text, images, navigation, project content, styles, testing, and GitHub Pages publishing.
-  - `Figma网页排版完全指南.md`: detailed beginner Figma workflow for designing project layouts and pasting exported content into `.section-content`.
-
-## Website Structure
-
-The current `index.html` contains:
-
-- Full-screen welcome section: `#welcome`, `.welcome-section`
-- Fixed top navigation: `.site-nav`
-- Language switching: `.zh` and `.en` elements, controlled by JavaScript
-- Project 1: `#project1.project-shuimo`, intended for the user's `《白蛇传》` project with ink-wash styling
-- Project 2: `#project2.project-handdrawn`
-- Project 3: `#project3.project-handdrawn`
-- About section: `#about.section-about`
-- Empty project content containers: `.section-content`
-- Mobile hamburger navigation
-- Active nav highlighting via `IntersectionObserver`
-- Back-to-top buttons: `.btn-top`
-- A large HTML comment at the end with image replacement, text replacement, and Figma workflow notes
-
-## User Workflow Assumption
-
-The user wants to build layouts visually, like collage work, rather than hand-code coordinates.
-
-Preferred workflow:
-
-1. Design a 900px-wide project section in Figma.
-2. Export HTML/CSS or export a full section image as a fallback.
-3. Place exported images in an `images/` folder.
-4. Paste project layout HTML into the matching `.section-content`.
-5. Update image paths to local paths such as `images/project1-main.png`.
-6. Preview `index.html` in a browser.
-
-If Figma export code is messy, recommend the simple screenshot/image fallback before over-engineering.
-
-## Replacement Conventions
-
-The project uses visible comments for replacement points:
-
-```html
-<!-- 🔧 替换：说明 -->
-```
-
-When adding new replaceable content, keep this convention.
-
-Recommended image folder:
+The site is intended to publish through GitHub Pages as a project site:
 
 ```text
+https://joycceeii.github.io/MyGamePortfolio/
+```
+
+Use relative links so the site works under `/MyGamePortfolio/`.
+
+Required URL structure:
+
+```text
+/MyGamePortfolio/
+/MyGamePortfolio/whitesnake/
+/MyGamePortfolio/project2/
+/MyGamePortfolio/project3/
+/MyGamePortfolio/designphilosophy/
+```
+
+Do not use root-relative links like `/whitesnake/`, because those can break on GitHub Pages project sites.
+
+Use these link patterns:
+
+From `index.html`:
+
+```html
+<a href="whitesnake/">White Snake</a>
+```
+
+From project subpages:
+
+```html
+<a href="../whitesnake/">White Snake</a>
+```
+
+## Current File Structure
+
+```text
+index.html
+style.css
+.nojekyll
+agent.md
+joy_li_portfolio_global_blueprint.md
+white_snake_project_blueprint.md
+
+whitesnake/index.html
+project2/index.html
+project3/index.html
+designphilosophy/index.html
+
 images/
 ```
 
-Recommended image names:
+`index.html` is the landing page.
 
-- `logo-small.png`
-- `welcome-bg.jpg`
-- `welcome-logo.png`
-- `project1-bg.jpg`
-- `project2-bg.jpg`
-- `project3-bg.jpg`
-- `avatar.jpg`
-- `divider.png`
+Each folder route contains an `index.html` so GitHub Pages can serve clean URLs such as `/whitesnake/`.
 
-Use forward slashes in HTML paths:
+`.nojekyll` should stay in the repository so GitHub Pages serves the static folders directly.
 
-```html
-<img src="images/avatar.jpg" alt="头像">
+## Asset Rule
+
+`images/` is the master asset library.
+
+Do not delete, rename, move, compress, overwrite, or modify files inside `images/` unless the user explicitly asks for that exact asset operation.
+
+It is okay to reference existing images from HTML or CSS.
+
+If the user adds new images, treat them as user-owned assets. Add them to Git only when they are used by the site or the user asks to track them.
+
+Current image assets include:
+
+```text
+images/project1-bg.png
+images/white-snake-video-frame.png
+images/project1-page2-arrow.png
+images/project1-page2-controller.png
+images/project1-page2-logo.png
+images/project1-page2-opera.png
+images/project1-page2-plus.png
+images/project1-page2-tape.png
 ```
 
 ## Design Direction
 
-The site is for graduate admissions reviewers, so it should be visually expressive but easy to scan.
+The portfolio should feel like a professional graduate application portfolio, not a student assignment, game studio site, museum exhibition, culture-promotion page, or resume page.
 
-Priorities:
+The site should communicate:
 
-- Clear project storytelling
-- Visible design process and iteration
-- Strong screenshots or visual artifacts
-- Easy reading in English
-- Mobile-friendly layout
-- Polished, gentle, hand-drawn portfolio aesthetic
+```text
+Joy Li designs interactive experiences through storytelling, culture, and play.
+```
 
-Current global visual direction:
+Priority order:
 
-- Cream background: `--bg-cream`
-- Soft pastel accents
-- Rounded paper-like containers
-- Handwritten title fonts
-- Ink-wash style for project 1
-- Playful hand-drawn style for projects 2 and 3
+1. Design thinking
+2. Storytelling
+3. Interactive experience
+4. Technical execution
 
-## Editing Rules
+Technology supports the experience. Do not make technology the main narrative focus.
 
-- Keep `index.html` as the single source of truth unless the user asks to split files.
-- Keep encoding as UTF-8.
-- Preserve Chinese comments and replacement markers.
-- Do not remove bilingual `.zh` / `.en` structure when editing visible text.
-- When adding text, provide both Chinese and English versions where appropriate.
-- Keep project `.section-content` areas flexible for user/Figma content.
-- Avoid introducing frameworks or build tools unless explicitly requested.
-- Do not overwrite user-filled portfolio content.
-- If generated Figma code includes a full `<!DOCTYPE html>`, `<html>`, `<head>`, or `<body>`, do not paste those wrappers into `.section-content`; only paste the relevant inner content and merge CSS into the existing `<style>`.
+## Visual Language
 
-## Verification
+Use a modern international portfolio style:
 
-After edits:
+- editorial
+- minimal
+- elegant
+- contemporary
+- design-focused
+- admissions-friendly
 
-- Read the edited area back with UTF-8.
-- Check that `index.html` still contains one valid document structure.
-- Confirm key anchors still exist: `#welcome`, `#project1`, `#project2`, `#project3`, `#about`.
-- Confirm language switching still uses `.zh`, `.en`, and `body.lang-en`.
-- Confirm navigation links have matching `href="#..."` and `data-target="..."`.
-- Confirm image paths use local `images/...` paths when possible.
-- Preview `index.html` in a browser when feasible.
-- Check desktop and mobile widths, especially the hamburger menu and timeline.
-- Run `git status --short` and report changed files.
+Avoid:
 
-## Known Notes
+- heavy Chinese decoration
+- ancient scroll aesthetics
+- excessive animation
+- visual clutter
+- corporate styling
+- glossy cards
+- long poetic writing
+- decorative calligraphy fonts for interface text
 
-- Earlier mojibake in `index.html` and `style.css` was repaired. If乱码 reappears, fix encoding/content as UTF-8.
-- `style.css` may still show as modified in Git history, but the current website does not import it.
-- The user prefers every assistant answer to end with `水蓝蓝`.
+White Snake may use ink-wash atmosphere, but the page must still feel like an international design case study.
+
+## Typography
+
+English:
+
+```text
+Titles: Cormorant Garamond
+Body: Inter
+```
+
+Chinese:
+
+```text
+Titles: Source Han Serif / Noto Serif SC fallback
+Body: Source Han Sans / Noto Sans SC fallback
+```
+
+Do not reintroduce old decorative fonts such as handwritten or playful display fonts for the main interface.
+
+## Color System
+
+Global colors:
+
+```css
+Paper White: #F8F6F2
+Ink Black: #111111
+Light Gray: #D8D3CC
+Muted Vermilion: #9B3D3D
+```
+
+Use muted vermilion sparingly for:
+
+- active navigation state
+- section numbers
+- small highlights
+- hover states
+- important quotes
+- interaction accents
+
+Do not use muted vermilion as a large background color.
+
+## Spacing System
+
+Use the 8px-based spacing tokens already defined in `style.css`:
+
+```css
+--xs: 8px;
+--s: 16px;
+--m: 24px;
+--l: 48px;
+--xl: 96px;
+--2xl: 160px;
+--3xl: 240px;
+```
+
+Keep the site spacious and calm. Favor readability and visual hierarchy over dense content.
+
+## Layout System
+
+Use the existing shared CSS system in `style.css`.
+
+Key layout patterns:
+
+- `.container`: max-width 1200px
+- `.measure`: readable body text width, max-width 650px
+- `.two-column`: editorial explanation layout
+- `.card-grid`: structured cards
+- `.system-grid`: technical system cards
+- `.visual-break`: full-screen emotional/cinematic break
+- `.project-hero`: full-screen project hero
+
+Do not add a framework or build step unless the user explicitly asks. This is a static HTML/CSS site.
+
+## Navigation Rules
+
+Fixed top navigation should stay visible:
+
+```text
+JOY LI
+White Snake
+Project 2
+Project 3
+Design Philosophy
+EN | Chinese
+```
+
+Rules:
+
+- No dropdown menu
+- No desktop hamburger menu
+- Current page highlighted with `aria-current="page"`
+- Language switch visible at all times
+- Use relative links for GitHub Pages compatibility
+
+## Bilingual System
+
+The site uses `.en` and `.zh` spans plus a small JavaScript language switcher on each page.
+
+Default language: English.
+
+Chinese copy should match the same design intent and tone. It does not need to be word-for-word literal.
+
+If adding visible content, add both English and Chinese unless the user asks otherwise.
+
+## Landing Page
+
+File:
+
+```text
+index.html
+```
+
+Purpose:
+
+- Introduce Joy Li
+- Immediately show the three project cards
+- Let admissions reviewers navigate quickly
+
+Hero message:
+
+```text
+JOY LI
+Designing Interactive Experiences Through Storytelling, Culture, and Play.
+```
+
+Keep the landing page minimal. Do not turn it into an about page, resume page, or long project list.
+
+Project cards should link directly to:
+
+```text
+whitesnake/
+project2/
+project3/
+```
+
+## White Snake Page
+
+File:
+
+```text
+whitesnake/index.html
+```
+
+Follow `white_snake_project_blueprint.md`.
+
+Required section order:
+
+```text
+Hero Video
+Overview
+Design Goal
+Visual Break I: Act I - West Lake Encounter
+Gameplay Design: Act I
+Visual Break II: Act II - Flooding Jinshan Temple
+Gameplay Design: Act II
+Artistic Direction
+Building Systems for Storytelling
+Challenges & Solutions
+Reflection
+Next Steps
+Next Project
+```
+
+Do not remove or reorder these sections unless the user gives a new direction.
+
+The current implementation uses available still images as placeholders where the blueprint asks for video/GIF/specific screenshots. If the user later provides actual videos, GIFs, or screenshots, replace the placeholders while preserving the same section structure.
+
+Important White Snake positioning:
+
+```text
+Using interactive storytelling to reconnect traditional culture with a new generation.
+```
+
+White Snake should read as a design case study. It should not read as a standalone game marketing site or cultural exhibition page.
+
+## Project 2 and Project 3
+
+Files:
+
+```text
+project2/index.html
+project3/index.html
+```
+
+These are placeholder case-study routes until the user provides final project names, content, and assets.
+
+Do not invent detailed project claims. Keep placeholders restrained and professional.
+
+When the user provides new project details, turn each page into a long vertical case study using the same global layout logic:
+
+1. Project hero
+2. Overview
+3. Design goal
+4. Gameplay or interaction design
+5. Visual/process evidence
+6. Systems or technical support
+7. Challenges and solutions
+8. Reflection
+9. Next project link
+
+Update navigation labels when final project names are known.
+
+## Design Philosophy Page
+
+File:
+
+```text
+designphilosophy/index.html
+```
+
+This replaces a traditional About page.
+
+It should be short, thoughtful, and ETC-oriented.
+
+It should answer:
+
+- What kind of designer is Joy?
+- What does Joy care about?
+- Why does Joy make games?
+
+Current structure:
+
+```text
+Design Philosophy
+Story
+Culture
+Experience
+```
+
+Do not turn this page into a biography, resume, or long personal essay.
+
+## CSS Maintenance
+
+File:
+
+```text
+style.css
+```
+
+Keep all shared visual systems here.
+
+Before adding new CSS:
+
+1. Check whether an existing class already fits.
+2. Reuse spacing/color/type variables.
+3. Avoid one-off visual hacks.
+4. Keep cards, images, and sections responsive.
+
+Avoid:
+
+- heavy shadows
+- large gradients
+- decorative blobs
+- excessive border radius
+- dense visual noise
+- viewport-width font scaling
+
+## Local Preview
+
+Because the site uses folder routes, preview it with a local server instead of opening nested HTML files directly.
+
+Recommended command:
+
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
+```
+
+Then open:
+
+```text
+http://127.0.0.1:4173/
+http://127.0.0.1:4173/whitesnake/
+http://127.0.0.1:4173/project2/
+http://127.0.0.1:4173/project3/
+http://127.0.0.1:4173/designphilosophy/
+```
+
+## Verification Checklist
+
+Before committing changes:
+
+1. Check `git status --short`.
+2. Confirm no unintended edits inside `images/`.
+3. Confirm no root-relative page links like `href="/whitesnake/"`.
+4. Confirm required routes load locally:
+   - `/`
+   - `/whitesnake/`
+   - `/project2/`
+   - `/project3/`
+   - `/designphilosophy/`
+5. Confirm navigation current state uses `aria-current="page"`.
+6. Confirm language switch still appears in the top nav.
+7. Confirm English and Chinese spans are present for new visible content.
+8. Confirm the page still feels calm, editorial, and admissions-friendly.
+
+Useful checks:
+
+```powershell
+rg -n 'href="/|src="/' index.html whitesnake project2 project3 designphilosophy
+git status --short
+git diff --stat
+```
+
+## Git Workflow
+
+The main remote is:
+
+```text
+origin https://github.com/Joycceeii/MyGamePortfolio.git
+```
+
+Default branch:
+
+```text
+main
+```
+
+Normal publish flow:
+
+```powershell
+git status
+git add <changed files>
+git commit -m "Clear commit message"
+git push origin main
+```
+
+Do not commit unrelated user changes unless the user asks.
+
+If `agent.md` or blueprint files are updated, it is okay to commit them when the user explicitly asks to update project documentation.
+
+## Current Documentation Files
+
+The blueprint files are now part of the project folder:
+
+```text
+joy_li_portfolio_global_blueprint.md
+white_snake_project_blueprint.md
+```
+
+Future AI agents should use these local files instead of reading copies from Downloads.
+
+Older Chinese guide files may still exist in the repo from the previous website era. They are not the current source of truth for the redesign.
+
+## Non-Goals
+
+Do not:
+
+- rebuild the old single-page portfolio
+- restore old section pagination
+- add a Projects landing page
+- hide project links inside a dropdown
+- use `/white-snake/`, `/project-2/`, or `/project-3/` as final URLs
+- make White Snake a cultural exhibition page
+- make the site look like a game studio marketing site
+- delete or modify assets in `images/`
+- introduce a build system unless requested
+
+The current goal is a clean, static, GitHub Pages-friendly portfolio that presents Joy Li as a thoughtful designer of interactive experiences.

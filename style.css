@@ -15,7 +15,7 @@
     --nav-height: 76px;
     --container: 1200px;
     --measure: 650px;
-    --sans: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+    --sans: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
 }
 
 * {
@@ -607,12 +607,37 @@ h3 {
     gap: var(--l);
 }
 
+.philosophy-hero {
+    padding-top: var(--xl);
+    padding-bottom: var(--xl);
+}
+
+.philosophy-hero h1 {
+    max-width: 760px;
+    margin-bottom: var(--l);
+    font-size: clamp(32px, 3.2vw, 46px);
+    line-height: 1.15;
+}
+
+.philosophy-intro {
+    max-width: 760px;
+}
+
+.philosophy-intro p:last-child {
+    margin-bottom: 0;
+}
+
 .philosophy-item {
     display: grid;
     grid-template-columns: 0.34fr 1fr;
     gap: var(--l);
     border-top: 1px solid rgba(17, 17, 17, 0.14);
     padding-top: var(--l);
+}
+
+.philosophy-item h2 {
+    font-size: clamp(24px, 2.2vw, 32px);
+    line-height: 1.2;
 }
 
 .footer {

@@ -556,8 +556,10 @@ h3 {
 
 .quiet-ending {
     font-family: var(--sans);
-    font-size: clamp(28px, 3vw, 44px);
-    line-height: 1.2;
+    max-width: var(--measure);
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 500;
+    line-height: 1.55;
 }
 
 .quote-band blockquote {
@@ -632,6 +634,16 @@ h3 {
     margin-top: var(--m);
     color: rgba(17, 17, 17, 0.54);
     font-size: 14px;
+}
+
+.level-walkthrough {
+    margin: var(--m) 0;
+    padding-left: 1.4rem;
+}
+
+.level-walkthrough li {
+    margin-bottom: var(--s);
+    padding-left: var(--xs);
 }
 
 @media (max-width: 900px) {

@@ -822,3 +822,25 @@ h3 {
         margin-top: var(--s);
     }
 }
+
+/* Taste Reviver system explanation. */
+#recipe-system { scroll-margin-top: calc(var(--nav-height) + 24px); }
+.taste-table-wrap { margin-top: var(--l); overflow-x: auto; }
+.taste-table-wrap:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 4px; }
+.taste-table { width: 100%; min-width: 580px; border-collapse: collapse; text-align: left; }
+.taste-table caption { text-align: left; padding-bottom: var(--m); font-weight: 600; }
+.taste-table th, .taste-table td { padding: var(--m) var(--s); border-bottom: 1px solid var(--gray); vertical-align: top; }
+.taste-table thead { font-size: 13px; background: var(--gray-soft); }
+.taste-table tbody th { width: 22%; font-weight: 600; }
+.taste-table td { width: 39%; }
+.taste-subsection { margin-top: var(--l); }
+.taste-batches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--l); border-top: 1px solid var(--gray); border-bottom: 1px solid var(--gray); }
+.taste-batches article { padding: var(--m); border-right: 1px solid var(--gray); }
+.taste-batches article:last-child { border-right: 0; }
+.taste-batches h3 { font-size: 24px; }
+.taste-batches article p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) {
+    .taste-batches { grid-template-columns: 1fr; }
+    .taste-batches article { border-right: 0; border-bottom: 1px solid var(--gray); }
+    .taste-batches article:last-child { border-bottom: 0; }
+}

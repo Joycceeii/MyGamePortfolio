@@ -943,3 +943,47 @@ h3 {
 
 .taste-story-evidence { margin-top: var(--l); }
 .taste-story-evidence .taste-evidence-figure { max-width: 1000px; margin-inline: auto; }
+
+/* Compact homepage introduction keeps the three project entries in view. */
+.hero-home {
+    min-height: 0;
+    padding: clamp(32px, 4vw, 56px) 0 24px;
+}
+.hero-home .hero-statement {
+    width: 100%;
+    max-width: var(--container);
+}
+.hero-statement h1 {
+    max-width: 900px;
+    margin-bottom: 16px;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1.15;
+}
+.hero-home .lead {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(16px, 1.4vw, 19px);
+}
+.home-projects {
+    padding-top: 24px;
+}
+.home-project-intro {
+    margin-bottom: 16px;
+}
+.home-project-intro .eyebrow {
+    margin-bottom: 0;
+}
+.home-project-grid .project-card {
+    transition: border-color 160ms ease;
+}
+.home-project-grid .project-card:hover,
+.home-project-grid .project-card:focus-visible {
+    border-color: var(--vermilion);
+}
+.home-project-grid .project-card:focus-visible {
+    outline: 2px solid var(--vermilion);
+    outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .home-project-grid .project-card { transition: none; }
+}

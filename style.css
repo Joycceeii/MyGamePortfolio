@@ -1154,3 +1154,14 @@ h3 {
 .taste-project .page .section-large .lead { color: #686158; }
 .taste-project .page .project-section-layout > div > h2 { margin-bottom: 0; }
 .taste-project .page .project-copy > h2 { margin-bottom: 24px; }
+
+/* Self-playtest notes: text beside a compact, expandable original page. */
+.taste-project .playtest-notes-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px); gap: 40px; align-items: start; }
+.taste-project .playtest-notes-image { width: 100%; max-width: 340px; margin: 0; justify-self: end; }
+.taste-project .playtest-notes-image img { display: block; width: 100%; height: auto; }
+.taste-project .playtest-notes-image figcaption { color: #686158; font-size: 14px; line-height: 1.65; }
+.taste-project .playtest-notes-text > :last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+.taste-project .playtest-notes-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.taste-project .playtest-notes-image { justify-self: start; }
+}

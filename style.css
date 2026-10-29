@@ -1104,17 +1104,17 @@ h3 {
 }
 
 /* Taste Reviver chapter navigation and type scale. */
-.taste-project { font-size: 17px; }
-.taste-project .page h1 { font-size: 48px; }
-.taste-project .page h2 { font-size: 32px; line-height: 1.3; }
-.taste-project .page h3 { font-size: 22px; line-height: 1.4; }
-.taste-project .page .lead { font-size: 17px; line-height: 1.8; }
-.taste-project .page .taste-table { font-size: 16px; line-height: 1.75; }
-.taste-project .page .taste-table thead { font-size: inherit; }
-.taste-project .page .taste-table caption { font-size: 14px; }
-.taste-project .page figcaption, .taste-project .page .script-note { font-size: 14px; line-height: 1.75; }
-.taste-project .page .section-category { font-size: 12px; margin-bottom: 12px; }
-.taste-project .page section[id] { scroll-margin-top: calc(var(--nav-height) + 24px); }
+:is(.taste-project, .white-snake-project) { font-size: 17px; }
+:is(.taste-project, .white-snake-project) .page h1 { font-size: 48px; }
+:is(.taste-project, .white-snake-project) .page h2 { font-size: 32px; line-height: 1.3; }
+:is(.taste-project, .white-snake-project) .page h3 { font-size: 22px; line-height: 1.4; }
+:is(.taste-project, .white-snake-project) .page .lead { font-size: 17px; line-height: 1.8; }
+:is(.taste-project, .white-snake-project) .page .taste-table { font-size: 16px; line-height: 1.75; }
+:is(.taste-project, .white-snake-project) .page .taste-table thead { font-size: inherit; }
+:is(.taste-project, .white-snake-project) .page .taste-table caption { font-size: 14px; }
+:is(.taste-project, .white-snake-project) .page figcaption, :is(.taste-project, .white-snake-project) .page .script-note { font-size: 14px; line-height: 1.75; }
+:is(.taste-project, .white-snake-project) .page .section-category { font-size: 12px; margin-bottom: 12px; }
+:is(.taste-project, .white-snake-project) .page section[id] { scroll-margin-top: calc(var(--nav-height) + 24px); }
 .project-contents { padding-top: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--gray); }
 .contents-title { margin-bottom: 16px; font-size: 14px; font-weight: 600; }
 .project-contents ol { display: flex; flex-wrap: wrap; gap: 16px 32px; list-style: none; padding: 0; margin: 0; }
@@ -1122,38 +1122,38 @@ h3 {
 .project-contents a:hover { text-decoration: underline; }
 .project-contents a:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 5px; }
 @media (max-width: 640px) {
-.taste-project { font-size: 16px; }
-.taste-project .page h1 { font-size: 32px; }
-.taste-project .page h2 { font-size: 26px; }
-.taste-project .page h3 { font-size: 20px; }
-.taste-project .page .lead { font-size: 16px; }
-.taste-project .page .taste-table { font-size: 15px; }
+:is(.taste-project, .white-snake-project) { font-size: 16px; }
+:is(.taste-project, .white-snake-project) .page h1 { font-size: 32px; }
+:is(.taste-project, .white-snake-project) .page h2 { font-size: 26px; }
+:is(.taste-project, .white-snake-project) .page h3 { font-size: 20px; }
+:is(.taste-project, .white-snake-project) .page .lead { font-size: 16px; }
+:is(.taste-project, .white-snake-project) .page .taste-table { font-size: 15px; }
 .project-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 }
 
 /* Consistent title-to-text and paragraph spacing within the case study. */
-.taste-project .page p { margin-top: 0; margin-bottom: 16px; }
-.taste-project .page .project-section-layout { gap: 24px; }
-.taste-project .page h2 { margin-top: 0; margin-bottom: 24px; }
-.taste-project .page .project-section-layout > div > h2 { margin-bottom: 0; }
-.taste-project .page h3 { margin-top: 0; margin-bottom: 16px; }
-.taste-project .page .project-copy > :last-child,
-.taste-project .page .clue-block-body > :last-child,
-.taste-project .page .info-card > :last-child,
-.taste-project .page .csi-card > :last-child { margin-bottom: 0; }
-.taste-project .page .clue-block-heading h3 { margin-bottom: 0; }
-.taste-project .page .section-category { margin-bottom: 12px; }
-.taste-project .page .hint-change p { margin-bottom: 0; }
-.taste-project .page .ws-video-heading h2 { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page p { margin-top: 0; margin-bottom: 16px; }
+:is(.taste-project, .white-snake-project) .page .project-section-layout { gap: 24px; }
+:is(.taste-project, .white-snake-project) .page h2 { margin-top: 0; margin-bottom: 24px; }
+:is(.taste-project, .white-snake-project) .page .project-section-layout > div > h2 { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page h3 { margin-top: 0; margin-bottom: 16px; }
+:is(.taste-project, .white-snake-project) .page .project-copy > :last-child,
+:is(.taste-project, .white-snake-project) .page .clue-block-body > :last-child,
+:is(.taste-project, .white-snake-project) .page .info-card > :last-child,
+:is(.taste-project, .white-snake-project) .page .csi-card > :last-child { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page .clue-block-heading h3 { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page .section-category { margin-bottom: 12px; }
+:is(.taste-project, .white-snake-project) .page .hint-change p { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page .ws-video-heading h2 { margin-bottom: 0; }
 
 .taste-project .feedback-estimate .taste-table { table-layout: auto; }
 .taste-project .feedback-estimate .taste-table th, .taste-project .feedback-estimate .taste-table td { width: auto; }
 .taste-project .feedback-estimate .taste-table th:first-child { width: 40%; }
 
 /* Optional introductions are secondary; chapter text always starts 24px below its title. */
-.taste-project .page .section-large .lead { color: #686158; }
-.taste-project .page .project-section-layout > div > h2 { margin-bottom: 0; }
-.taste-project .page .project-copy > h2 { margin-bottom: 24px; }
+:is(.taste-project, .white-snake-project) .page .section-large .lead { color: #686158; }
+:is(.taste-project, .white-snake-project) .page .project-section-layout > div > h2 { margin-bottom: 0; }
+:is(.taste-project, .white-snake-project) .page .project-copy > h2 { margin-bottom: 24px; }
 
 /* Handwritten page split into two supporting images. */
 .taste-project .playtest-notes-layout { display: block; }
@@ -1166,3 +1166,5 @@ h3 {
 @media (max-width: 600px) {
 .handwritten-notes-pair { grid-template-columns: 1fr; gap: 16px; }
 }
+
+.white-snake-project .page h2 + .lead { margin-top: 24px; }

@@ -873,3 +873,20 @@ h3 {
     .clue-block .taste-table { font-size: 13px; }
     .clue-block .taste-table th, .clue-block .taste-table td { padding: 12px 8px; }
 }
+
+/* White Snake: story and gameplay in one sequence. */
+.ws-story-flow { display: flex; list-style: none; padding: var(--m) 0; margin: var(--l) 0; gap: var(--m); align-items: center; border-block: 1px solid var(--gray); }
+.ws-story-flow li { flex: 1; position: relative; font-size: 13px; line-height: 1.6; padding-right: var(--s); }
+.ws-story-flow li:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 0; color: var(--vermilion); }
+.ws-act { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr); gap: var(--l); padding: var(--l) 0; border-bottom: 1px solid var(--gray); }
+.ws-act h3 { font-size: 30px; }
+.ws-act h4 { font-size: 16px; margin: var(--m) 0 var(--xs); }
+.ws-act h4:first-child { margin-top: 0; }
+.ws-act p { line-height: 1.85; }
+#story-gameplay { scroll-margin-top: calc(var(--nav-height) + var(--m)); }
+@media (max-width: 760px) {
+    .ws-act { grid-template-columns: minmax(0, 1fr); gap: var(--m); }
+    .ws-story-flow { flex-direction: column; align-items: stretch; gap: var(--m); }
+    .ws-story-flow li { padding: 0 0 var(--s); }
+    .ws-story-flow li:not(:last-child)::after { content: '↓'; right: auto; top: auto; bottom: -8px; left: 0; }
+}

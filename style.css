@@ -1168,3 +1168,13 @@ h3 {
 }
 
 .white-snake-project .page h2 + .lead { margin-top: 24px; }
+
+/* Both case studies use the same explicit title and body tokens. */
+.project-detail.white-snake-project, .project-detail.taste-project { --case-title: 48px; --case-section: 32px; --case-subtitle: 22px; --case-body: 17px; }
+:is(.white-snake-project, .taste-project) .page h1 { font-size: var(--case-title); font-weight: 600; line-height: 1.15; }
+:is(.white-snake-project, .taste-project) .page h2 { font-size: var(--case-section); font-weight: 600; line-height: 1.3; }
+:is(.white-snake-project, .taste-project) .page h3 { font-size: var(--case-subtitle); font-weight: 600; line-height: 1.4; }
+:is(.white-snake-project, .taste-project) .journal-notes p { font-size: var(--case-body); }
+@media (max-width: 640px) {
+.project-detail.white-snake-project, .project-detail.taste-project { --case-title: 32px; --case-section: 26px; --case-subtitle: 20px; --case-body: 16px; }
+}

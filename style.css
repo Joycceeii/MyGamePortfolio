@@ -1130,3 +1130,22 @@ h3 {
 .taste-project .page .taste-table { font-size: 15px; }
 .project-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 }
+
+/* Consistent title-to-text and paragraph spacing within the case study. */
+.taste-project .page p { margin-top: 0; margin-bottom: 16px; }
+.taste-project .page .project-section-layout { gap: 24px; }
+.taste-project .page h2 { margin-top: 0; margin-bottom: 24px; }
+.taste-project .page .project-section-layout > div > h2 { margin-bottom: 0; }
+.taste-project .page h3 { margin-top: 0; margin-bottom: 16px; }
+.taste-project .page .project-copy > :last-child,
+.taste-project .page .clue-block-body > :last-child,
+.taste-project .page .info-card > :last-child,
+.taste-project .page .csi-card > :last-child { margin-bottom: 0; }
+.taste-project .page .clue-block-heading h3 { margin-bottom: 0; }
+.taste-project .page .section-category { margin-bottom: 12px; }
+.taste-project .page .hint-change p { margin-bottom: 0; }
+.taste-project .page .ws-video-heading h2 { margin-bottom: 0; }
+
+.taste-project .feedback-estimate .taste-table { table-layout: auto; }
+.taste-project .feedback-estimate .taste-table th, .taste-project .feedback-estimate .taste-table td { width: auto; }
+.taste-project .feedback-estimate .taste-table th:first-child { width: 40%; }

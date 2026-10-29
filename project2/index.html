@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Taste Reviver | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261029-type-navigation">
+    <link rel="stylesheet" href="../style.css?v=20261029-spacing">
 </head>
 <body class="project-detail taste-project">
     <nav class="site-nav" aria-label="Primary navigation">
@@ -79,8 +79,9 @@
             <div class="container">
                 <div class="project-copy">
 
-                    <h2><span class="en">A Journey Across Guangdong</span><span class="zh">走访广东的寻味旅程</span></h2>
-                    <p class="lead"><span class="en">In each city, players encounter a local specialty.</span><span class="zh">每到一座城市，玩家都会遇到一道当地特色菜。</span></p>
+                    <h2><span class="en">A Journey Across Guangdong</span><span class="zh">走访广东的寻味旅程</span></h2></div>
+<div class="project-copy">
+<p class="lead"><span class="en">In each city, players encounter a local specialty.</span><span class="zh">每到一座城市，玩家都会遇到一道当地特色菜。</span></p>
                     <p><span class="en">The grandmother travels across Guangdong looking for food she remembers. Each recipe puzzle is part of that trip.</span><span class="zh">奶奶走访广东，寻找记忆中的食物。玩家在旅途中逐关还原配方。</span></p>
                 </div>
                 <div class="card-grid" style="margin-top: var(--l);">
@@ -122,8 +123,6 @@
 
                     <p class="eyebrow section-category"><span class="en">Gameplay &amp; Levels</span><span class="zh">玩法与关卡</span></p><h2><span class="en">Core Gameplay</span><span class="zh">核心玩法</span></h2>
                     <p class="lead"><span class="en">Set the force, control speed with the mouse, and explore order, batch grouping, and proportion.</span><span class="zh">确定力度、用鼠标控制速度，再探索加入顺序、研磨分批和比例。</span></p>
-                </div>
-                <div class="project-copy">
                     <p>
                         <span class="en">The game takes place at a wooden worktable with a mortar, a stone pestle, and the ingredients required for the current recipe. Players set the grinding force and move the pestle with the mouse to control speed. They also decide the order of addition, which ingredients should be ground together or separately, and how much of each ingredient to use.</span>
                         <span class="zh">游戏画面集中在一张木质工作台上，桌面摆放着研钵、石杵，以及当前配方所需的食材。玩家通过滑条确定力度，用鼠标亲手拖动石杵来控制研磨速度；同时需要拖放食材，决定加入顺序、哪些食材一起研磨或分批处理，以及每种食材的用量。</span>
@@ -200,15 +199,21 @@
 <p class="script-note"><span class="en">The factors 1 / 3 / 3 / 1 count ways to place batch boundaries for each fixed ingredient order. Order and grouping are counted together to avoid duplication. These are distinct action configurations under the stated assumptions, not necessarily distinct evaluated outcomes. Proportion choices would expand the space further.</span><span class="zh">1 / 3 / 3 / 1 表示每个固定顺序下各批次数的边界设置方式。顺序与分批联合计算，避免重复计数。这是上述假设下不同操作配置的数量，不一定对应同样多种判定结果；如果再开放比例，范围还会进一步扩大。</span></p>
 <div class="taste-subsection">
 <h3><span class="en">Reducing trial and error with real-time feedback</span><span class="zh">用实时反馈降低试错成本</span></h3>
-<p class="project-copy"><span class="en">The number of combinations led me to add feedback during grinding, so players could adjust before completing an attempt. The current version includes warnings for excessive force and speed, such as a burnt smell when grinding too fast.</span><span class="zh">看到这么多组合后，我加入了研磨过程中的实时反馈，让玩家不用等整次实验结束，就能发现需要调整的地方。目前已加入力度过重和速度过快时的提示，例如研磨太快时出现烧焦气味的提示。</span></p>
+<p class="project-copy"><span class="en">The number of combinations led me to add feedback during grinding, so players could adjust before completing an attempt. The current version includes warnings for excessive force and speed, such as a burnt smell when the force is too heavy.</span><span class="zh">看到这么多组合后，我加入了研磨过程中的实时反馈，让玩家不用等整次实验结束，就能发现需要调整的地方。目前已加入力度过重和速度过快时的提示，例如力度过重时出现烧焦气味的提示。</span></p>
 <p class="project-copy"><span class="en">Further additions could signal insufficient force or speed, for example through a message about large particles remaining. Ingredient-hover descriptions already introduce each ingredient; they could be expanded with more specific preparation clues for the current level. These extensions remain proposed additions.</span><span class="zh">后续还可以补充力度不足、速度过慢时的反馈，例如提示仍有较大颗粒；现有的鼠标悬停介绍也可以扩展为与当前关卡处理方法有关的更具体线索。这些扩展属于后续设想，与目前已实现的提示分开说明。</span></p>
-<div class="taste-table-wrap" tabindex="0" role="region" aria-label="Theoretical feedback comparison"><table class="taste-table">
-<caption><span class="en">Force and speed: illustrative worst-case estimates</span><span class="zh">力度与速度：理论最坏情况估算</span></caption>
-<thead><tr><th scope="col"><span class="en">Scope</span><span class="zh">范围</span></th><th scope="col"><span class="en">Blind search: maximum failures</span><span class="zh">盲试：最多失败</span></th><th scope="col"><span class="en">Full directional feedback: maximum failures</span><span class="zh">完整方向反馈：最多失败</span></th><th scope="col"><span class="en">Reduction in the bound</span><span class="zh">上限减少</span></th></tr></thead>
-<tbody><tr><th scope="row"><span class="en">Force: 3 settings</span><span class="zh">力度：3 档</span></th><td>2</td><td>1</td><td>1 / 50%</td></tr>
-<tr><th scope="row"><span class="en">Speed: 3 settings</span><span class="zh">速度：3 档</span></th><td>2</td><td>1</td><td>1 / 50%</td></tr>
-<tr><th scope="row"><span class="en">Force × speed: 9 pairs</span><span class="zh">力度 × 速度：9 种组合</span></th><td>8</td><td>2</td><td>6 / 75%</td></tr></tbody></table></div>
-<p class="script-note"><span class="en">Assumptions: one batch, one correct setting per dimension, other variables fixed. Blind search does not repeat settings or pairs and receives no informative feedback. The guided strategy starts at Medium and receives clear too-low / correct / too-high feedback for each dimension. It resolves one dimension at a time and retains correct settings: at most one failed probe per dimension, then correction. Together, this permits at most two failed probes followed by a successful confirmation. These are strategy-specific upper bounds, not average savings or playtest results. They do not reduce the 216,000 configurations above by 75%. The current one-sided warnings and proposed hover clues are not assigned a numerical benefit.</span><span class="zh">估算假设：只考虑一批食材，每个维度只有一个正确档位，其他条件固定。盲试不重复尝试档位或组合，且没有可用于排除选项的反馈。引导策略从中档开始，能明确区分偏低、正确、偏高，逐个解决维度并保留正确设置：每个维度最多错一次后即可修正，合计最多两次失败，再成功确认。这是特定策略下的最坏情况上限比较，不是平均节省次数或实测结果，也不能据此将上面的 216,000 种配置直接减少 75%。目前只有偏高方向的提示，以及设想中的悬停线索，暂不单独量化收益。</span></p>
+
+</div>
+<div class="taste-subsection">
+<h3><span class="en">How aroma feedback narrows force choices</span><span class="zh">气味反馈能排除哪些力度选择</span></h3>
+<p class="project-copy"><span class="en">A burnt smell means the force is too heavy; little aroma means it is too light. Together with the current force setting, these messages let players rule out choices. For example, a burnt smell at Heavy leaves Light or Medium; at Medium, it points to Light. Little aroma at Medium points to Heavy.</span><span class="zh">烧焦的气味表示力度过重，香味还没有散发出来表示力度过轻。玩家结合当前档位，就能排除一些选择：重档出现焦味，还剩轻、中两档；中档出现焦味，就可以判断应改为轻档；中档提示香味未散发，则应改为重档。</span></p>
+<p class="project-copy"><span class="en">Even a small cue can help players rule out ineffective choices. As these cues accumulate across batches, they can substantially narrow the combinations players need to consider, reducing the cost of blind trial and error.</span><span class="zh">一个小小的提示，就能帮助玩家排除一些无效选择。当这些线索在不同批次中逐步积累时，需要考虑的组合也会大幅减少，从而降低盲目试错的成本。</span></p>
+<div class="taste-table-wrap feedback-estimate" tabindex="0" role="region" aria-label="Force clue configuration estimates"><table class="taste-table">
+<caption><span class="en">Four ingredients: force clues only, with speed unchanged</span><span class="zh">四种食材：只计算力度提示，速度仍保留三档</span></caption>
+<thead><tr><th scope="col"><span class="en">Information available for each batch</span><span class="zh">每批获得的信息</span></th><th scope="col"><span class="en">Force choices left</span><span class="zh">剩余力度</span></th><th scope="col"><span class="en">Force × speed per batch</span><span class="zh">每批力度 × 速度组合</span></th><th scope="col"><span class="en">Total configurations</span><span class="zh">总操作组合</span></th></tr></thead>
+<tbody><tr><th scope="row"><span class="en">No force choice excluded</span><span class="zh">尚未排除力度档位</span></th><td>3</td><td>3 × 3 = 9</td><td>216,000</td></tr>
+<tr><th scope="row"><span class="en">Heavy produces a burnt smell, or Light produces little aroma</span><span class="zh">重档出现焦味，或轻档香味未散发</span></th><td>2</td><td>2 × 3 = 6</td><td>49,392</td></tr>
+<tr><th scope="row"><span class="en">Medium produces a burnt smell or little aroma</span><span class="zh">中档出现焦味或香味未散发</span></th><td>1</td><td>1 × 3 = 3</td><td>4,608</td></tr></tbody></table></div>
+<p class="script-note"><span class="en">Conditional estimates using the earlier four-ingredient model: each ingredient is used once, proportion is fixed, and all orders and batch groupings remain open. If each batch has q force–speed choices, the total is 24 × (q + 3q² + 3q³ + q⁴). Each row assumes equally informative feedback is available for every batch in every candidate grouping, with one correct force setting and a reliable direction of error. Feedback must be obtained during play and can change with ingredient combinations; a single message does not immediately reduce the entire game to the number shown. These counts describe remaining configurations under those assumptions, not failed attempts or measured player performance.</span><span class="zh">这是沿用前面四种食材模型的条件估算：每种食材使用一次，比例固定，加入顺序与分批方式仍全部开放。每批若剩 q 种力度与速度组合，总数为 24 ×（q＋3q²＋3q³＋q⁴）。每行假设所有候选分组中的每一批，都已获得同等程度的反馈，且每批只有一个正确力度，反馈能可靠指出偏重或偏轻。反馈需要在操作中获得，也会随食材搭配改变；不能把一次提示理解为整个游戏立即缩减到表中的数量。这里计算的是假设条件下剩余的操作组合，不是失败次数或玩家实测结果。</span></p>
 </div>
 <h3><span class="en">From guided learning to independent deduction</span><span class="zh">从逐步教学到独立推理</span></h3>
 <div class="card-grid taste-subsection">
@@ -250,10 +255,9 @@
             <div class="container project-section-layout">
                 <div>
 
-                    <h2><span class="en">One Level Example</span><span class="zh">一个关卡示例</span></h2>
-                    <p class="lead"><span class="en">L12 asks players to use notes from L07, L10, and L11.</span><span class="zh">L12 需要用到 L07、L10 和 L11 的记录。</span></p>
-                </div>
-                <div class="project-copy">
+                    <h2><span class="en">One Level Example</span><span class="zh">一个关卡示例</span></h2></div>
+<div class="project-copy">
+<p class="lead"><span class="en">L12 asks players to use notes from L07, L10, and L11.</span><span class="zh">L12 需要用到 L07、L10 和 L11 的记录。</span></p>
                     <h3><span class="en">L12 — Douchi-Scallion Mastery</span><span class="zh">L12 — 豆豉葱香综合关</span></h3>
                     <p><span class="en">L12 provides no new hints. Players use notes from L07, L10, and L11 to work out force, speed, order, batch grouping, and proportion for one recipe.</span><span class="zh">L12 不提供任何新提示。玩家需要查阅 L07、L10 和 L11 的记录，确定这道配方的力度、速度、加入顺序、研磨分批与比例。</span></p>
                     <ol class="level-walkthrough">

@@ -1159,7 +1159,7 @@ h3 {
 .taste-project .playtest-notes-layout { display: block; }
 .taste-project .playtest-notes-text { max-width: none; }
 .taste-project .playtest-notes-image { max-width: 900px; margin: 24px 0 0; }
-.handwritten-notes-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.handwritten-notes-pair { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; align-items: start; }
 .handwritten-notes-pair a { display: block; min-width: 0; }
 .handwritten-notes-pair img { display: block; width: 100%; height: auto; }
 .taste-project .playtest-notes-image figcaption { color: #686158; font-size: 14px; line-height: 1.65; }

@@ -1165,3 +1165,12 @@ h3 {
 .taste-project .playtest-notes-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 .taste-project .playtest-notes-image { justify-self: start; }
 }
+
+/* Keep the note and its explanation together within a readable composition. */
+.taste-project .playtest-notes-section .playtest-notes-layout { width: 100%; max-width: 960px; margin-inline: auto; grid-template-columns: minmax(0, 1fr) 340px; gap: 56px; align-items: center; }
+.taste-project .playtest-notes-text h3 { margin-bottom: 24px; }
+.taste-project .playtest-notes-text p { line-height: 1.8; }
+@media (max-width: 760px) {
+.taste-project .playtest-notes-section .playtest-notes-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.taste-project .playtest-notes-image { justify-self: center; }
+}

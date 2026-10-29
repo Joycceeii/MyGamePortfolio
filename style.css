@@ -844,3 +844,32 @@ h3 {
     .taste-batches article { border-right: 0; border-bottom: 1px solid var(--gray); }
     .taste-batches article:last-child { border-bottom: 0; }
 }
+/* Long-form clue iteration: separate the topic labels from readable content. */
+.clue-iteration { scroll-margin-top: calc(var(--nav-height) + var(--m)); }
+.clue-section-header { max-width: 820px; margin-bottom: var(--l); }
+.clue-section-header h2 { margin-bottom: var(--m); }
+.clue-section-header .lead { margin-bottom: 0; }
+.clue-block { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: var(--l); padding: var(--l) 0; border-top: 1px solid var(--gray); }
+.clue-block-heading .eyebrow { margin-bottom: var(--s); font-variant-numeric: tabular-nums; }
+.clue-block-heading h3 { font-size: 23px; line-height: 1.4; margin-bottom: 0; }
+.clue-block-body { min-width: 0; }
+.clue-block-body > p { max-width: 760px; line-height: 1.85; }
+.clue-block-body > :last-child { margin-bottom: 0; }
+.clue-block .taste-table-wrap { margin: var(--m) 0; }
+.clue-block .taste-table { min-width: 0; table-layout: fixed; font-size: 14px; line-height: 1.75; }
+.clue-block .taste-table caption { font-size: 13px; font-weight: 500; color: #605a53; padding-bottom: var(--s); }
+.clue-block .taste-table th, .clue-block .taste-table td { padding: var(--s); overflow-wrap: anywhere; }
+.clue-block .taste-table th:first-child, .clue-block .taste-table td:first-child { width: 20%; }
+.clue-block .taste-table td { width: 40%; }
+.clue-block .script-note { padding: var(--s) 0 var(--s) var(--m); border-left: 2px solid var(--gray); font-size: 13px; color: #605a53; }
+@media (max-width: 1000px) {
+    .clue-block { grid-template-columns: 180px minmax(0, 1fr); gap: var(--m); }
+}
+@media (max-width: 760px) {
+    .clue-block { grid-template-columns: minmax(0, 1fr); gap: var(--m); padding: var(--l) 0; }
+    .clue-block-heading { display: flex; align-items: baseline; gap: var(--s); }
+    .clue-block-heading .eyebrow { margin: 0; }
+    .clue-block-heading h3 { font-size: 22px; }
+    .clue-block .taste-table { font-size: 13px; }
+    .clue-block .taste-table th, .clue-block .taste-table td { padding: 12px 8px; }
+}

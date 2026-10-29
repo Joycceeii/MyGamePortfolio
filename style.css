@@ -917,3 +917,29 @@ h3 {
     .ws-art-source img { height: auto; }
     .ws-art-drawing .ws-art-image { height: 380px; }
 }
+
+/* Match the comparison frames; crop references while preserving complete drawn poses. */
+.ws-art-image { height: 440px; overflow: hidden; }
+.ws-art-source img { object-fit: cover; object-position: 58% 50%; }
+.ws-art-costume img { object-position: 82% 50%; }
+.ws-art-pair-drawing img { transform: scale(1.16); transform-origin: 50% 63%; }
+.ws-background-figure { margin: var(--m) 0 0; }
+.ws-background-figure img { display: block; width: 100%; height: auto; }
+.ws-background-figure figcaption { padding-top: var(--s); font-size: 13px; color: #605a53; }
+@media (max-width: 760px) {
+    .ws-art-source .ws-art-image, .ws-art-drawing .ws-art-image { height: 360px; }
+    .ws-art-source img { height: 100%; }
+}
+
+/* Taste Reviver screenshots document feedback and records. */
+.taste-feedback-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--m); margin-top: var(--l); }
+.taste-evidence-figure { margin: 0; min-width: 0; }
+.taste-evidence-figure a { display: block; }
+.taste-evidence-figure img { display: block; width: 100%; height: auto; }
+.taste-evidence-figure figcaption { padding-top: var(--s); font-size: 13px; line-height: 1.7; color: #605a53; }
+.taste-log-evidence { margin-top: var(--l); }
+.taste-log-evidence .taste-evidence-figure { max-width: 1000px; margin-inline: auto; }
+@media (max-width: 760px) { .taste-feedback-evidence { grid-template-columns: minmax(0, 1fr); gap: var(--l); } }
+
+.taste-story-evidence { margin-top: var(--l); }
+.taste-story-evidence .taste-evidence-figure { max-width: 1000px; margin-inline: auto; }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Taste Reviver | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261029-story-art">
+    <link rel="stylesheet" href="../style.css?v=20261028-gameplay">
 </head>
 <body>
     <nav class="site-nav" aria-label="Primary navigation">
@@ -63,6 +63,13 @@
                     </p>
                     <p><span class="en">The player works with ingredients supplied by each level, tests their preparation, and uses feedback and unlocked clues to reconstruct the missing method. The larger story connects these recipe puzzles to the grandmother and her remembered flavors.</span><span class="zh">每关提供指定食材，玩家通过尝试处理方式、读取反馈与解锁线索，逐步还原缺失的方法。整体故事则将这些配方谜题与奶奶及她记忆中的味道联系起来。</span></p>
                 </div>
+            </div>
+        </section>
+        <section class="ws-gameplay-preview" aria-label="Gameplay video">
+            <div class="container">
+                <div class="ws-video-heading"><h2><span class="en">Gameplay Video</span><span class="zh">游戏实录</span></h2><span class="ws-video-status"><span class="en">Video coming soon</span><span class="zh">视频即将上线</span></span></div>
+                <!-- Set data-video-src to ../videos/taste-reviver-gameplay.mp4 when ready. -->
+                <video class="ws-gameplay-video" data-video-src="" poster="../images/taste-grandmother-storybook.png" preload="none" playsinline aria-label="The Taste Reviver gameplay recording">Your browser does not support HTML video.</video>
             </div>
         </section>
 
@@ -356,6 +363,12 @@
     </footer>
 
     <script>
+        const gameplayVideo = document.querySelector('.ws-gameplay-video');
+        if (gameplayVideo.dataset.videoSrc) {
+            gameplayVideo.src = gameplayVideo.dataset.videoSrc;
+            gameplayVideo.controls = true;
+            document.querySelector('.ws-video-status').hidden = true;
+        }
         const buttons = document.querySelectorAll("[data-lang]");
         const setLang = (lang) => {
             document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";

@@ -1005,3 +1005,9 @@ h3 {
     .home-project-grid { grid-template-columns: minmax(0, 1fr); }
     .home-project-grid .project-card-body { padding: 24px 16px; }
 }
+/* Dedicated gameplay section after the project overview. */
+.ws-gameplay-preview { padding: 0 0 32px; }
+.ws-video-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.ws-video-heading h2 { font-size: 26px; margin: 0; }
+.ws-video-status { color: #686158; font-size: 13px; }
+.ws-gameplay-video { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--ink); object-fit: contain; }

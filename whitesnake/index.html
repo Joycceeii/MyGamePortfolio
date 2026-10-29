@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Snake | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261029-art-crop">
+    <link rel="stylesheet" href="../style.css?v=20261028-gameplay">
 </head>
 <body>
     <nav class="site-nav" aria-label="Primary navigation">
@@ -72,6 +72,13 @@
                         <span class="zh">设计重点是让玩家通过互动感受故事：聆听、预判、回应，并逐渐理解这个传说中的情感节奏。</span>
                     </p>
                 </div>
+            </div>
+        </section>
+        <section class="ws-gameplay-preview" aria-label="Gameplay video">
+            <div class="container">
+                <div class="ws-video-heading"><h2><span class="en">Gameplay Video</span><span class="zh">游戏实录</span></h2><span class="ws-video-status"><span class="en">Video coming soon</span><span class="zh">视频即将上线</span></span></div>
+                <!-- Set data-video-src to ../videos/white-snake-gameplay.mp4 when ready. -->
+                <video class="ws-gameplay-video" data-video-src="" poster="../images/white-snake-bridge-background.jpg" preload="none" playsinline aria-label="White Snake gameplay recording">Your browser does not support HTML video.</video>
             </div>
         </section>
 
@@ -250,6 +257,12 @@
     </main>
 
     <script>
+        const gameplayVideo = document.querySelector('.ws-gameplay-video');
+        if (gameplayVideo.dataset.videoSrc) {
+            gameplayVideo.src = gameplayVideo.dataset.videoSrc;
+            gameplayVideo.controls = true;
+            document.querySelector('.ws-video-status').hidden = true;
+        }
         const buttons = document.querySelectorAll("[data-lang]");
         const setLang = (lang) => {
             document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";

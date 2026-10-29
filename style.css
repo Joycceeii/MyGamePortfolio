@@ -1178,3 +1178,10 @@ h3 {
 @media (max-width: 640px) {
 .project-detail.white-snake-project, .project-detail.taste-project { --case-title: 32px; --case-section: 26px; --case-subtitle: 20px; --case-body: 16px; }
 }
+
+/* One heading with three related learning stages. */
+.taste-project .learning-progression { margin-top: 40px; }
+.taste-project .page .learning-progression > h3 { margin-bottom: 16px; }
+.taste-project .learning-progression-grid { margin-top: 0; padding-top: 20px; border-top: 1px solid var(--gray); }
+.taste-project .learning-progression-grid > .csi-card { border-top: 0; padding-top: 0; }
+.taste-project .page .learning-progression-grid h3 { font-size: 20px; margin-bottom: 12px; }

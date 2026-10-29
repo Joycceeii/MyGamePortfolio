@@ -890,3 +890,13 @@ h3 {
     .ws-story-flow li { padding: 0 0 var(--s); }
     .ws-story-flow li:not(:last-child)::after { content: '↓'; right: auto; top: auto; bottom: -8px; left: 0; }
 }
+
+/* Reference images retain their full frames and original proportions. */
+.ws-reference-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--m); margin-top: var(--l); }
+.ws-reference { margin: 0; min-width: 0; }
+.ws-reference-image { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: var(--gray-soft); }
+.ws-reference img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.ws-reference figcaption { padding-top: var(--m); }
+.ws-reference figcaption .eyebrow { margin-bottom: var(--xs); }
+.ws-reference figcaption > p:last-child { margin-bottom: 0; max-width: 540px; }
+@media (max-width: 760px) { .ws-reference-grid { grid-template-columns: minmax(0, 1fr); gap: var(--l); } }

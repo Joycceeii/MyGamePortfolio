@@ -1049,3 +1049,9 @@ h3 {
     .project-detail .taste-table tbody th { width: 18%; }
     .project-detail .taste-table td { width: 41%; }
 }
+/* Section titles occupy their own row rather than a narrow left column. */
+.project-section-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.project-section-layout > * { min-width: 0; }
+.project-section-layout h2 { width: 100%; max-width: none; margin-bottom: 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }
+.project-section-layout .project-copy { width: 100%; max-width: none; }
+.project-section-layout .project-copy > :last-child { margin-bottom: 0; }

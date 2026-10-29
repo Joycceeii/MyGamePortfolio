@@ -1149,3 +1149,8 @@ h3 {
 .taste-project .feedback-estimate .taste-table { table-layout: auto; }
 .taste-project .feedback-estimate .taste-table th, .taste-project .feedback-estimate .taste-table td { width: auto; }
 .taste-project .feedback-estimate .taste-table th:first-child { width: 40%; }
+
+/* Optional introductions are secondary; chapter text always starts 24px below its title. */
+.taste-project .page .section-large .lead { color: #686158; }
+.taste-project .page .project-section-layout > div > h2 { margin-bottom: 0; }
+.taste-project .page .project-copy > h2 { margin-bottom: 24px; }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Taste Reviver | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261028-hint-arrows">
+    <link rel="stylesheet" href="../style.css?v=20261029-type-navigation">
 </head>
-<body class="project-detail">
+<body class="project-detail taste-project">
     <nav class="site-nav" aria-label="Primary navigation">
         <div class="nav-inner">
             <a class="brand" href="../">JOY LI</a>
@@ -48,12 +48,14 @@
                 </div>
             </div>
         </header>
+<nav class="project-contents container" aria-label="Project contents"><p class="contents-title"><span class="en">Contents</span><span class="zh">目录</span></p><ol><li><a href="#project-introduction"><span class="en">Project Introduction</span><span class="zh">项目介绍</span></a></li><li><a href="#gameplay-levels"><span class="en">Gameplay &amp; Levels</span><span class="zh">玩法与关卡</span></a></li><li><a href="#clue-iteration"><span class="en">Iteration</span><span class="zh">迭代过程</span></a></li><li><a href="#story-art"><span class="en">Story &amp; Art</span><span class="zh">故事与美术</span></a></li><li><a href="#development-outlook"><span class="en">Development &amp; Outlook</span><span class="zh">开发与展望</span></a></li></ol></nav>
 
-        <section class="section-large">
+
+        <section class="section-large" id="project-introduction">
             <div class="container project-section-layout">
                 <div>
 
-                    <h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2>
+                    <p class="eyebrow section-category"><span class="en">Project Introduction</span><span class="zh">项目介绍</span></p><h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2>
                 </div>
                 <div class="project-copy">
                     <p class="lead"><span class="en">Each level supplies a fixed set of ingredients. Players work out how to prepare them.</span><span class="zh">每关提供固定的食材，制作方法需要玩家自己找出来。</span></p>
@@ -114,11 +116,11 @@
             </div>
         </section>
 
-        <section class="section-large">
+        <section class="section-large" id="gameplay-levels">
             <div class="container project-section-layout">
                 <div>
 
-                    <h2><span class="en">Core Gameplay</span><span class="zh">核心玩法</span></h2>
+                    <p class="eyebrow section-category"><span class="en">Gameplay &amp; Levels</span><span class="zh">玩法与关卡</span></p><h2><span class="en">Core Gameplay</span><span class="zh">核心玩法</span></h2>
                     <p class="lead"><span class="en">Set the force, control speed with the mouse, and explore order, batch grouping, and proportion.</span><span class="zh">确定力度、用鼠标控制速度，再探索加入顺序、研磨分批和比例。</span></p>
                 </div>
                 <div class="project-copy">
@@ -270,7 +272,7 @@
 
 <section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Why Grinding?</span><span class="zh">为什么选择研磨？</span></h2></div><div class="project-copy"><p class="lead"><span class="en">I chose grinding because it felt like a natural way to bring different ingredients together. Compared with stir-frying or juicing, it better suited the ingredient-combination process I wanted players to explore: ingredients are worked together in the mortar to form a blend. This made grinding a fitting central interaction for the recipe puzzles.</span><span class="zh">我选择研磨，是因为这个动作能很自然地把不同食材结合起来。相比炒菜或榨汁，研磨更贴合我想让玩家探索的食材组合过程：把食材放进研钵，通过研磨逐渐融合。因此，我把它作为配方解谜的核心操作。</span></p></div></div></section>
 <section class="section-large clue-iteration" id="clue-iteration"><div class="container">
-<header class="clue-section-header"><h2><span class="en">Iteration Process</span><span class="zh">迭代过程</span></h2></header>
+<header class="clue-section-header"><p class="eyebrow section-category"><span class="en">Iteration</span><span class="zh">迭代过程</span></p><h2><span class="en">Iteration Process</span><span class="zh">迭代过程</span></h2></header>
 <article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Reducing the search space</span><span class="zh">缩小尝试范围</span></h3></div><div class="clue-block-body"><p><span class="en">I initially considered six dimensions. With several ingredients, evaluating every variable at once created too many possible combinations. I reduced the system to the current five dimensions, used fixed settings such as the three force and speed tiers, and identified the dimensions checked by each level. This gave players a smaller, clearer space in which to reason.</span><span class="zh">最初我考虑过六个维度。多个食材与多个变量同时叠加，会产生过多组合。因此，我将系统缩减为目前的五个维度，为力度与速度等操作提供固定档位，并明确每关考察哪些维度，让玩家在更清晰、更有限的范围内推理。</span></p></div></article>
 <article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Trying aroma-based feedback</span><span class="zh">尝试用气味提供反馈</span></h3></div><div class="clue-block-body"><p><span class="en">I initially wanted changes in aroma to provide real-time clues about grinding force. For example, applying heavier or lighter force to a spice would produce different aroma descriptions, allowing players to infer how to adjust their handling. During play, however, I found these descriptions difficult to interpret. Even when players understood a force-related cue, it did not provide enough information about the other dimensions needed to solve the recipe.</span><span class="zh">最初，我希望通过研磨时气味的变化提供实时反馈，暗示可能需要的力度。例如，对香料施加较重或较轻的力度时，会出现不同的气味描述，让玩家据此推理该如何调整。但实际游玩时，我发现这些描述并不容易理解。即使理解了关于力度的暗示，玩家仍然缺少其他维度的线索，难以仅凭气味反馈推导出完整的制作方法。</span></p></div></article>
 <article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Example: dried tangerine peel</span><span class="zh">以陈皮为例</span></h3></div><div class="clue-block-body">
@@ -324,18 +326,18 @@
 
 
 
-<section class="section-large"><div class="container project-section-layout">
-<div><h2><span class="en">A Journey Like a Storybook</span><span class="zh">像翻阅童话书一样的旅程</span></h2></div>
+<section class="section-large" id="story-art"><div class="container project-section-layout">
+<div><p class="eyebrow section-category"><span class="en">Story &amp; Art</span><span class="zh">故事与美术</span></p><h2><span class="en">A Journey Like a Storybook</span><span class="zh">像翻阅童话书一样的旅程</span></h2></div>
 <div class="project-copy">
 <p><span class="en">I chose a grandmother as the protagonist because she can feel familiar and approachable. I hoped players could connect her with someone in their own family and find a personal way into her search for remembered flavors.</span><span class="zh">我选择奶奶作为主人公，是因为奶奶是一个让人感到亲切的形象。我希望玩家能从她身上想到自己的家人，对她寻找记忆中味道的旅程产生共鸣。</span></p>
 <p><span class="en">The game offers two ways of relating to her. During the recipe levels, players take her first-person perspective, handling ingredients and reconstructing the preparation themselves. In the story scenes, they watch her journey from outside, almost as a grandchild following a loved one's search for familiar recipes.</span><span class="zh">游戏里有两种与她相处的视角。进入配方关卡时，玩家代入奶奶，以第一人称亲手处理食材、还原做法；在故事画面中，玩家又从第三人称观看她的旅程，像是她的孙辈，跟随一位亲人寻找记忆中的配方。</span></p>
 <p><span class="en">I wanted players both to take part in her work and to feel close to her as a family member. I drew the story artwork myself, using a picture-book style to tell her journey through Guangdong.</span><span class="zh">我希望玩家既能亲自参与她的寻味过程，也能带着家人的感情看待这段旅程。我亲手绘制故事美术，用绘本的形式呈现她走访广东的经历。</span></p>
 </div></div><div class="container taste-story-evidence"><figure class="taste-evidence-figure"><a href="../images/taste-grandmother-storybook.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-grandmother-storybook.png" alt="Illustrated introduction before Level 4 showing the grandmother with peanut and black sesame, the ingredients used in that level" width="1905" height="1063" loading="lazy"></a><figcaption><span class="en">The introduction before Level 4 connects the story to the next recipe: peanut and black sesame are the ingredients players will use, while the background architecture refers to the city the grandmother is visiting. The page leads into the level’s separate-batch preparation.</span><span class="zh">第四关开始前的引导页。花生与黑芝麻是本关会用到的食材，背景建筑则对应奶奶所在的城市。这页把城市、故事和下一关的食材联系起来，再衔接到分批处理的玩法。</span></figcaption></figure></div></section>
-        <section class="section-large">
+        <section class="section-large" id="development-outlook">
             <div class="container project-section-layout">
                 <div>
 
-                    <h2><span class="en">Development</span><span class="zh">开发实现</span></h2>
+                    <p class="eyebrow section-category"><span class="en">Development &amp; Outlook</span><span class="zh">开发与展望</span></p><h2><span class="en">Development</span><span class="zh">开发实现</span></h2>
                 </div>
                 <div class="project-copy">
                     <p>

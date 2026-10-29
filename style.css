@@ -1102,3 +1102,31 @@ h3 {
     .hint-change { grid-template-columns: minmax(0, 1fr); gap: 8px; }
     .hint-change-arrow { justify-self: start; transform: rotate(90deg); }
 }
+
+/* Taste Reviver chapter navigation and type scale. */
+.taste-project { font-size: 17px; }
+.taste-project .page h1 { font-size: 48px; }
+.taste-project .page h2 { font-size: 32px; line-height: 1.3; }
+.taste-project .page h3 { font-size: 22px; line-height: 1.4; }
+.taste-project .page .lead { font-size: 17px; line-height: 1.8; }
+.taste-project .page .taste-table { font-size: 16px; line-height: 1.75; }
+.taste-project .page .taste-table thead { font-size: inherit; }
+.taste-project .page .taste-table caption { font-size: 14px; }
+.taste-project .page figcaption, .taste-project .page .script-note { font-size: 14px; line-height: 1.75; }
+.taste-project .page .section-category { font-size: 12px; margin-bottom: 12px; }
+.taste-project .page section[id] { scroll-margin-top: calc(var(--nav-height) + 24px); }
+.project-contents { padding-top: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--gray); }
+.contents-title { margin-bottom: 16px; font-size: 14px; font-weight: 600; }
+.project-contents ol { display: flex; flex-wrap: wrap; gap: 16px 32px; list-style: none; padding: 0; margin: 0; }
+.project-contents a { color: var(--vermilion); font-size: 15px; text-underline-offset: 5px; }
+.project-contents a:hover { text-decoration: underline; }
+.project-contents a:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 5px; }
+@media (max-width: 640px) {
+.taste-project { font-size: 16px; }
+.taste-project .page h1 { font-size: 32px; }
+.taste-project .page h2 { font-size: 26px; }
+.taste-project .page h3 { font-size: 20px; }
+.taste-project .page .lead { font-size: 16px; }
+.taste-project .page .taste-table { font-size: 15px; }
+.project-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+}

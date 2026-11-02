@@ -1223,3 +1223,16 @@ h3 {
 /* Home page White Snake calligraphy cover. */
 .home-cover.home-cover-white-snake { background: #fff; }
 .home-cover-white-snake img { object-fit: contain; object-position: center; }
+
+/* Home page: other work and a compact personal introduction. */
+.home-cover-dungeon { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; background: #e7e8d9; color: #273c31; }
+.dungeon-cover-kicker { font-size: 11px; letter-spacing: .16em; }
+.dungeon-cover-title { font-size: clamp(30px, 3vw, 46px); font-weight: 600; line-height: 1.1; }
+.dungeon-cover-subtitle { font-size: 15px; }
+.home-about { scroll-margin-top: calc(var(--nav-height) + 24px); }
+.home-about-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; border-top: 1px solid var(--gray); padding-top: 40px; }
+.home-about h2 { margin-bottom: 0; }
+.home-about-copy { max-width: 720px; }
+.home-about-copy p { font-size: 17px; line-height: 1.8; }
+.home-about-copy p:last-child { margin-bottom: 0; }
+@media (max-width: 680px) { .home-about-layout { grid-template-columns: 1fr; gap: 24px; } .home-about-copy p { font-size: 16px; } }

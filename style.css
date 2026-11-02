@@ -1260,3 +1260,17 @@ h3 {
 .about-group-photo { margin: 24px 0 0; }
 .about-group-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
 .about-group-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }
+
+/* About Me: photographs support the creative perspective. */
+.about-interest-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--gray); }
+.about-interest-section h2 { font-size: 26px; line-height: 1.35; margin-bottom: 20px; }
+.about-interest-section > p { max-width: 800px; }
+.about-culture-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.about-personal-photo { margin: 0; }
+.about-personal-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.about-culture-gallery img { aspect-ratio: 3 / 2; object-fit: cover; object-position: center; }
+.about-personal-photo figcaption { font-size: 14px; line-height: 1.7; color: #686158; margin-top: 10px; }
+.about-why-games { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr); gap: 32px; align-items: start; }
+.about-interest-section > .about-personal-photo { max-width: 800px; margin-top: 24px; }
+@media (max-width: 760px) { .about-why-games { grid-template-columns: 1fr; gap: 20px; } }
+@media (max-width: 480px) { .about-culture-gallery { grid-template-columns: 1fr; gap: 20px; } }

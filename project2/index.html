@@ -406,10 +406,9 @@
             document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
             document.body.classList.toggle("lang-zh", lang === "zh");
             buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
-            localStorage.setItem("joy-li-lang", lang);
         };
         buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.lang)));
-        setLang(localStorage.getItem("joy-li-lang") || "en");
+        setLang("en");
     </script>
 </body>
 </html>

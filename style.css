@@ -1237,40 +1237,26 @@ h3 {
 .home-about-copy p:last-child { margin-bottom: 0; }
 @media (max-width: 680px) { .home-about-layout { grid-template-columns: 1fr; gap: 24px; } .home-about-copy p { font-size: 16px; } }
 
-/* Projects first on the landing page; personal introduction on its own page. */
+/* About Me follows the same reading width, type scale and rhythm as the case studies. */
 .home-projects-only { padding-top: var(--xl); }
-.about-page-copy { max-width: 800px; margin-top: 32px; }
-.about-page-copy p { font-size: 17px; line-height: 1.85; margin-bottom: 24px; }
-.about-page-copy .lead { font-size: 20px; line-height: 1.7; }
-@media (max-width: 680px) { .about-page-copy p { font-size: 16px; } .about-page-copy .lead { font-size: 18px; } }
-
-/* Personal cultural interests with an accompanying hanfu photo. */
-.about-page-copy { max-width: 1040px; }
-.about-page-copy > p { max-width: 800px; }
-.about-culture { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px); gap: 32px; align-items: start; margin-top: 40px; }
-.about-culture h2 { font-size: 24px; margin-bottom: 16px; }
-.about-culture-photo { margin: 0; }
-.about-culture-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
-.about-culture-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }
-@media (max-width: 760px) { .about-culture { grid-template-columns: minmax(0, 1fr); gap: 20px; } .about-culture-photo { max-width: 520px; } }
-
-/* Full group photo preserves everyone in the frame. */
-.about-connections { margin-top: 36px; max-width: 800px; }
-.about-connections h2 { font-size: 24px; margin-bottom: 16px; }
-.about-group-photo { margin: 24px 0 0; }
-.about-group-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
-.about-group-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }
-
-/* About Me: photographs support the creative perspective. */
-.about-interest-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--gray); }
-.about-interest-section h2 { font-size: 26px; line-height: 1.35; margin-bottom: 20px; }
-.about-interest-section > p { max-width: 800px; }
+.about-project { --case-title: 48px; --case-section: 32px; --case-body: 17px; }
+.about-project .about-page h1 { font-size: var(--case-title); font-weight: 600; line-height: 1.15; margin: 0 0 24px; }
+.about-project .about-page > .container > .eyebrow { font-size: 12px; margin-bottom: 12px; }
+.about-page-copy { width: 100%; max-width: none; margin-top: 0; }
+.about-project .about-page-copy p { font-size: var(--case-body); line-height: 1.8; margin: 0 0 16px; max-width: none; }
+.about-project .about-page-copy > .lead { max-width: 800px; color: #686158; }
+.about-interest-section { display: block; margin: 48px 0 0; padding: 40px 0 0; border-top: 1px solid var(--gray); }
+.about-project .about-interest-section h2 { font-size: var(--case-section); font-weight: 600; line-height: 1.3; margin: 0 0 24px; }
 .about-culture-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
-.about-personal-photo { margin: 0; }
+.about-personal-photo { margin: 24px 0 0; max-width: none; }
+.about-culture-gallery .about-personal-photo { margin: 0; }
+.about-personal-photo a { display: block; }
 .about-personal-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
 .about-culture-gallery img { aspect-ratio: 3 / 2; object-fit: cover; object-position: center; }
-.about-personal-photo figcaption { font-size: 14px; line-height: 1.7; color: #686158; margin-top: 10px; }
-.about-why-games { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr); gap: 32px; align-items: start; }
-.about-interest-section > .about-personal-photo { max-width: 800px; margin-top: 24px; }
-@media (max-width: 760px) { .about-why-games { grid-template-columns: 1fr; gap: 20px; } }
-@media (max-width: 480px) { .about-culture-gallery { grid-template-columns: 1fr; gap: 20px; } }
+.about-why-games > .about-personal-photo { width: min(100%, 760px); }
+.about-personal-photo figcaption { font-size: 14px; line-height: 1.75; color: #686158; margin-top: 12px; }
+@media (max-width: 640px) {
+    .about-project { --case-title: 32px; --case-section: 26px; --case-body: 16px; }
+    .about-interest-section { margin-top: 36px; padding-top: 32px; }
+    .about-culture-gallery { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}

@@ -1260,3 +1260,17 @@ h3 {
     .about-interest-section { margin-top: 36px; padding-top: 32px; }
     .about-culture-gallery { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
+/* Match the story photograph to the adjacent text height on desktop. */
+.about-why-games { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: stretch; }
+.about-why-games > div > p:last-child { margin-bottom: 0; }
+.about-why-games > .about-personal-photo { width: auto; max-width: none; margin: 0; min-height: 0; position: relative; }
+.about-why-games > .about-personal-photo > a { position: absolute; inset: 0; }
+.about-why-games > .about-personal-photo img { height: 100%; object-fit: cover; object-position: 50% 50%; }
+.about-why-games > .about-personal-photo figcaption { position: absolute; top: 100%; left: 0; right: 0; margin-top: 10px; }
+.about-why-games { margin-bottom: 48px; }
+@media (max-width: 760px) {
+    .about-why-games { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-bottom: 0; }
+    .about-why-games > .about-personal-photo > a { position: static; }
+    .about-why-games > .about-personal-photo img { height: auto; object-fit: contain; }
+    .about-why-games > .about-personal-photo figcaption { position: static; }
+}

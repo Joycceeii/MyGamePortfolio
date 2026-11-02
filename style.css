@@ -1253,3 +1253,10 @@ h3 {
 .about-culture-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
 .about-culture-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }
 @media (max-width: 760px) { .about-culture { grid-template-columns: minmax(0, 1fr); gap: 20px; } .about-culture-photo { max-width: 520px; } }
+
+/* Full group photo preserves everyone in the frame. */
+.about-connections { margin-top: 36px; max-width: 800px; }
+.about-connections h2 { font-size: 24px; margin-bottom: 16px; }
+.about-group-photo { margin: 24px 0 0; }
+.about-group-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.about-group-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }

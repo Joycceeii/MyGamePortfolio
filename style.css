@@ -1243,3 +1243,13 @@ h3 {
 .about-page-copy p { font-size: 17px; line-height: 1.85; margin-bottom: 24px; }
 .about-page-copy .lead { font-size: 20px; line-height: 1.7; }
 @media (max-width: 680px) { .about-page-copy p { font-size: 16px; } .about-page-copy .lead { font-size: 18px; } }
+
+/* Personal cultural interests with an accompanying hanfu photo. */
+.about-page-copy { max-width: 1040px; }
+.about-page-copy > p { max-width: 800px; }
+.about-culture { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px); gap: 32px; align-items: start; margin-top: 40px; }
+.about-culture h2 { font-size: 24px; margin-bottom: 16px; }
+.about-culture-photo { margin: 0; }
+.about-culture-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.about-culture-photo figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: #686158; }
+@media (max-width: 760px) { .about-culture { grid-template-columns: minmax(0, 1fr); gap: 20px; } .about-culture-photo { max-width: 520px; } }

@@ -1280,3 +1280,5 @@ h3 {
 
 /* Zelda recording retains its original display ratio. */
 .zelda-gameplay-video { aspect-ratio: 16 / 15; max-height: 80vh; object-fit: contain; }
+
+.gameplay-full-link { margin: 16px 0 0; font-size: 15px; }

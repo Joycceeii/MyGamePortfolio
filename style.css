@@ -1199,3 +1199,15 @@ h3 {
 .home-cooking-grid img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; }
 .home-cooking-photos figcaption { margin-top: 12px; font-size: 14px; line-height: 1.7; color: var(--text-secondary, #665f55); }
 @media (max-width: 480px) { .home-cooking-grid { gap: 10px; } }
+
+/* Act headings, footage and explanations share a continuous reading order. */
+.project-detail.white-snake-project .ws-act { display: block; }
+.white-snake-project .ws-act > header { margin-bottom: 24px; }
+.white-snake-project .ws-act > .gameplay-loop { margin: 0 0 28px; }
+.white-snake-project .ws-act-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.white-snake-project .ws-act-details > section { min-width: 0; }
+.white-snake-project .ws-act-details h4 { font-size: var(--case-body); font-weight: 600; line-height: 1.5; margin: 0 0 12px; }
+.white-snake-project .ws-act-details p { margin-bottom: 0; }
+@media (max-width: 900px) {
+    .white-snake-project .ws-act-details { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}

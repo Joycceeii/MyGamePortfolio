@@ -1236,3 +1236,10 @@ h3 {
 .home-about-copy p { font-size: 17px; line-height: 1.8; }
 .home-about-copy p:last-child { margin-bottom: 0; }
 @media (max-width: 680px) { .home-about-layout { grid-template-columns: 1fr; gap: 24px; } .home-about-copy p { font-size: 16px; } }
+
+/* Projects first on the landing page; personal introduction on its own page. */
+.home-projects-only { padding-top: var(--xl); }
+.about-page-copy { max-width: 800px; margin-top: 32px; }
+.about-page-copy p { font-size: 17px; line-height: 1.85; margin-bottom: 24px; }
+.about-page-copy .lead { font-size: 20px; line-height: 1.7; }
+@media (max-width: 680px) { .about-page-copy p { font-size: 16px; } .about-page-copy .lead { font-size: 18px; } }

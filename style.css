@@ -1201,6 +1201,8 @@ h3 {
 /* Short gameplay loops retain the full capture aspect ratio. */
 .gameplay-loop { grid-column: 1 / -1; grid-row: 2; margin: 0; }
 .gameplay-loop img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.gameplay-loop video { display: block; width: 100%; height: auto; border-radius: 8px; }
+.gameplay-loop [hidden] { display: none; }
 .gameplay-loop figcaption { margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary, #665f55); }
 @media (max-width: 760px) { .gameplay-loop { grid-row: auto; } }
 

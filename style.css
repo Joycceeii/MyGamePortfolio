@@ -1274,3 +1274,6 @@ h3 {
     .about-why-games > .about-personal-photo img { height: auto; object-fit: contain; }
     .about-why-games > .about-personal-photo figcaption { position: static; }
 }
+/* Preserve the complete pixel-art room within the shared cover frame. */
+.home-cover.home-cover-zelda { background: #071c28; }
+.home-cover-zelda img { object-fit: contain; image-rendering: pixelated; }

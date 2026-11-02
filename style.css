@@ -1217,7 +1217,11 @@ h3 {
 /* Act headings, footage and explanations share a continuous reading order. */
 .project-detail.white-snake-project .ws-act { display: block; }
 .white-snake-project .ws-act > header { margin-bottom: 24px; }
-.white-snake-project .ws-act > .gameplay-loop { margin: 0 0 28px; }
+.white-snake-project .ws-act > .gameplay-loop {
+    width: min(100%, 800px, 96vh);
+    width: min(100%, 800px, 96svh);
+    margin: 0 auto 28px;
+}
 .white-snake-project .ws-act-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .white-snake-project .ws-act-details > section { min-width: 0; }
 .white-snake-project .ws-act-details h4 { font-size: var(--case-body); font-weight: 600; line-height: 1.5; margin: 0 0 12px; }

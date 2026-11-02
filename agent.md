@@ -559,3 +559,31 @@ Do not:
 - introduce a build system unless requested
 
 The current goal is a clean, static, GitHub Pages-friendly portfolio that presents Joy Li as a thoughtful designer of interactive experiences.
+
+## Current Handoff — 2026-11-01 (America/Chicago)
+
+This section records the latest user-approved state and overrides older conflicting blueprint details.
+
+- Homepage shows three project cards only: White Snake, The Taste Reviver, and Other Project (NES Zelda Dungeon Demo). Project 3 page and all website links have been removed.
+- Design Philosophy was replaced with About Me; its existing route remains `designphilosophy/`. All navigation labels say About Me. The homepage has no personal biography or large introduction hero.
+- Every page initializes in English on each load. Manual Chinese switching remains available; do not restore persisted language preference.
+- Homepage White Snake cover is `images/white-snake-calligraphy-cover.png` on pure white with contain sizing. Its video poster remains the Act I Meeting at West Lake title frame (`white-snake-cover.jpg`). Taste Reviver uses the supplied cookbook cover. Zelda uses a real gameplay screenshot with contain sizing.
+- Project players: White Snake `videos/white-snake-short.mp4` (4:23), linked full recording `white-snake-gameplay.mp4` (6:39); Taste Reviver `taste-reviver-short.mp4` (6:17), linked full recording `taste-reviver-gameplay.mp4` (12:42); Zelda `zelda-nes-gameplay.mp4` (3:23). The two main projects have bilingual full-playthrough links beneath their players.
+- GIFs in `images/gifs/` illustrate both White Snake acts and Taste Reviver grinding/evaluation. Retain reduced-motion still-image alternatives. White Snake must contain exactly two act sections; an erroneous duplicate Act II with Act I footage was removed.
+- White Snake inspiration: Act I references Taiko no Tatsujin (notes converge centrally), Act II references Nishan Shaman (Fahai shield). Small opera reference photos supplement these. Background artwork study now uses Jinshan Temple, not the repeated bridge image.
+- Act I describes converging notes as two hearts drawing closer, growing affection, and coming together. Act explanations use heading, footage, then three explanation blocks.
+- Taste Reviver teaching design: L01–L05 each focus on one checked dimension (L04 and L05 both teach grouping); L06 onward combines 2, then 3, then 4, ultimately 5 dimensions. Prior ingredient clues and the Experiment Log reduce trial and error. Do not restore the incorrect seven-tutorial claim.
+- The Taste Reviver overview briefly introduces the grandmother finding a faded cookbook and the preparation puzzle. Home cooking photos accompany project motivation. The outdated recording-before-tutorial-update note has been removed in both languages.
+- About Me leads with cultural inspiration (hanfu and Sanxingdui photos), followed by why games (selected character-plush portrait), then shared experiences (volleyball group). Personal text emphasizes Chinese traditional art, ideas and spirit, everyday details, and understanding different perspectives. No school-specific application pitch.
+- About Me typography, margins and content boundaries align with project pages. Why I Create Games uses text left/photo right at equal height on desktop and stacks on mobile. Keep the volleyball group uncropped.
+- Zelda asset credits link to https://www.spriters-resource.com/nes/legendofzelda/ and distinguish original Nintendo artwork from Unity gameplay/system implementation.
+- Existing untracked `images/white-snake-act1-bridge.png` is preserved in this handoff commit as an unused source image; do not add it to the page without a new request.
+
+### Saving and publication
+
+- Repository: https://github.com/Joycceeii/MyGamePortfolio ; branch: main.
+- Published site: https://joycceeii.github.io/MyGamePortfolio/ . Relative paths are required.
+- Content changes through commit `02a3457` were already pushed. This handoff commit saves the remaining source image and documentation.
+- GitHub Pages deploys asynchronously after push. A successful push is not proof of deployment; check the workflow and live page/media if asked whether the website is updated.
+- Full MP4 decodes and GIF frame checks passed when assets were prepared. Recent text/CSS edits received diff checks; comprehensive browser visual QA of the latest layout has not been performed.
+- Original user videos/photos remain in their supplied local folders. Temporary extracted FFmpeg directories were cleaned up.

@@ -1282,3 +1282,15 @@ h3 {
 .zelda-gameplay-video { aspect-ratio: 16 / 15; max-height: 80vh; object-fit: contain; }
 
 .gameplay-full-link { margin: 16px 0 0; font-size: 15px; }
+
+/* Keep both inspiration groups at the same visual scale. */
+#inspiration .ws-inspiration-group { margin-top: var(--l); }
+#inspiration .ws-inspiration-group > h3 { margin-bottom: 16px; }
+#inspiration .opera-reference-photos { max-width: none; margin-top: var(--m); }
+#inspiration .opera-reference-pair { gap: var(--m); }
+#inspiration .opera-reference-pair a { aspect-ratio: 16 / 9; background: var(--gray-soft); }
+#inspiration .opera-reference-pair img { width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
+#inspiration .ws-reference-grid { margin-top: var(--m); }
+@media (max-width: 760px) {
+    #inspiration .opera-reference-pair { grid-template-columns: minmax(0, 1fr); }
+}

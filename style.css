@@ -1219,3 +1219,7 @@ h3 {
 .opera-reference-pair img { display: block; width: 100%; height: auto; border-radius: 4px; }
 .opera-reference-photos figcaption { margin-top: 10px; color: #686158; }
 @media (max-width: 480px) { .opera-reference-pair { gap: 10px; } }
+
+/* Home page White Snake calligraphy cover. */
+.home-cover.home-cover-white-snake { background: #fff; }
+.home-cover-white-snake img { object-fit: contain; object-position: center; }

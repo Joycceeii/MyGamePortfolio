@@ -1191,3 +1191,11 @@ h3 {
 .gameplay-loop img { display: block; width: 100%; height: auto; border-radius: 8px; }
 .gameplay-loop figcaption { margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary, #665f55); }
 @media (max-width: 760px) { .gameplay-loop { grid-row: auto; } }
+
+/* Personal cooking photos, cropped equally while preserving full-size originals. */
+.home-cooking-photos { margin: 28px 0 0; }
+.home-cooking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.home-cooking-grid a { display: block; overflow: hidden; border-radius: 6px; }
+.home-cooking-grid img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; }
+.home-cooking-photos figcaption { margin-top: 12px; font-size: 14px; line-height: 1.7; color: var(--text-secondary, #665f55); }
+@media (max-width: 480px) { .home-cooking-grid { gap: 10px; } }

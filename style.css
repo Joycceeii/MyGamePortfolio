@@ -1277,3 +1277,6 @@ h3 {
 /* Preserve the complete pixel-art room within the shared cover frame. */
 .home-cover.home-cover-zelda { background: #071c28; }
 .home-cover-zelda img { object-fit: contain; image-rendering: pixelated; }
+
+/* Zelda recording retains its original display ratio. */
+.zelda-gameplay-video { aspect-ratio: 16 / 15; max-height: 80vh; object-fit: contain; }

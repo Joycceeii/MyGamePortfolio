@@ -1185,3 +1185,9 @@ h3 {
 .taste-project .learning-progression-grid { margin-top: 0; padding-top: 20px; border-top: 1px solid var(--gray); }
 .taste-project .learning-progression-grid > .csi-card { border-top: 0; padding-top: 0; }
 .taste-project .page .learning-progression-grid h3 { font-size: 20px; margin-bottom: 12px; }
+
+/* Short gameplay loops retain the full capture aspect ratio. */
+.gameplay-loop { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+.gameplay-loop img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.gameplay-loop figcaption { margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary, #665f55); }
+@media (max-width: 760px) { .gameplay-loop { grid-row: auto; } }

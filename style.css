@@ -1211,3 +1211,11 @@ h3 {
 @media (max-width: 900px) {
     .white-snake-project .ws-act-details { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
+
+/* Supporting opera references remain smaller than gameplay media. */
+.opera-reference-photos { max-width: 640px; margin: 20px 0 0; }
+.opera-reference-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.opera-reference-pair a { display: block; }
+.opera-reference-pair img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.opera-reference-photos figcaption { margin-top: 10px; color: #686158; }
+@media (max-width: 480px) { .opera-reference-pair { gap: 10px; } }

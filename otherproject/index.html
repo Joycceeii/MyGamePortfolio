@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zelda NES: Dungeon Recreation &amp; Color Puzzles | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261101-zelda-video">
+    <link rel="stylesheet" href="../style.css?v=20261102-zelda-type-contents">
 </head>
-<body>
+<body class="project-detail zelda-project">
     <nav class="site-nav" aria-label="Primary navigation">
         <div class="nav-inner">
             <a class="brand" href="../">JOY LI</a>
@@ -52,11 +52,11 @@
                 </div>
             </div>
         </header>
+<nav class="project-contents container" aria-label="Project contents"><p class="contents-title"><span class="en">Contents</span><span class="zh">目录</span></p><ol><li><a href="#project-introduction"><span class="en">Project Introduction</span><span class="zh">项目介绍</span></a></li><li><a href="#contribution"><span class="en">My Contribution</span><span class="zh">个人贡献</span></a></li><li><a href="#gold"><span class="en">Gold Color Puzzles</span><span class="zh">Gold 颜色解谜</span></a></li><li><a href="#gameplay-systems"><span class="en">Gameplay &amp; Systems</span><span class="zh">玩法与系统</span></a></li><li><a href="#development"><span class="en">Development &amp; Iteration</span><span class="zh">开发与迭代</span></a></li><li><a href="#development-notes"><span class="en">Notes &amp; Outlook</span><span class="zh">收获与展望</span></a></li></ol></nav>
 
-        <section class="section-large">
+        <section class="section-large" id="project-introduction">
             <div class="container two-column">
                 <div>
-                    <p class="eyebrow">01</p>
                     <h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2>
                 </div>
                 <div class="measure">
@@ -76,7 +76,7 @@
 
         <section class="section-large" id="contribution">
             <div class="container two-column">
-                <div><p class="eyebrow"><span class="en">Team &amp; Contribution</span><span class="zh">团队与个人贡献</span></p><h2><span class="en">My Contribution</span><span class="zh">我负责的部分</span></h2></div>
+                <div><p class="eyebrow section-category"><span class="en">Team &amp; Contribution</span><span class="zh">团队与个人贡献</span></p><h2><span class="en">My Contribution</span><span class="zh">我负责的部分</span></h2></div>
                 <div class="measure">
                     <p class="lead"><span class="en">Building the connections between combat, resources, and dungeon progression.</span><span class="zh">连接战斗、资源消耗与地牢推进。</span></p>
                     <p><span class="en">My foundational responsibilities included health and damage, the bow-and-arrow system, the Stalfos enemy, room transitions, and keys and locked doors. I also contributed to resolution and control conventions.</span><span class="zh">我负责的基础系统包括生命与伤害、弓箭、Stalfos 敌人、房间切换，以及钥匙与锁门；同时参与了分辨率与控制规范相关工作。</span></p>
@@ -89,7 +89,7 @@
         <section class="section-large" id="gold">
             <div class="container">
                 <div class="measure">
-                    <p class="eyebrow"><span class="en">Custom Mechanic</span><span class="zh">自定义机制</span></p>
+                    <p class="eyebrow section-category"><span class="en">Custom Mechanic</span><span class="zh">自定义机制</span></p>
                     <h2><span class="en">Gold: One Rule, Multiple Uses</span><span class="zh">Gold：一种规则，多种用途</span></h2>
                     <p class="lead"><span class="en">A shared red-and-blue state changes how the player moves through the dungeon.</span><span class="zh">统一的红蓝状态，改变玩家穿越地牢的方式。</span></p>
                     <p><span class="en">Gold builds on the existing combat and exploration systems. Switching color affects gates, teleport pads, and switches, asking players to consider both when to change state and which route to take.</span><span class="zh">Gold 在已有战斗与探索系统上加入颜色切换。红蓝状态同时影响门、传送台与开关，让玩家判断切换时机，并规划行动顺序与路线。</span></p>
@@ -102,10 +102,9 @@
             </div>
         </section>
 
-        <section class="section-large">
+        <section class="section-large" id="gameplay-systems">
             <div class="container">
                 <div class="measure">
-                    <p class="eyebrow">02</p>
                     <h2><span class="en">Player &amp; Weapons</span><span class="zh">角色与武器</span></h2>
                     <p class="lead"><span class="en">Movement, combat, inventory, and resources form the core interaction loop.</span><span class="zh">移动、战斗、背包与资源共同构成核心互动循环。</span></p>
                 </div>
@@ -129,7 +128,6 @@
         <section class="section-large">
             <div class="container two-column">
                 <div>
-                    <p class="eyebrow">03</p>
                     <h2><span class="en">Dungeon Systems</span><span class="zh">地牢系统</span></h2>
                 </div>
                 <div class="measure">
@@ -143,7 +141,6 @@
         <section class="section-large">
             <div class="container">
                 <div class="measure">
-                    <p class="eyebrow">04</p>
                     <h2><span class="en">Enemies &amp; Boss</span><span class="zh">敌人与 Boss</span></h2>
                     <p class="lead"><span class="en">Different movement and attack patterns create distinct room-level challenges.</span><span class="zh">不同的移动与攻击模式构成各具特点的房间挑战。</span></p>
                 </div>
@@ -162,7 +159,6 @@
         <section class="section-large">
             <div class="container two-column">
                 <div>
-                    <p class="eyebrow">05</p>
                     <h2><span class="en">Cheat Mode</span><span class="zh">Cheat Mode</span></h2>
                 </div>
                 <div class="measure">
@@ -175,7 +171,6 @@
         <section class="section-large">
             <div class="container">
                 <div class="measure">
-                    <p class="eyebrow">06</p>
                     <h2><span class="en">Controls</span><span class="zh">操作方式</span></h2>
                 </div>
                 <div class="card-grid" style="margin-top: var(--l);">
@@ -191,7 +186,6 @@
         <section class="section-large">
             <div class="container two-column">
                 <div>
-                    <p class="eyebrow">07</p>
                     <h2><span class="en">Technical Structure</span><span class="zh">技术结构</span></h2>
                 </div>
                 <div class="measure">
@@ -204,7 +198,6 @@
         <section class="section-large">
             <div class="container two-column">
                 <div>
-                    <p class="eyebrow">08</p>
                     <h2><span class="en">Browser Delivery &amp; Validation</span><span class="zh">浏览器交付与验证</span></h2>
                 </div>
                 <div class="measure">
@@ -217,7 +210,7 @@
 
         <section class="section-large" id="development">
             <div class="container">
-                <div class="measure"><p class="eyebrow"><span class="en">Development Process</span><span class="zh">开发过程</span></p><h2><span class="en">From Features to a Continuous Experience</span><span class="zh">从单项功能到连续体验</span></h2><p><span class="en">The work developed through four broad phases, with integration becoming as important as individual features.</span><span class="zh">开发工作可以归纳为四个阶段，系统集成逐渐成为与单项功能同样重要的工作。</span></p></div>
+                <div class="measure"><p class="eyebrow section-category"><span class="en">Development Process</span><span class="zh">开发过程</span></p><h2><span class="en">From Features to a Continuous Experience</span><span class="zh">从单项功能到连续体验</span></h2><p><span class="en">The work developed through four broad phases, with integration becoming as important as individual features.</span><span class="zh">开发工作可以归纳为四个阶段，系统集成逐渐成为与单项功能同样重要的工作。</span></p></div>
                 <div class="process-grid" style="margin-top: var(--l);">
                     <article class="info-card"><h3><span class="en">01 · Core Loop</span><span class="zh">01 · 基础循环</span></h3><p><span class="en">Establish movement, health, damage, weapons, basic enemies, and room transitions so the player can move, fight, and receive feedback.</span><span class="zh">建立移动、生命、伤害、武器、基础敌人与房间切换，让玩家能够行动、战斗并获得反馈。</span></p></article>
                     <article class="info-card"><h3><span class="en">02 · Dungeon Content</span><span class="zh">02 · 扩展地牢内容</span></h3><p><span class="en">Add enemy patterns and a boss alongside keys, pushable blocks, room-clear rewards, and special rooms.</span><span class="zh">扩展敌人行为与 Boss，并加入钥匙、推块、清房奖励和特殊房间。</span></p></article>

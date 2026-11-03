@@ -939,6 +939,7 @@ h3 {
 .ws-background-pair { align-items: start; }
 .ws-background-pair .ws-background-figure { min-width: 0; margin: 0; }
 .ws-background-figure img { display: block; width: 100%; height: auto; }
+.ws-background-pair .ws-background-figure img { aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
 .ws-background-figure figcaption { padding-top: var(--s); font-size: 13px; color: #605a53; }
 @media (max-width: 760px) {
     .ws-art-source .ws-art-image, .ws-art-drawing .ws-art-image { height: 360px; }

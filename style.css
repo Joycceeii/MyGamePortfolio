@@ -1314,3 +1314,13 @@ h3 {
 @media (max-width: 760px) {
     #inspiration .opera-reference-pair { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Zelda feature clips share the case-study evidence layout. */
+.zelda-feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--m); margin-top: var(--l); }
+.zelda-feature-figure { min-width: 0; margin: 0; }
+.zelda-feature-figure a, .zelda-feature-figure img { display: block; width: 100%; }
+.zelda-feature-figure img { height: auto; background: var(--ink); }
+.zelda-feature-figure figcaption { margin-top: 12px; color: #686158; }
+.zelda-asset-note { padding-top: 24px; border-top: 1px solid var(--gray); color: #686158; }
+.zelda-asset-note a, #asset-credits a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 640px) { .zelda-feature-grid { grid-template-columns: minmax(0, 1fr); } }

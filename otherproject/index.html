@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zelda NES: Dungeon Recreation &amp; Color Puzzles | Joy Li</title>
-    <link rel="stylesheet" href="../style.css?v=20261102-zelda-hero-aligned">
+    <link rel="stylesheet" href="../style.css?v=20261102-zelda-feature-gifs">
 </head>
 <body class="project-detail zelda-project">
     <nav class="site-nav" aria-label="Primary navigation">
@@ -62,7 +62,8 @@
                     <p class="lead"><span class="en">From a classic dungeon loop to a custom color-puzzle extension.</span><span class="zh">从经典地牢循环，延伸到自定义颜色解谜。</span></p>
                     <p><span class="en">The player controls Link across multiple connected rooms, fights enemies, collects rupees and keys, unlocks doors, solves block puzzles, enters special rooms, and eventually challenges Aquamentus.</span><span class="zh">玩家操控 Link 探索多个相连房间，与敌人战斗，收集卢比与钥匙，开启锁门，破解方块机关，进入特殊房间，并最终挑战 Aquamentus。</span></p>
                     <p><span class="en">The project was designed as a systems-focused exercise: each feature had to work independently while also supporting a clear progression from exploration to combat, reward, and boss encounter.</span><span class="zh">项目以系统实现为重点：各项功能既需要相对独立，也要共同支持从探索、战斗到奖励与 Boss 战的清晰流程。</span></p>
-                </div>
+                <p class="zelda-asset-note"><span class="en">Art assets: original NES The Legend of Zelda sprites by Nintendo, sourced from <a href="https://www.spriters-resource.com/nes/legendofzelda/" target="_blank" rel="noopener">The Spriters Resource ↗</a>. This is a team course recreation; my work covers gameplay systems and Gold mechanic design and scripting.</span><span class="zh">美术素材：使用任天堂原版 NES《塞尔达传说》精灵素材，来源为 <a href="https://www.spriters-resource.com/nes/legendofzelda/" target="_blank" rel="noopener">The Spriters Resource ↗</a>。本项目为团队课程复刻，我负责玩法系统及 Gold 机制设计与脚本实现。</span></p>
+</div>
             </div>
         </section>
         <section class="ws-gameplay-preview" aria-labelledby="zelda-video-title">
@@ -98,7 +99,8 @@
                     <article class="info-card"><h3><span class="en">Teleport Pads &amp; Switches</span><span class="zh">传送台与开关</span></h3><p><span class="en">Color also governs transport and activation, connecting movement choices with mechanism order.</span><span class="zh">颜色规则也用于传送与机关启动，将移动选择与触发顺序连接起来。</span></p></article>
                     <article class="info-card"><h3><span class="en">Five-Room Progression</span><span class="zh">五个房间的递进</span></h3><p><span class="en">Rooms move from introducing the rule to combining mechanisms and combat pressure, creating new challenges from a consistent system.</span><span class="zh">房间从基础规则教学，逐步过渡到多机关组合与战斗压力，用一致的系统形成递进挑战。</span></p></article>
                 </div>
-            </div>
+            <div class="zelda-feature-grid"><figure class="zelda-feature-figure"><a href="../images/gifs/zelda-color-gates.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/gifs/zelda-color-gates-still.jpg"><img src="../images/gifs/zelda-color-gates.gif" alt="Color gates: switching red and blue changes which barriers can be crossed." width="640" height="600" loading="lazy"></picture></a><figcaption><span class="en">Color gates: switching red and blue changes which barriers can be crossed.</span><span class="zh">颜色门：切换红蓝状态，改变可以穿过的障碍。</span></figcaption></figure><figure class="zelda-feature-figure"><a href="../images/gifs/zelda-teleport.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/gifs/zelda-teleport-still.jpg"><img src="../images/gifs/zelda-teleport.gif" alt="Teleportation: crossing the room through a pad while using the shared color rule." width="640" height="600" loading="lazy"></picture></a><figcaption><span class="en">Teleportation: crossing the room through a pad while using the shared color rule.</span><span class="zh">传送：结合统一的颜色规则，利用传送台跨越房间。</span></figcaption></figure></div>
+</div>
         </section>
 
         <section class="section-large" id="gameplay-systems">
@@ -121,7 +123,8 @@
                         <p><span class="en">Health, rupees, bombs, keys, and permanent weapon pickups are tracked and reflected in the HUD.</span><span class="zh">生命值、卢比、炸弹、钥匙与永久武器拾取状态会被记录并显示在 HUD 中。</span></p>
                     </article>
                 </div>
-            </div>
+            <div class="zelda-feature-grid"><figure class="zelda-feature-figure"><a href="../images/gifs/zelda-combat.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/gifs/zelda-combat-still.jpg"><img src="../images/gifs/zelda-combat.gif" alt="Stalfos combat: enemy movement and attacks share a room with the player’s weapon interactions." width="640" height="600" loading="lazy"></picture></a><figcaption><span class="en">Stalfos combat: enemy movement and attacks share a room with the player’s weapon interactions.</span><span class="zh">Stalfos 战斗：敌人移动与攻击和玩家武器交互共同构成房间内的战斗体验。</span></figcaption></figure><figure class="zelda-feature-figure"><a href="../images/gifs/zelda-room-transition.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/gifs/zelda-room-transition-still.jpg"><img src="../images/gifs/zelda-room-transition.gif" alt="Room transitions: passing through doorways connects consecutive dungeon rooms." width="480" height="450" loading="lazy"></picture></a><figcaption><span class="en">Room transitions: passing through doorways connects consecutive dungeon rooms.</span><span class="zh">房间切换：通过门口进入相邻房间，连接连续的地牢探索。</span></figcaption></figure></div>
+</div>
         </section>
 
         <section class="section-large">

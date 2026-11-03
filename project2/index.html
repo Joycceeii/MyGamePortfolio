@@ -35,8 +35,8 @@
                     <h1>THE TASTE REVIVER</h1>
                     <p class="lead"><span class="en">A 3D Recipe Puzzle Game</span><span class="zh">一款 3D 配方解谜游戏</span></p>
                     <p class="project-copy">
-                        <span class="en">Players experience the journey from the grandmother's point of view, travelling through cities across Guangdong to search for the forgotten recipes she remembers from childhood. The ingredients are still known, but the correct methods have been lost.</span>
-                        <span class="zh">玩家将以奶奶的视角展开旅程，跟随她走访广东的不同城市，寻找童年记忆中被遗忘的配方。食材仍有记录，但正确的制作方法已经失传。</span>
+                        <span class="en">A storybook journey following Grandma in search of childhood memories. Recover forgotten recipes through hands-on experiments and clues from earlier discoveries.</span>
+                        <span class="zh">一本故事书，跟随奶奶寻找童年记忆。在亲手实验与线索推理中，还原被遗忘的配方。</span>
                     </p>
                     <div class="hero-meta">
                         <p><b><span class="en">Role</span><span class="zh">职责</span></b><span class="en">Game Design / Programming / UI &amp; UX</span><span class="zh">游戏设计 / 程序开发 / UI 与 UX</span></p>
@@ -50,103 +50,33 @@
 <nav class="project-contents container" aria-label="Project contents"><p class="contents-title"><span class="en">Contents</span><span class="zh">目录</span></p><ol><li><a href="#project-introduction"><span class="en">Project Introduction</span><span class="zh">项目介绍</span></a></li><li><a href="#gameplay-levels"><span class="en">Gameplay &amp; Levels</span><span class="zh">玩法与关卡</span></a></li><li><a href="#clue-iteration"><span class="en">Iteration</span><span class="zh">迭代过程</span></a></li><li><a href="#story-art"><span class="en">Story &amp; Art</span><span class="zh">故事与美术</span></a></li><li><a href="#development-outlook"><span class="en">Development &amp; Outlook</span><span class="zh">开发与展望</span></a></li></ol></nav>
 
 
-        <section class="section-large" id="project-introduction">
-            <div class="container project-section-layout">
-                <div>
-
-                    <p class="eyebrow section-category"><span class="en">Project Introduction</span><span class="zh">项目介绍</span></p><h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2>
-                </div>
-                <div class="project-copy">
-                    <p><span class="en">The Taste Reviver is a 3D recipe puzzle game about childhood flavors and forgotten recipes. Longing for the flavors of her childhood, Grandma discovers a yellowed cookbook in an old trunk. Its instructions have faded, so she sets out across Guangdong to recover the familiar recipes.</span><span class="zh">《味觉复原师》是一款围绕童年味道与被遗忘的配方展开的 3D 配方解谜游戏。奶奶总惦记着小时候的味道。一天，她在旧箱子里找到一本泛黄的食谱，上面的做法却已模糊，于是决定走访广东，寻找还原老配方的线索。</span></p>
-                    <p><span class="en">Players take her point of view, adding ingredients, choosing amounts, arranging batches, and controlling the pestle with the mouse. Early tutorials introduce these actions; later recipes ask players to use feedback and earlier Experiment Log entries to work out the missing methods and recover the memories behind each dish.</span><span class="zh">玩家将以奶奶的视角添加食材、选择用量、安排批次，并用鼠标控制研磨。前期教学帮助玩家熟悉操作，后续则需要结合反馈与实验日志中的旧线索，逐步推导制作方法，找回每道食物背后的记忆。</span></p>
-                </div>
-            </div>
-        </section>
-        <section class="ws-gameplay-preview" aria-label="Gameplay video">
+        <section class="section-large" id="project-introduction"><div class="container project-section-layout">
+<div><h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2></div><div class="project-copy">
+<p><span class="en">Grandma discovers a yellowed cookbook in an old trunk and sets out across Guangdong to recover the flavors of her childhood.</span><span class="zh">奶奶在旧箱子里发现一本泛黄的食谱，于是踏上走访广东不同城市的寻味旅程。</span></p>
+<p><span class="en">Players prepare ingredients from her first-person perspective, reconstructing recipes through force, speed, ingredient order, proportion, and batch grouping. Picture-book story scenes connect the recipes with her journey and memories.</span><span class="zh">玩家以她的第一人称视角处理食材，通过力度、速度、加入顺序、比例和分批方式还原配方。绘本形式的故事画面串联旅程，呈现每道食物背后的记忆。</span></p>
+</div></div></section>
+<section class="ws-gameplay-preview" aria-label="Gameplay video">
             <div class="container">
                 <div class="ws-video-heading"><h2><span class="en">Gameplay Highlights</span><span class="zh">精简试玩视频</span></h2></div>
                 <video class="ws-gameplay-video" controls src="../videos/taste-reviver-short.mp4" data-video-src="../videos/taste-reviver-short.mp4" poster="../images/taste-reviver-cover.jpg" preload="none" playsinline aria-label="The Taste Reviver gameplay recording">Your browser does not support HTML video.</video>
                 <p class="gameplay-full-link"><a class="text-link" href="../videos/taste-reviver-gameplay.mp4" target="_blank" rel="noopener"><span class="en">Watch the full playthrough (12:42) →</span><span class="zh">查看完整试玩视频（12:42）→</span></a></p>
             </div>
         </section>
-
-        <section class="section-large">
-            <div class="container">
-                <div class="project-copy">
-
-                    <h2><span class="en">A Journey Across Guangdong</span><span class="zh">走访广东的寻味旅程</span></h2>
-<p class="lead" style="color: #686158;"><span class="en">In each city, players encounter a local specialty.</span><span class="zh">每到一座城市，玩家都会遇到一道当地特色菜。</span></p>
-                    <p><span class="en">The grandmother travels across Guangdong looking for food she remembers. Each recipe puzzle is part of that trip.</span><span class="zh">奶奶走访广东，寻找记忆中的食物。玩家在旅途中逐关还原配方。</span></p>
-                </div>
-                <div class="card-grid" style="margin-top: var(--l);">
-                    <article class="info-card">
-                        <h3><span class="en">Discover</span><span class="zh">发现</span></h3>
-                        <p><span class="en">Discover ingredient properties, unlock clues, and understand how ingredients affect one another as the grandmother searches for flavors she remembers.</span><span class="zh">跟随奶奶寻找记忆中的味道，发现食材特性、解锁线索，理解食材之间的关系。</span></p>
-                    </article>
-                    <article class="info-card">
-                        <h3><span class="en">Experiment</span><span class="zh">尝试</span></h3>
-                        <p><span class="en">Use the supplied ingredients and test force, speed, order, batch grouping, and proportion.</span><span class="zh">使用关卡指定的食材，探索力度、速度、加入顺序、研磨分批和比例。</span></p>
-                    </article>
-                    <article class="info-card">
-                        <h3><span class="en">Recover</span><span class="zh">复原</span></h3>
-                        <p><span class="en">Use real-time grinding feedback and earlier records to reconstruct the preparation method, recover the recipe, and carry ingredient knowledge into the next city.</span><span class="zh">结合研磨时的实时反馈与先前记录，逐步复原制作方法，找回熟悉的配方，并把学到的食材知识带往下一座城市。</span></p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-large">
-            <div class="container project-section-layout">
-                <div>
-
-                    <h2><span class="en">Why This Project</span><span class="zh">为什么做这个项目</span></h2>
-                </div>
-                <div class="project-copy">
-                    <p class="lead"><span class="en">I missed the food my family made.</span><span class="zh">我想念家里人做的饭。</span></p>
-                    <p>
-                        <span class="en">While studying in the United States, I missed the food of home, especially meals made by my family. Some flavors from my childhood are also becoming harder to find. Few people still make those foods, and the versions I remember live on mostly in my family's cooking.</span><span class="zh">在美国留学时，我很想念家乡的美食，尤其是家里人做的饭。有些小时候常吃的食物，如今已经很少有人会做；记忆里的那口味道，往往只有在家里才能尝到。</span>
-                    </p>
-                    <p><span class="en">I wanted to turn the process of recovering familiar recipes and rediscovering how to make them into a game. Through that process, I hope players can share something of the longing for home that a familiar taste can hold.</span><span class="zh">我想把寻找熟悉的配方、一点点还原做法的过程做成游戏，让玩家在找回一道道味道的过程中，也能感受到我们对家乡的思念。</span></p>
-                    <figure class="home-cooking-photos">
+<section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Why This Project</span><span class="zh">为什么做这个项目</span></h2></div><div class="project-copy">
+<p><span class="en">While studying in the United States, I missed the food of home, especially meals made by my family. Some foods I grew up with are now rarely made.</span><span class="zh">在美国留学时，我很想念家乡的食物，尤其是家里人做的饭。有些小时候常吃的食物，如今已经很少有人会做。</span></p>
+<p><span class="en">I wanted to turn the process of finding familiar recipes and recovering their methods into a game, sharing the longing for family and home that a remembered flavor can hold.</span><span class="zh">我想把寻找熟悉配方、逐步还原做法的过程做成游戏，让玩家在找回一道道味道的过程中，感受到对家人与家乡的思念。</span></p>
+<figure class="home-cooking-photos">
                         <div class="home-cooking-grid">
                             <a href="../images/home-cooking-table.jpg" class="image-preview-link" aria-haspopup="dialog"><img src="../images/home-cooking-table.jpg" alt="A meal I cooked at home: chicken wings with roasted potatoes and broccoli" loading="lazy"></a>
                             <a href="../images/home-cooking-stove.jpg" class="image-preview-link" aria-haspopup="dialog"><img src="../images/home-cooking-stove.jpg" alt="Cooking meat and vegetables in a steaming pan at home" loading="lazy"></a>
                         </div>
                         <figcaption><span class="en">Meals I cooked at home — cooking is part of my everyday connection to familiar flavors.</span><span class="zh">我自己在家做饭的照片。亲手做饭，也是我在日常中寻找熟悉味道的方式。</span></figcaption>
                     </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-large" id="gameplay-levels">
-            <div class="container project-section-layout">
-                <div>
-
-                    <p class="eyebrow section-category"><span class="en">Gameplay &amp; Levels</span><span class="zh">玩法与关卡</span></p><h2><span class="en">Core Gameplay</span><span class="zh">核心玩法</span></h2></div>
-<div class="project-copy">
-                    <p><span class="en">From L06 onward, players learn about the ingredients and how to prepare them through the results of each dish they make. An experiment may use the right ingredients but fail because the proportions are wrong, an ingredient was added in the wrong order, or ingredients that should be processed separately were ground together.</span><span class="zh">从 L06 起，玩家通过每道菜的制作结果，获得关于食材及其处理方式的线索。一次实验可能使用了正确食材，却因为比例不对，某种食材加入的顺序不对，或本应分开处理的食材被一起研磨而失败。</span></p>
-
-                    <p>
-                        <span class="en">The game takes place at a wooden worktable with a mortar, a stone pestle, and the ingredients required for the current recipe. Players set the grinding force and move the pestle with the mouse to control speed. They also decide the order of addition, which ingredients should be ground together or separately, and how much of each ingredient to use.</span>
-                        <span class="zh">游戏画面集中在一张木质工作台上，桌面摆放着研钵、石杵，以及当前配方所需的食材。玩家通过滑条确定力度，用鼠标亲手拖动石杵来控制研磨速度；同时需要拖放食材，决定加入顺序、哪些食材一起研磨或分批处理，以及每种食材的用量。</span>
-                    </p>
-                    <p><span class="en">The force slider provides Light, Medium, and Heavy settings. Mouse movement of the pestle is classified as Fast, Medium, or Slow grinding. Order, batch grouping, and proportion are the other three evaluation dimensions. Each level states in advance which dimensions it checks.</span><span class="zh">力度滑条提供轻、中、重三档，鼠标拖动石杵的速度被识别为快、中、慢三档研磨速度。加入顺序、研磨分批和比例是另外三个判定维度，每关会提前说明当前考察哪些维度。</span></p>
-                </div>
-            </div>
-            <div class="container card-grid" style="margin-top: var(--l);">
-                <article class="info-card"><h3><span class="en">Read &amp; Plan</span><span class="zh">阅读与判断</span></h3><p><span class="en">First, check which preparation variables are available in the current level. Then read the ingredient traits and make an initial judgment about how each ingredient should be prepared.</span><span class="zh">先了解当前关卡开放的操作维度，再阅读食材特性，初步判断每种食材需要怎样处理。</span></p></article>
-                <article class="info-card"><h3><span class="en">Experiment</span><span class="zh">实验</span></h3><p><span class="en">Experiment repeatedly, adjusting force, speed, order, batch grouping, and proportion in response to feedback.</span><span class="zh">不断实验，根据反馈调整力度、速度、加入顺序、研磨分批和比例。</span></p></article>
-                <article class="info-card"><h3><span class="en">Learn</span><span class="zh">学习</span></h3><p><span class="en">Record each result in the Experiment Log. Once the entire recipe is correct, unlock clues about its ingredients and apply that knowledge in later experiments.</span><span class="zh">在实验日志中记录每次结果。配方完全正确后，解锁当前食材的线索，并将这些知识用于后续实验。</span></p></article>
-            </div>
-        </section>
-
-<section class="section-large" id="recipe-system">
-<div class="container">
-
-<h2><span class="en">Managing Five Gameplay Variables</span><span class="zh">怎么降低五个维度的复杂度</span></h2>
-<p class="lead project-copy"><span class="en">Opening every variable at once would leave too many combinations to try.</span><span class="zh">如果同时开放所有维度，玩家需要尝试的组合会太多。</span></p>
-<p class="project-copy"><span class="en">L01–L05 introduce the five preparation variables one at a time. Each level provides clear instructions and explains which variable is being evaluated. From L06 onward, recipes gradually combine two, three, and four variables, with all five used together in the final levels.</span><span class="zh">L01–L05 逐一介绍五个操作维度。每关提供明确的操作指引，并说明本关考察的维度。从 L06 起，配方逐步组合两个、三个、四个维度，最后的关卡再综合运用全部五个维度。</span></p>
-<p class="project-copy"><span class="en">The simpler early levels also unlock ingredient clues in the Experiment Log. Players can revisit these clues in later recipes, using earlier discoveries to narrow their choices and reduce trial and error.</span><span class="zh">玩家也会在前期较简单的关卡中解锁食材线索，并将它们保存在实验日志里。面对后续更复杂的配方时，就可以回查已有知识，缩小尝试范围，减少试错成本。</span></p>
+</div></div></section>
+<section class="section-large" id="gameplay-levels"><div class="container">
+<h2><span class="en">Core Gameplay</span><span class="zh">核心玩法</span></h2>
+<p class="project-copy"><span class="en">The game centers on a wooden workbench. Players drag ingredients into the mortar, choose amounts and force, and move the pestle with the mouse to control grinding speed.</span><span class="zh">游戏围绕一张木质工作台展开。玩家拖放食材、选择用量与力度，并通过鼠标移动研磨杵控制速度。</span></p>
+<p class="project-copy"><span class="en">Each level identifies the variables it evaluates. Players read the level requirements and ingredient traits, experiment, then adjust their actions using feedback and earlier records.</span><span class="zh">每关会说明当前考察的维度。玩家先阅读关卡要求与食材特性，再进行实验，根据实时反馈和评价调整操作，并将已有记录用于后续配方。</span></p>
 <div class="taste-table-wrap" tabindex="0" role="region" aria-label="Gameplay dimensions">
 <table class="taste-table">
 <caption><span class="en">The five gameplay variables</span><span class="zh">五个操作维度</span></caption>
@@ -155,8 +85,8 @@
 <tr><th scope="row"><span class="en">Force</span><span class="zh">力度</span></th><td><span class="en">How strongly a batch is ground.</span><span class="zh">每一批研磨时施加的力度。</span></td><td><span class="en">Set the pressure slider to Light, Medium, or Heavy.</span><span class="zh">通过力度滑条选择轻、中、重。</span></td></tr>
 <tr><th scope="row"><span class="en">Speed</span><span class="zh">速度</span></th><td><span class="en">How quickly the pestle moves.</span><span class="zh">石杵移动的快慢。</span></td><td><span class="en">Move the mouse at a Slow, Medium, or Fast pace.</span><span class="zh">通过鼠标移动控制慢、中、快三档节奏。</span></td></tr>
 <tr><th scope="row"><span class="en">Order</span><span class="zh">加入顺序</span></th><td><span class="en">Which ingredient enters the mortar first.</span><span class="zh">哪种食材先进入研钵。</span></td><td><span class="en">Drag ingredients into the mortar in sequence.</span><span class="zh">按顺序将食材拖入研钵。</span></td></tr>
-<tr><th scope="row">Batch Grouping<span class="zh"> · 研磨批次</span></th><td><span class="en">Which ingredients are processed together or separately.</span><span class="zh">哪些食材共同处理，哪些分开处理。</span></td><td><span class="en">Press New Batch to begin a separate processing group.</span><span class="zh">按 New Batch 开始新的处理批次。</span></td></tr>
-<tr><th scope="row"><span class="en">Proportion</span><span class="zh">比例</span></th><td><span class="en">How much of each ingredient is used.</span><span class="zh">每种食材的用量。</span></td><td><span class="en">Choose an amount for each ingredient. For example, four-ingredient recipes use four tiers: Very Small, Small, Moderately Large, and Large.</span><span class="zh">选择每种食材的用量档位。例如，四种食材对应四档：很少、少、较多、多。</span></td></tr>
+<tr><th scope="row"><span class="en">Batch Grouping</span><span class="zh">研磨批次</span></th><td><span class="en">Which ingredients are processed together or separately.</span><span class="zh">哪些食材共同处理，哪些分开处理。</span></td><td><span class="en">Press New Batch to begin a separate processing group.</span><span class="zh">按 New Batch 开始新的处理批次。</span></td></tr>
+<tr><th scope="row"><span class="en">Proportion</span><span class="zh">比例</span></th><td><span class="en">How much of each ingredient is used.</span><span class="zh">每种食材的用量。</span></td><td><span class="en">Choose an amount for each ingredient. For example, four-ingredient recipes use four tiers: Very Small, Small, Medium, and Large.</span><span class="zh">选择每种食材的用量档位。例如，四种食材对应四档：极少、少、中、多。</span></td></tr>
 
 
 
@@ -164,17 +94,37 @@
 
 
 </tbody></table></div>
-<div class="taste-subsection">
-<h3><span class="en">Order and grouping are different decisions.</span><span class="zh">加入顺序与研磨分批，是两项不同的决策。</span></h3>
-<p class="project-copy"><span class="en">Order determines what comes first. Batch grouping determines what is ground together. In L12, Douchi and Ginger share a batch, while Scallion Stem and Coarse Salt are processed separately. New Batch marks the boundaries between these groups.</span><span class="zh">顺序决定先放什么，分批决定哪些一起研磨。在 L12 中，豆豉和姜共同处理，葱茎与粗盐则分别处理。New Batch 操作明确了各组之间的边界。</span></p>
+<h3><span class="en">Order and grouping are different decisions</span><span class="zh">顺序与分批是两项不同的决策</span></h3>
+<p class="project-copy"><span class="en">Order determines what goes in first; grouping determines what is processed together. In L12, Douchi and Ginger share a batch, while Scallion Stem and Coarse Salt are processed separately. New Batch starts a new group.</span><span class="zh">顺序决定先放什么，分批决定哪些食材一起处理。例如，L12 中豆豉与姜同批，葱茎和粗盐分别处理，New Batch 用于开始新的批次。</span></p>
 <div class="taste-batches">
-<article><p class="eyebrow">Batch 01</p><h3><span class="en">Douchi + Ginger</span><span class="zh">豆豉 + 姜</span></h3><p><span class="en">Processed together</span><span class="zh">共同处理</span></p></article>
-<article><p class="eyebrow">Batch 02</p><h3><span class="en">Scallion Stem</span><span class="zh">葱茎</span></h3><p><span class="en">Processed separately</span><span class="zh">单独处理</span></p></article>
-<article><p class="eyebrow">Batch 03</p><h3><span class="en">Coarse Salt</span><span class="zh">粗盐</span></h3><p><span class="en">A separate final batch</span><span class="zh">独立的最后一批</span></p></article>
-</div></div>
-<div class="taste-subsection">
-<h3><span class="en">What if every choice were open?</span><span class="zh">如果所有选择都完全开放？</span></h3>
-<p class="project-copy"><span class="en">To understand the cost of unrestricted experimentation, I estimated the configurations for four distinct ingredients, each used exactly once. This model preserves the order of addition and allows each batch its own force and speed settings. Proportion is held fixed.</span><span class="zh">为了判断完全开放的试错成本，我估算了四种不同食材各使用一次时的操作配置数。这里保留食材的加入顺序，每批独立选择力度与速度，暂时固定比例。</span></p>
+<article><p class="eyebrow"><span class="en">Batch 01</span><span class="zh">批次 01</span></p><h3><span class="en">Douchi + Ginger</span><span class="zh">豆豉 + 姜</span></h3><p><span class="en">Processed together</span><span class="zh">共同处理</span></p></article>
+<article><p class="eyebrow"><span class="en">Batch 02</span><span class="zh">批次 02</span></p><h3><span class="en">Scallion Stem</span><span class="zh">葱茎</span></h3><p><span class="en">Processed separately</span><span class="zh">单独处理</span></p></article>
+<article><p class="eyebrow"><span class="en">Batch 03</span><span class="zh">批次 03</span></p><h3><span class="en">Coarse Salt</span><span class="zh">粗盐</span></h3><p><span class="en">A separate final batch</span><span class="zh">独立的最后一批</span></p></article>
+</div>
+<h3><span class="en">Why Grinding?</span><span class="zh">为什么选择研磨？</span></h3>
+<p class="project-copy"><span class="en">Grinding gives players a direct way to work with ingredients and explore how they combine. Moving the pestle makes recipe experiments a physical interaction with the food.</span><span class="zh">研磨让玩家能直接处理食材、探索它们的组合。通过亲手移动研磨杵，配方实验成为一种可以操作和感受的过程。</span></p>
+</div></section>
+<section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">From Guided Learning to Independent Deduction</span><span class="zh">从教学到独立推理</span></h2></div><div class="project-copy">
+<p><span class="en">The first level begins with exploration: players can expand Ingredient Traits, hover over ingredients for introductions, and try the force slider before following the instructions to complete the force tutorial.</span><span class="zh">第一关先让玩家探索操作台：展开 Ingredient Traits 阅读完整特性、悬停查看食材简介，并尝试拖动力度条，再根据指引完成力度教学。</span></p>
+<p><span class="en">The first six levels gradually introduce the five variables: L01 teaches force, L02 speed, L03 order, L04–L05 batch grouping, and L06 proportion alongside force. Grouping progresses from processing ingredients separately to choosing which ingredients share a batch. Later recipes combine different variables according to their requirements.</span><span class="zh">前六关逐步引入五个操作维度：L01 教力度、L02 教速度、L03 教顺序、L04–L05 教分批与灵活分组，L06 引入比例并结合力度考察。分批教学从分别处理食材，推进到选择哪些食材同批。后续关卡再按配方需求组合不同维度。</span></p>
+<p><span class="en">An Experiment Log Practice level asks players to retrieve earlier clues, preparing them to reason from their records. L12 then brings earlier discoveries together in one recipe.</span><span class="zh">日志练习关要求玩家主动找回已有线索，帮助他们从跟随指引过渡到利用记录推理。到了 L12，玩家需要综合之前的发现完成配方。</span></p>
+</div></div></section>
+<section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Feedback and Experiment Log</span><span class="zh">反馈与实验日志</span></h2></div><div class="project-copy">
+<p><span class="en">Aroma descriptions provide immediate clues during grinding: a burnt smell indicates excessive force, while little aroma indicates insufficient force. Players can compare these cues with their current setting to decide what to change.</span><span class="zh">研磨时的气味描述提供即时线索：焦味表示力度过重，香味尚未散发表示力度不足。玩家可以结合当前档位，判断下一次应如何调整。</span></p>
+<p><span class="en">After an experiment, the Hint Panel gives a Correct, Close, or Wrong result and guides players toward an unresolved variable. Guidance stays on that problem until it is solved, so players can focus on one adjustment at a time.</span><span class="zh">实验结束后，Hint Panel 给出 Correct、Close 或 Wrong 的评价，并引导玩家处理尚未解决的维度。提示会停留在当前问题上，解决后再继续，避免玩家同时猜测多个未知条件。</span></p>
+<p><span class="en">The Experiment Log saves attempts. In levels with clue rewards, a fully correct recipe also unlocks ingredient clues. Clues and attempt records appear in separate sections for later reference.</span><span class="zh">Experiment Log 保存尝试记录；在设有线索奖励的关卡中，整道配方完全正确后，还会解锁食材线索。线索与实验记录分栏显示，方便玩家在后续关卡回查。</span></p>
+</div></div><div class="container taste-feedback-evidence"><figure class="taste-evidence-figure"><a href="../images/gifs/taste-rice-grinding.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/taste-rice-sensory-feedback.png"><img src="../images/gifs/taste-rice-grinding.gif" alt="Animated rice grinding in the mortar" width="768" height="480" loading="lazy"></picture></a><figcaption><span class="en">Rice grinding: mouse movement controls the pestle as the rice becomes powder.</span><span class="zh">大米研磨：通过鼠标移动操作研杵，将大米磨成粉末。</span></figcaption></figure><figure class="taste-evidence-figure"><a href="../images/gifs/taste-rice-evaluation.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/taste-rice-close-result.png"><img src="../images/gifs/taste-rice-evaluation.gif" alt="Animated rice evaluation and opening of the experiment log" width="768" height="480" loading="lazy"></picture></a><figcaption><span class="en">After grinding: evaluate the attempt and open the Experiment Log.</span><span class="zh">研磨后评价本次尝试，再打开实验日志。</span></figcaption></figure></div><div class="container taste-log-evidence"><figure class="taste-evidence-figure"><a href="../images/taste-tea-experiment-log.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-tea-experiment-log.png" alt="Tea leaf log entry with unlocked clues and correct and incorrect speed records" width="1906" height="1075" loading="lazy"></a><figcaption><span class="en">Tea Leaf entry: unlocked clues appear above the attempt notes. Correct and incorrect records are labeled; Slow and Medium attempts can be compared. Force is marked as fixed for this level. Select the image to read it at full size.</span><span class="zh">茶叶条目：上方是已解锁线索，下方标明正确与错误记录，可对照 Slow 和 Medium 两次尝试。力度注明为本关固定值。点击图片可查看原图。</span></figcaption></figure></div></section>
+<section class="section-large" id="recipe-system"><div class="container">
+<h2><span class="en">Managing the Cost of Trial and Error</span><span class="zh">如何控制试错成本</span></h2>
+<p class="project-copy"><span class="en">Unrestricted choices produce many combinations. With four ingredients and fixed proportions, allowing every order, batch grouping, and independent force and speed settings per batch yields 216,000 theoretical configurations. This models unrestricted experimentation, rather than the choices evaluated in each actual level.</span><span class="zh">完全开放所有操作会产生大量组合。以四种食材、固定比例为例，如果允许任意顺序、分批，以及每批独立选择力度与速度，理论上共有 216,000 种配置。这个数字用于评估完全开放的复杂度，并非每关实际需要尝试的数量。</span></p>
+<p class="project-copy"><span class="en">I narrow this space by limiting the variables evaluated in each level, providing real-time feedback, and letting players reuse earlier clues. The table illustrates how force feedback alone could reduce configurations if it narrowed every batch to two or one force choices.</span><span class="zh">我通过限定每关考察的维度、提供实时反馈，以及让玩家复用已有线索，缩小需要考虑的范围。下表展示理论模型中，若力度反馈让每批剩余两档或一档力度选择，组合数会如何减少。</span></p>
+<div class="taste-table-wrap feedback-estimate" tabindex="0" role="region" aria-label="Force clue configuration estimates"><table class="taste-table">
+<caption><span class="en">How force feedback reduces the combinations</span><span class="zh">力度提示如何减少操作组合</span></caption>
+<thead><tr><th scope="col"><span class="en">Information available for each batch</span><span class="zh">每批获得的信息</span></th><th scope="col"><span class="en">Force choices left</span><span class="zh">剩余力度</span></th><th scope="col"><span class="en">Force × speed per batch</span><span class="zh">每批力度 × 速度组合</span></th><th scope="col"><span class="en">Total configurations</span><span class="zh">总操作组合</span></th></tr></thead>
+<tbody><tr><th scope="row"><span class="en">No force choice excluded</span><span class="zh">尚未排除力度档位</span></th><td>3</td><td>3 × 3 = 9</td><td>216,000</td></tr>
+<tr><th scope="row"><span class="en">Heavy produces a burnt smell, or Light produces little aroma</span><span class="zh">重档出现焦味，或轻档香味未散发</span></th><td>2</td><td>2 × 3 = 6</td><td>49,392</td></tr>
+<tr><th scope="row"><span class="en">Medium produces a burnt smell or little aroma</span><span class="zh">中档出现焦味或香味未散发</span></th><td>1</td><td>1 × 3 = 3</td><td>4,608</td></tr></tbody></table></div>
+<details class="taste-subsection"><summary><span class="en">View the calculation</span><span class="zh">查看详细计算</span></summary>
 <div class="taste-table-wrap" tabindex="0" role="region" aria-label="Recipe possibility calculation">
 <table class="taste-table">
 <caption><span class="en">Four ingredients: before adding proportion choices</span><span class="zh">四种食材：尚未计入比例的可能性</span></caption>
@@ -184,8 +134,7 @@
 <tr><th scope="row"><span class="en">Speed</span><span class="zh">速度</span></th><td>Slow / Medium / Fast</td><td><span class="en">3 per batch; 9 force–speed pairs</span><span class="zh">每批 3 种；力度与速度共 9 种搭配</span></td></tr>
 <tr><th scope="row"><span class="en">Order</span><span class="zh">食材顺序</span></th><td><span class="en">Arrange all four ingredients.</span><span class="zh">四种食材全部排列。</span></td><td>4! = 24</td></tr>
 <tr><th scope="row"><span class="en">Batch grouping</span><span class="zh">研磨分批</span></th><td><span class="en">For a fixed order, split or join at each of three gaps. This includes one batch of four, two pairs, a group of three plus one, and four separate batches.</span><span class="zh">固定顺序后，三个间隔各自选择分开或合并；包含四种一起、两两一批、三种一批加一种单独处理，以及全部单独处理等方式。</span></td><td><span class="en">2³ = 8 per order</span><span class="zh">每个顺序 2³ = 8 种</span></td></tr>
-</tbody></table></div>
-<div class="taste-table-wrap" tabindex="0" role="region" aria-label="Configurations by batch count">
+</tbody></table></div><div class="taste-table-wrap" tabindex="0" role="region" aria-label="Configurations by batch count">
 <table class="taste-table">
 <caption><span class="en">Each additional batch has its own grinding choices</span><span class="zh">每增加一批，就多一组独立的研磨选择</span></caption>
 <thead><tr><th scope="col"><span class="en">Batches</span><span class="zh">批次数</span></th><th scope="col"><span class="en">Calculation</span><span class="zh">计算方式</span></th><th scope="col"><span class="en">Configurations</span><span class="zh">操作配置数</span></th></tr></thead>
@@ -196,163 +145,46 @@
 <tr><th scope="row">4</th><td>24 × 1 × 9⁴</td><td>157,464</td></tr>
 <tr><th scope="row"><span class="en">Total</span><span class="zh">总计</span></th><td>216 + 5,832 + 52,488 + 157,464</td><td><strong>216,000</strong></td></tr>
 </tbody></table></div>
-<p class="script-note"><span class="en">For a fixed order of four ingredients, each of the three gaps can either separate batches or keep ingredients together. There are 1, 3, 3, and 1 ways to form one, two, three, and four batches, respectively. Combining these with the 24 ingredient orders and the force and speed choices for each batch gives the totals above.</span><span class="zh">固定四种食材的加入顺序后，三个间隔都可以选择分开或一起研磨。分成一批、两批、三批、四批，分别有 1、3、3、1 种方式。再结合 24 种加入顺序，以及每批的力度与速度选择，就得到上表的组合数。</span></p>
-<div class="taste-subsection">
-<h3><span class="en">Reducing trial and error with real-time feedback</span><span class="zh">用实时反馈降低试错成本</span></h3>
-<p class="project-copy"><span class="en">The number of combinations led me to add real-time feedback during grinding, so players can identify what needs adjusting before completing an experiment. A burnt smell indicates excessive force, while little aroma indicates insufficient force. Players can also hover over ingredients to read their descriptions and use this information to adjust their actions.</span><span class="zh">看到这么多组合后，我加入了研磨过程中的实时反馈，让玩家不用等整次实验结束，就能发现需要调整的地方。例如，出现烧焦气味表示力度过重，香味还没有散发出来表示力度过轻。玩家也可以通过鼠标悬停查看食材介绍，结合这些信息调整操作。</span></p>
-<div class="taste-subsection">
-<h3><span class="en">How aroma feedback narrows force choices</span><span class="zh">气味反馈能排除哪些力度选择</span></h3>
-<p class="project-copy"><span class="en">A burnt smell means the force is too heavy; little aroma means it is too light. Together with the current force setting, these messages let players rule out choices. For example, a burnt smell at Heavy leaves Light or Medium; at Medium, it points to Light. Little aroma at Medium points to Heavy.</span><span class="zh">烧焦的气味表示力度过重，香味还没有散发出来表示力度过轻。玩家结合当前档位，就能排除一些选择：重档出现焦味，还剩轻、中两档；中档出现焦味，就可以判断应改为轻档；中档提示香味未散发，则应改为重档。</span></p>
-<p class="project-copy"><span class="en">Even a small cue can help players rule out ineffective choices. As these cues accumulate across batches, they can substantially narrow the combinations players need to consider, reducing the cost of blind trial and error.</span><span class="zh">一个小小的提示，就能帮助玩家排除一些无效选择。当这些线索在不同批次中逐步积累时，需要考虑的组合也会大幅减少，从而降低盲目试错的成本。</span></p>
-<div class="taste-table-wrap feedback-estimate" tabindex="0" role="region" aria-label="Force clue configuration estimates"><table class="taste-table">
-<caption><span class="en">How force feedback reduces the combinations</span><span class="zh">力度提示如何减少操作组合</span></caption>
-<thead><tr><th scope="col"><span class="en">Information available for each batch</span><span class="zh">每批获得的信息</span></th><th scope="col"><span class="en">Force choices left</span><span class="zh">剩余力度</span></th><th scope="col"><span class="en">Force × speed per batch</span><span class="zh">每批力度 × 速度组合</span></th><th scope="col"><span class="en">Total configurations</span><span class="zh">总操作组合</span></th></tr></thead>
-<tbody><tr><th scope="row"><span class="en">No force choice excluded</span><span class="zh">尚未排除力度档位</span></th><td>3</td><td>3 × 3 = 9</td><td>216,000</td></tr>
-<tr><th scope="row"><span class="en">Heavy produces a burnt smell, or Light produces little aroma</span><span class="zh">重档出现焦味，或轻档香味未散发</span></th><td>2</td><td>2 × 3 = 6</td><td>49,392</td></tr>
-<tr><th scope="row"><span class="en">Medium produces a burnt smell or little aroma</span><span class="zh">中档出现焦味或香味未散发</span></th><td>1</td><td>1 × 3 = 3</td><td>4,608</td></tr></tbody></table></div>
-<p class="script-note"><span class="en">With four ingredients and fixed proportions, each batch starts with three force and three speed settings. As force feedback narrows each batch to two or one force choices, its force–speed combinations fall from nine to six or three. Keeping all ingredient orders and batch groupings, the totals become 216,000, 49,392, and 4,608. For q remaining force–speed combinations per batch, the calculation is 24 × (q + 3q² + 3q³ + q⁴).</span><span class="zh">以四种食材、固定比例为例，每批最初有三档力度与三档速度。随着力度提示将每批的力度选择缩小到两档或一档，力度与速度的组合也从 9 种减少到 6 种或 3 种。保留所有加入顺序和分批方式，对应的总组合数就是 216,000、49,392 和 4,608。每批剩余 q 种力度与速度组合时，计算式为 24 ×（q＋3q²＋3q³＋q⁴）。</span></p>
-</div>
-<section class="learning-progression"><h3><span class="en">From guided learning to independent deduction</span><span class="zh">从逐步教学到独立推理</span></h3>
-<div class="card-grid learning-progression-grid">
-<article class="csi-card"><h3><span class="en">Levels 1–5: Learn the dimensions</span><span class="zh">前五关：逐步认识各个维度</span></h3><p><span class="en">L01–L05 explicitly teach force, speed, order, separate batches, and flexible grouping. L06 begins combining dimensions in recipe challenges.</span><span class="zh">L01–L05 明确教授力度、速度、加入顺序、独立分批和灵活分组。L06 起进入组合多个维度的配方挑战。</span></p></article>
-<article class="csi-card"><h3><span class="en">Experiment Log Practice: Retrieve clues</span><span class="zh">日志练习：回查已有线索</span></h3><p><span class="en">A dedicated Experiment Log Practice level requires players to open the log and retrieve clues they have already collected. It teaches them to consult earlier records when working on a new recipe.</span><span class="zh">专门设置的 Experiment Log Practice 要求玩家打开实验日志，找回先前获得的线索，让玩家学会在遇到新配方时主动回查记录。</span></p></article>
-<article class="csi-card"><h3><span class="en">Level 12: Combine earlier discoveries</span><span class="zh">第十二关：综合运用已有线索</span></h3><p><span class="en">The final level tests whether players can retrieve clues from earlier levels and combine them to find the correct preparation method. It introduces no new rule; the solution depends on what players have already learned and recorded.</span><span class="zh">最后一关考验玩家能否从前面的关卡中找回线索，并将它们结合起来，推导出正确的制作方法。本关不引入新规则，答案需要从已经学到并记录的知识中找到。</span></p></article>
-</div></section>
-</div></div></section>
-        <section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">From Finding Clues to Adjusting Actions</span><span class="zh">从寻找线索到调整操作</span></h2></div><div class="project-copy">
-<p><span class="en">L01–L05 give explicit tutorial steps. Level 1 directly teaches Medium force for Rice; Ingredient Traits provides supporting ingredient information. From L06 onward, players infer settings from Traits, saved clues, and feedback.</span><span class="zh">L01–L05 明确给出教学步骤。第一关直接教大米使用 Medium 力度，Ingredient Traits 补充食材信息。L06 起，玩家根据 Traits、已有线索和反馈推导设置。</span></p>
-<p><span class="en">Force and speed each have three settings. Players use the clues to choose a force setting, then move the pestle with the mouse to try it out. As later levels introduce speed and other dimensions, players need to combine more information to make their decisions.</span><span class="zh">力度和速度各有三档。玩家根据线索选择力度，再用鼠标控制研磨杵进行尝试。随着后续关卡引入速度等其他维度，玩家需要结合更多信息作出判断。</span></p>
-<p><span class="en">After an experiment, the Hint Panel gives an overall Correct, Close, or Wrong result and guidance on the dimensions that still need adjustment. For force and speed, an adjacent setting is Close; a setting two steps away is Wrong. If force is already correct but speed is close, the guidance points to speed, helping players retain what works and focus on the unresolved part.</span><span class="zh">完成一次实验后，Hint Panel 会给出 Correct、Close 或 Wrong 的整体评价，并针对仍需调整的维度提供提示。对于力度和速度，相邻档位判为 Close，相隔两档判为 Wrong。例如，当力度已经正确、速度仍然接近时，提示会指向速度，帮助玩家保留做对的部分，集中调整尚未解决的问题。</span></p>
-<p><span class="en">Players can then review the experiment in the log to inform their next attempt.</span><span class="zh">评价后，玩家还可以回到实验日志查看记录，为下一次尝试寻找依据。</span></p>
-</div></div><div class="container taste-feedback-evidence"><figure class="taste-evidence-figure"><a href="../images/gifs/taste-rice-grinding.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/taste-rice-sensory-feedback.png"><img src="../images/gifs/taste-rice-grinding.gif" alt="Animated rice grinding in the mortar" width="768" height="480" loading="lazy"></picture></a><figcaption><span class="en">Rice grinding: mouse movement controls the pestle as the rice becomes powder.</span><span class="zh">大米研磨：通过鼠标移动操作研杵，将大米磨成粉末。</span></figcaption></figure><figure class="taste-evidence-figure"><a href="../images/gifs/taste-rice-evaluation.gif" target="_blank" rel="noopener"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../images/taste-rice-close-result.png"><img src="../images/gifs/taste-rice-evaluation.gif" alt="Animated rice evaluation and opening of the experiment log" width="768" height="480" loading="lazy"></picture></a><figcaption><span class="en">After grinding: evaluate the attempt and open the Experiment Log.</span><span class="zh">研磨后评价本次尝试，再打开实验日志。</span></figcaption></figure></div></section>
-
-        <section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Experiment Log</span><span class="zh">实验日志</span></h2></div><div class="project-copy">
-<p class="lead"><span class="en">Keep attempt records and ingredient clues for later recipes.</span><span class="zh">保存实验记录与食材线索，为后续配方积累依据。</span></p>
-<p><span class="en">Every attempt is recorded in the Experiment Log. After evaluation, the Log button changes to Review Log, prompting players to revisit their results. The change also introduces the log as a resource they will need beyond the current level.</span><span class="zh">每次尝试的结果都会保存在 Experiment Log 中。评价后，Log 按钮会变为 Review Log，提醒玩家回去查看结果，也让玩家意识到：这些记录不只服务于当前关卡，之后还会用到。</span></p>
-<p><span class="en">Ingredient clues unlock only when the entire recipe is Correct. An overall Close result does not unlock clues for individually correct dimensions. Unlocked clues are organized by ingredient, so players can retrieve them when the same ingredient appears in a later recipe.</span><span class="zh">只有整道配方完全 Correct，才会解锁相关食材的线索。整体结果为 Close 时，不会单独解锁已经做对的维度所对应的线索。已解锁线索按食材分类，方便玩家在后续再次遇到同一食材时回查。</span></p>
-<p><span class="en">The dedicated Experiment Log Practice level requires players to retrieve earlier clues rather than receive a new hint. This prepares them to use their records independently; Level 12 then asks them to combine earlier discoveries using existing knowledge.</span><span class="zh">专门的 Experiment Log Practice 不提供新提示，而是要求玩家找回已有线索，练习主动调用记录。到了第十二关，玩家需要在已有知识的基础上，结合之前积累的线索推导答案。</span></p>
-</div></div><div class="container taste-log-evidence"><figure class="taste-evidence-figure"><a href="../images/taste-tea-experiment-log.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-tea-experiment-log.png" alt="Tea leaf log entry with unlocked clues and correct and incorrect speed records" width="1906" height="1075" loading="lazy"></a><figcaption><span class="en">Tea Leaf entry: unlocked clues appear above the attempt notes. Correct and incorrect records are labeled; Slow and Medium attempts can be compared. Force is marked as fixed for this level. Select the image to read it at full size.</span><span class="zh">茶叶条目：上方是已解锁线索，下方标明正确与错误记录，可对照 Slow 和 Medium 两次尝试。力度注明为本关固定值。点击图片可查看原图。</span></figcaption></figure></div></section>
-
-        <section class="section-large"><div class="container project-section-layout">
-<div><h2><span class="en">The First Five Levels Are Tutorials</span><span class="zh">前五关为教学关</span></h2></div>
-<div class="project-copy">
-<p><span class="en">The first level gives players room to explore the workbench and its controls. They can expand Ingredient Traits to read the full ingredient properties, hover over an ingredient for a short introduction, and try dragging the force slider. These interactions let players discover what the buttons and panels do as they become familiar with the interface.</span><span class="zh">第一关先让玩家自由探索操作台与界面：点击展开 Ingredient Traits，阅读完整的食材特性；将鼠标悬停在食材上，查看简短介绍；尝试拖动力度条。在这些操作中，玩家逐步熟悉桌面上的按钮与各个面板的作用。</span></p>
-<p><span class="en">L01–L05 are tutorial levels, each making only one preparation variable available for players to control. This lets players first learn how to operate each variable before using them together in later recipes.</span><span class="zh">第 1–5 关都是教学关，每关只开放一个操作维度，让玩家先学习这个维度如何操作，再在后续配方中组合运用。</span></p>
-</div></div></section>
-<section class="section-large"><div class="container project-section-layout">
-<div><h2><span class="en">Why an Ingredient Returns</span><span class="zh">为什么让同一种食材反复出现</span></h2></div>
-<div class="project-copy"><p class="lead"><span class="en">Dried tangerine peel appears in five levels: L03, L05, L07, L08, and L10.</span><span class="zh">陈皮在 L03、L05、L07、L08、L10 中共出现五次。</span></p>
-<p><span class="en">I reused ingredients so players could apply what they had learned. When peel appears again, they can check its earlier notes in the Experiment Log.</span><span class="zh">我重复使用一些食材，让玩家有机会用上之前学到的东西。再次遇到陈皮时，就可以回查日志里的旧记录。</span></p>
-<p><span class="en">Its appearances cover different decisions: order in L03, batch grouping in L05, force and proportion in L07, separate processing in L08, and a combination of force, speed, order, and proportion in L10. Repetition changes the context in which players use an ingredient.</span><span class="zh">这些出场涉及不同决策：L03 的顺序、L05 的分批、L07 的力度与比例、L08 的分别处理，以及 L10 中力度、速度、加入顺序与比例的组合。重复出现的食材，被放进了不同的使用情境。</span></p>
-<h3><span class="en">How ingredient combinations change preparation</span><span class="zh">食材组合如何改变处理方式</span></h3>
-<p><span class="en">In L08, dried tangerine peel is processed on its own using Medium force and Fast speed. In L10, it becomes part of a recipe with several ingredients, using Heavy force and Slow speed. This difference reflects the game's treatment of ingredients as interacting parts of a dish: combining them changes the preparation required, so the settings for peel alone do not automatically apply to the whole mixture.</span><span class="zh">L08 中，陈皮单独处理，使用 Medium 力度与 Fast 速度；到了 L10，陈皮与其他食材共同组成一道食物，整道配方使用 Heavy 力度与 Slow 速度。这里的区别来自食材之间的相互影响：组合发生变化，所需的处理方式也会改变，因此单独处理陈皮时的设置，不能直接照搬到混合配方中。</span></p>
-<p><span class="en">I do not want players to memorize a single fixed answer for each ingredient. Ingredients can affect one another, and Ingredient Traits already includes clues about relationships between pairs of ingredients. Players need to combine these clues with earlier experiment records to reason about the preparation required by the current recipe.</span><span class="zh">我不希望玩家只记住每种食材的一套固定答案。食材之间会相互影响，Ingredient Traits 中也已经提供了一些关于两种食材之间关系的线索。玩家需要结合这些线索与先前的实验记录，推理当前配方需要怎样处理，而不是直接照搬某种食材之前的设置。</span></p>
-</div></div></section>
-<section class="section-large">
-            <div class="container project-section-layout">
-                <div>
-
-                    <h2><span class="en">One Level Example</span><span class="zh">一个关卡示例</span></h2></div>
-<div class="project-copy">
-<p class="lead"><span class="en">L12 asks players to use notes from L07, L10, and L11.</span><span class="zh">L12 需要用到 L07、L10 和 L11 的记录。</span></p>
-                    <h3><span class="en">L12 — Douchi-Scallion Mastery</span><span class="zh">L12 — 豆豉葱香综合关</span></h3>
-                    <p><span class="en">L12 provides no new hints. Players use notes from L07, L10, and L11 to work out force, speed, order, batch grouping, and proportion for one recipe.</span><span class="zh">L12 不提供任何新提示。玩家需要查阅 L07、L10 和 L11 的记录，确定这道配方的力度、速度、加入顺序、研磨分批与比例。</span></p>
-                    <ol class="level-walkthrough">
+<p class="script-note"><span class="en">For each of 24 ingredient orders, the three gaps give 1, 3, 3, and 1 ways to form one to four batches. With q force–speed choices per batch, the total is 24 × (q + 3q² + 3q³ + q⁴). The comparison uses q = 9, 6, and 3, assuming equal information for every batch.</span><span class="zh">四种食材有 24 种顺序；固定顺序后，分成一至四批分别有 1、3、3、1 种方式。每批剩余 q 种力度与速度组合时，总数为 24 ×（q＋3q²＋3q³＋q⁴）。对比表分别取 q＝9、6、3，并假设每批获得同等程度的力度信息。</span></p>
+</details></div></section>
+<section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Applying Old Knowledge to New Recipes</span><span class="zh">让旧知识在新配方中发挥作用</span></h2></div><div class="project-copy">
+<p><span class="en">Dried tangerine peel returns across several recipes, but its preparation changes with the context. In L08, it is processed separately with Medium force and Fast speed. In L10, it joins a mixed recipe using Heavy force and Slow speed.</span><span class="zh">陈皮在多个关卡中反复出现，但处理方式随配方改变。例如，L08 中陈皮单独处理，使用 Medium 力度与 Fast 速度；L10 中它参与混合配方，使用 Heavy 力度与 Slow 速度。</span></p>
+<p><span class="en">I want players to understand relationships between ingredients and recipes, rather than memorize one fixed answer for each ingredient.</span><span class="zh">我希望玩家理解食材与配方之间的关系，而不是只记住每种食材的一套固定答案。</span></p>
+<h3><span class="en">L12 — Douchi-Scallion Sauce</span><span class="zh">L12 — 豆豉葱酱</span></h3>
+<p><span class="en">Players combine records from L07, L10, and L11 to determine the recipe. L12 adds no new ingredient clues, but still provides evaluation and adjustment feedback.</span><span class="zh">玩家结合 L07、L10 和 L11 的记录推导配方。L12 不新增食材线索，但仍提供评价与调整反馈。</span></p>
+<ol class="level-walkthrough">
                         <li><span class="en"><b>Open the Experiment Log.</b> Compare earlier attempts involving Yangjiang Douchi, Ginger, Scallion Stem, and Coarse Salt.</span><span class="zh"><b>打开 Experiment Log。</b> 对照过去包含阳江豆豉、姜、葱茎与粗盐的实验记录。</span></li>
-                        <li><span class="en"><b>Recover the proportions.</b> Set Douchi to Large, Ginger to Medium, Scallion Stem to Small, and Coarse Salt to Very Small.</span><span class="zh"><b>找回比例知识。</b> 将豆豉设为 Large、姜设为 Medium、葱茎设为 Small、粗盐设为 Very Small。</span></li>
+                        <li><span class="en"><b>Recover the proportions.</b> Use Large for Douchi, Medium for Ginger, Small for Scallion Stem, and Very Small for Coarse Salt.</span><span class="zh"><b>找回比例知识。</b> 豆豉用多，姜用中，葱茎用少，粗盐用极少。</span></li>
                         <li><span class="en"><b>Build the first batch.</b> Add Yangjiang Douchi first and Ginger second. Process them together with Heavy Force and Slow Speed.</span><span class="zh"><b>完成第一批。</b> 先加入阳江豆豉，再加入姜；两者一起使用 Heavy Force 与 Slow Speed 处理。</span></li>
-                        <li><span class="en"><b>Start a new batch.</b> Press New Batch and process Scallion Stem by itself so its fresh aroma is not covered by the savory base.</span><span class="zh"><b>开始新批次。</b> 按下 New Batch，让葱茎单独处理，避免清新香气被咸鲜基底覆盖。</span></li>
+                        <li><span class="en"><b>Start a new batch.</b> Press New Batch and process Scallion Stem by itself.</span><span class="zh"><b>开始新批次。</b> 按下 New Batch，让葱茎单独处理。</span></li>
                         <li><span class="en"><b>Finish with salt.</b> Press New Batch again, add Coarse Salt as its own final batch, and keep the amount at Very Small.</span><span class="zh"><b>用盐收尾。</b> 再次按下 New Batch，将粗盐作为最后一个独立批次，并维持 Very Small 的用量。</span></li>
                         <li><span class="en"><b>Evaluate and revise.</b> Read the overall result and the hints about what still needs adjustment. L12 adds no new permanent clue; it tests earlier knowledge.</span><span class="zh"><b>评价与修正。</b>查看整体结果及仍需调整部分的提示。L12 不新增永久线索，而是检验已有知识。</span></li>
                     </ol>
-
-                    <p class="script-note"><span class="en">Before the formal levels rely on this behavior, an Experiment Log Practice level teaches it directly with Tea Leaf using Medium Force and Slow Speed.</span><span class="zh">在正式关卡要求玩家依赖这一功能之前，Experiment Log Practice 会使用 Tea Leaf（Medium Force + Slow Speed）专门教学玩家如何从日志中找回旧知识。</span></p>
-                </div>
-            </div>
-        </section>
-
-<section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Why Grinding?</span><span class="zh">为什么选择研磨？</span></h2></div><div class="project-copy"><p><span class="en">I chose grinding because it felt like a natural way to bring different ingredients together. Compared with stir-frying or juicing, it better suited the ingredient-combination process I wanted players to explore: ingredients are worked together in the mortar to form a blend. This made grinding a fitting central interaction for the recipe puzzles.</span><span class="zh">我选择研磨，是因为这个动作能很自然地把不同食材结合起来。相比炒菜或榨汁，研磨更贴合我想让玩家探索的食材组合过程：把食材放进研钵，通过研磨逐渐融合。因此，我把它作为配方解谜的核心操作。</span></p></div></div></section>
+</div></div></section>
 <section class="section-large clue-iteration" id="clue-iteration"><div class="container">
-<header class="clue-section-header"><p class="eyebrow section-category"><span class="en">Iteration</span><span class="zh">迭代过程</span></p><h2><span class="en">Iteration Process</span><span class="zh">迭代过程</span></h2></header>
-
-<article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Trying aroma-based feedback</span><span class="zh">尝试用气味提供反馈</span></h3></div><div class="clue-block-body"><p><span class="en">I initially wanted changes in aroma to provide real-time clues about grinding force. For example, applying heavier or lighter force to a spice would produce different aroma descriptions, allowing players to infer how to adjust their handling. During play, however, I found these descriptions difficult to interpret. Even when players understood a force-related cue, it did not provide enough information about the other dimensions needed to solve the recipe.</span><span class="zh">最初，我希望通过研磨时气味的变化提供实时反馈，暗示可能需要的力度。例如，对香料施加较重或较轻的力度时，会出现不同的气味描述，让玩家据此推理该如何调整。但实际游玩时，我发现这些描述并不容易理解。即使理解了关于力度的暗示，玩家仍然缺少其他维度的线索，难以仅凭气味反馈推导出完整的制作方法。</span></p></div></article>
-<article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Example: dried tangerine peel</span><span class="zh">以陈皮为例</span></h3></div><div class="clue-block-body">
-<p><span class="en">Descriptions of peel as a finishing accent did not specify an actionable order. I now tie instructions to the actual recipe: L03 explicitly teaches Red Bean → Dried Tangerine Peel → Rock Sugar. L05 explicitly accepts any two spices together, with the third prepared separately.</span><span class="zh">把陈皮描述成“点缀”无法明确告诉玩家加入顺序。现在，引导对应具体配方：L03 明确教红豆 → 陈皮 → 冰糖；L05 明确接受任意两种香料同批，第三种单独处理。</span></p>
-</div></article>
-<article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Separating clues from experiment records</span><span class="zh">把线索与实验记录分栏</span></h3></div><div class="clue-block-body">
-<p><span class="en">The early log listed all clues together without clearly separating them. I later divided the log into sections: unlocked Clues remain at the top for players to revisit, while the actions and results of each experiment appear below.</span><span class="zh">早期日志把所有线索直接列在一起，没有分清楚。后来我把日志分成不同的栏：已经解锁、可以一直查看的 Clues 放在前面，方便玩家随时回查；每次实验的操作和结果放在后面。</span></p>
-</div></article>
-<article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Separating information across panels</span><span class="zh">把不同提示分到不同面板</span></h3></div><div class="clue-block-body">
-<p><span class="en">Earlier versions mixed different kinds of clues together. I separated them across panels so players could more easily find the information they needed. Each panel now has a specific role.</span><span class="zh">早期的线索混在一起，玩家不容易找到自己需要的信息。后来我把不同方向的提示分到不同面板，让每个面板负责一类信息。</span></p>
-<div class="taste-table-wrap" tabindex="0" role="region" aria-label="Panel roles"><table class="taste-table">
-<thead><tr><th scope="col"><span class="en">Panel / interaction</span><span class="zh">面板／交互</span></th><th scope="col"><span class="en">Information provided</span><span class="zh">提供的信息</span></th></tr></thead>
-<tbody>
-<tr><th scope="row">Hint</th><td><span class="en">Evaluates the attempt as Correct, Close, or Wrong, showing whether the preparation is right.</span><span class="zh">给出 Correct、Close 或 Wrong 的评价，让玩家知道这次制作的结果是否正确。</span></td></tr>
-<tr><th scope="row">Ingredient Traits</th><td><span class="en">Describes ingredient properties and clues about how ingredients affect one another.</span><span class="zh">单独介绍食材特性，以及食材之间相互影响的线索。</span></td></tr>
-<tr><th scope="row"><span class="en">Ingredient hover</span><span class="zh">鼠标悬停食材</span></th><td><span class="en">Displays an introduction to the ingredient under the cursor.</span><span class="zh">显示鼠标所指食材的介绍，方便玩家查看当前食材的信息。</span></td></tr>
-<tr><th scope="row">Experiment Log</th><td><span class="en">Keeps earlier experiment records and unlocked clues for players to revisit.</span><span class="zh">保存之前的实验记录与已获得的线索，供玩家回查。</span></td></tr>
-</tbody></table></div>
-</div></article>
-<article class="clue-block"><div class="clue-block-heading"><h3><span class="en">Revealing help in stages</span><span class="zh">让提示逐步明确</span></h3></div><div class="clue-block-body">
-<p><span class="en">I limited hints to the first unresolved dimension to make a multi-dimensional recipe more manageable. Players can focus on one part of the problem before moving to the next, reducing the need to try combinations across several unknown dimensions at once. Hints first direct players toward earlier knowledge, then become more specific after failure. Even when the hint stages for the current dimension run out, help stays with that dimension until it is solved.</span><span class="zh">我让提示锁定第一个未解决的维度，主要是为了降低多维配方的复杂度。玩家可以先集中解决问题的一部分，再进入下一部分，减少在多个未知维度之间同时排列组合、盲目穷举的需要。提示先引导玩家回忆旧知识，失败后再逐渐明确；即使当前维度的渐进提示用完，也仍停留在这一维度，直到它被解决。</span></p>
-<div class="hint-change-list"><div class="hint-change"><p><span class="en">Hints repeat a step already solved</span><span class="zh">提示重复已经做对的步骤</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Point to the current error and preserve completed steps.</span><span class="zh">只针对当前错误，保留玩家已经完成的部分。</span></p></div>
-<div class="hint-change"><p><span class="en">Earlier clues do not match the current guidance</span><span class="zh">已有线索和当前提示对不上</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Check Ingredient Traits, log clues, and recipe answers together; prompt retrieval before offering more specific help.</span><span class="zh">一起核对 Ingredient Traits、日志线索与配方答案；先引导回查，再逐步给出更具体的帮助。</span></p></div>
-<div class="hint-change"><p><span class="en">An incomplete attempt gives no clear next step</span><span class="zh">操作没完成，却不知道漏了什么</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Add guidance for missing ingredients, incomplete batches, the step after New Batch, and final mixing; correct misleading L05 guidance.</span><span class="zh">补充缺食材、同批漏料、New Batch 后下一步与最终混合的提示，并修正 L05 的误导。</span></p></div>
-<div class="hint-change"><p><span class="en">Hints move on before a dimension is solved</span><span class="zh">一个维度没解决，提示就跳到了下一个</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Keep guidance on the first unresolved dimension until it is solved.</span><span class="zh">让提示停留在第一个未解决的维度，解决后再继续。</span></p></div>
-<div class="hint-change"><p><span class="en">Hints suggest duration when evaluation checks force and speed</span><span class="zh">提示让玩家调整研磨时长，但实际考察的是力度与速度</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Remove duration-based answer hints and use ingredient properties to guide force and speed, including the L08 descriptions.</span><span class="zh">移除把时长当答案的提示，改为依据食材特性提示力度与速度，修正 L08 的相关描述。</span></p></div>
-<div class="hint-change"><p><span class="en">It is unclear whether prepared powders need grinding again</span><span class="zh">分批磨好的粉末放回研钵后，不清楚还要不要再磨</span></p><span class="hint-change-arrow" aria-hidden="true">→</span><p><span class="en">Clarify that L04/L05 require returning all prepared powders to complete the blend, without grinding again.</span><span class="zh">明确 L04／L05 只需放回所有已制备粉末，完成混合，不必再次研磨。</span></p></div></div>
-</div></article>
-
-<article class="clue-block playtest-notes-section"><div class="clue-block-heading"><h3><span class="en">Playtesting and revising</span><span class="zh">试玩与修改</span></h3></div><div class="clue-block-body playtest-notes-layout"><div class="playtest-notes-text">
-<h4><span class="en">Making batch changes explicit</span><span class="zh">让分批操作更明确</span></h4>
-<p><span class="en">The early version had no New Batch button. Players moved prepared powder back into a bowl and dragged in another ingredient to continue. This made the boundary between batches unclear. I added New Batch to make starting a separate batch an explicit action.</span><span class="zh">早期版本没有 New Batch 按钮。玩家将磨好的粉末放回碗里，再拖入新的食材继续操作，但这种方式没有清楚表达批次的切换。后来我加入 New Batch 按钮，让开始新一批成为一个明确的操作。</span></p>
-<h4><span class="en">Teaching players to revisit their records</span><span class="zh">引导玩家主动回查日志</span></h4>
-<p><span class="en">Playtesters initially tended to guess rather than open the Experiment Log. I added a dedicated practice level that asks players to retrieve earlier clues from the log. In subsequent playtesting, they were more willing to use their records to guide their decisions.</span><span class="zh">试玩时，玩家一开始更倾向于直接猜答案，很少主动打开 Experiment Log。我因此增加了专门的日志练习关，要求玩家回查先前获得的线索。后续试玩中，玩家更愿意利用已有记录来辅助判断。</span></p>
-<h4><span class="en">Checking combinations and building hint templates</span><span class="zh">检查组合与设计提示模板</span></h4>
-<p><span class="en">I used handwritten notes to enumerate batch groupings, check for missing combinations, and assess how many possibilities players might need to consider. For four ingredients in a fixed order, the notes map eight ways to divide them into consecutive batches.</span><span class="zh">我用手写笔记枚举分批组合，检查是否有遗漏，也评估玩家需要考虑的可能性会不会太多。对于固定顺序的四种食材，笔记列出了将相邻食材划分为不同批次的八种方式。</span></p>
-<p><span class="en">When a hint did not give enough information to guide the next adjustment, I returned to these notes to review the cases. Rather than write a separate hint for every combination, I grouped similar cases into reusable templates, filling in the relevant ingredient names. This helped me organize the feedback around the relationships players needed to reconsider.</span><span class="zh">当试玩中发现提示不足以支持下一步调整时，我会回到笔记中检查各种情况。我没有为每种组合单独写一句提示，而是将相似情况分类，设计可复用的提示模板，再填入对应的食材名称，让反馈围绕玩家需要重新判断的食材关系展开。</span></p>
-</div><figure class="taste-evidence-figure playtest-notes-image"><div class="handwritten-notes-pair"><a href="../images/taste-handwritten-design-notes-top.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-handwritten-design-notes-top.png" alt="Upper half of handwritten notes: ingredient batch groupings and hint examples" loading="lazy"></a><a href="../images/taste-handwritten-design-notes-bottom.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-handwritten-design-notes-bottom.png" alt="Lower half of handwritten notes: eight batch grouping combinations" loading="lazy"></a></div><figcaption><span class="en">My handwritten notes explore eight batch groupings for four ingredients in a fixed order, and how pairwise hints help narrow down the choices.</span><span class="zh">我的手写笔记列出了四种食材在固定顺序下的八种分批组合，并推敲如何通过食材两两之间的提示缩小选择范围。</span></figcaption></figure>
-</div></article>
-
+<h2><span class="en">Playtesting and Iteration</span><span class="zh">试玩与迭代</span></h2>
+<article class="clue-block playtest-notes-section"><div class="clue-block-body playtest-notes-layout"><div class="playtest-notes-text">
+<h3><span class="en">Making Batch Changes Explicit</span><span class="zh">让分批操作更明确</span></h3>
+<p><span class="en">Early versions changed batches implicitly as players removed powder and added new ingredients. I added New Batch to make the boundary between batches an explicit action.</span><span class="zh">早期版本没有 New Batch 按钮，玩家通过移出粉末、加入新食材切换批次，批次边界不够清楚。我加入按钮，让开始新一批成为明确的操作。</span></p>
+<h3><span class="en">Encouraging Players to Use the Log</span><span class="zh">引导玩家使用日志</span></h3>
+<p><span class="en">Playtesters initially guessed rather than consulted their records. I added a dedicated log practice level; in later playtests, players were more willing to use their records to guide decisions.</span><span class="zh">试玩者起初倾向于直接猜答案，很少主动查看记录。我增加了专门的日志练习关，帮助他们学会回查线索；后续试玩中，他们更愿意利用记录辅助判断。</span></p>
+<h3><span class="en">Organizing Hints and Information</span><span class="zh">整理提示与信息层级</span></h3>
+<p><span class="en">Early aroma descriptions were difficult to interpret and could not support reasoning about every variable. I separated ingredient traits, current feedback, and historical records across panels. Hints focus on the first unresolved variable and become more specific after unsuccessful attempts.</span><span class="zh">早期气味描述难以理解，也不足以支持其他维度的推理。我将食材特性、当前反馈与历史记录分到不同面板，并让提示优先针对第一个未解决的维度，在尝试失败后逐步提供更明确的帮助。</span></p>
+<h3><span class="en">Checking Combinations and Building Hint Templates</span><span class="zh">检查组合与设计提示模板</span></h3>
+<p><span class="en">I enumerated batch groupings in handwritten notes to check for omissions and assess the number of choices. When feedback did not support the next adjustment, I reviewed these cases, grouped similar situations, and created reusable templates filled with the relevant ingredient names.</span><span class="zh">我用手写笔记枚举分批情况，检查遗漏和选择数量。发现提示不足以支持下一步判断时，就回查这些组合，将相似情况分类，再填入对应食材名称，形成可复用的提示模板。</span></p>
+</div><figure class="taste-evidence-figure playtest-notes-image"><div class="handwritten-notes-pair"><a href="../images/taste-handwritten-design-notes-top.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-handwritten-design-notes-top.png" alt="Upper half of handwritten notes: ingredient batch groupings and hint examples" loading="lazy"></a><a href="../images/taste-handwritten-design-notes-bottom.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-handwritten-design-notes-bottom.png" alt="Lower half of handwritten notes: eight batch grouping combinations" loading="lazy"></a></div><figcaption><span class="en">My handwritten notes explore eight batch groupings for four ingredients in a fixed order, and how pairwise hints help narrow down the choices.</span><span class="zh">我的手写笔记列出了四种食材在固定顺序下的八种分批组合，并推敲如何通过食材两两之间的提示缩小选择范围。</span></figcaption></figure></div></article>
+<h3><span class="en">Improving the Grinding Feel</span><span class="zh">改善研磨手感</span></h3>
+<p class="project-copy"><span class="en">Early interaction had model clipping, unnatural motion, and speed that was difficult to control consistently. I adjusted the interaction area and speed detection ranges so players could more easily express the intended action, keeping the challenge focused on understanding recipes.</span><span class="zh">早期操作存在穿模、运动不自然，以及速度难以稳定控制的问题。我调整操作区域与速度识别区间，让玩家更容易表达想要的操作，将挑战集中在配方理解上。</span></p>
 </div></section>
-        <section class="section-large"><div class="container project-section-layout"><div><h2><span class="en">Making Grinding Feel Natural</span><span class="zh">让研磨操作更自然</span></h2></div><div class="project-copy"><p><span class="en">Players drag the supplied ingredients from a dish into the mortar, hold the pestle with the mouse, and drag it over the ingredients until they become powder. A three-setting slider controls force and displays the current setting.</span><span class="zh">玩家把碟子中的指定食材拖进研磨碗，用鼠标拖动研磨杵在食材上移动，持续操作后食材变成粉末。力度滑条提供三档选择，并显示当前档位。</span></p><h3><span class="en">Early problems</span><span class="zh">早期问题</span></h3><p><span class="en">Early versions had model clipping and unnatural visual motion. The grinding interaction area also needed adjustment, and speed control felt awkward, especially when trying to maintain Medium speed.</span><span class="zh">早期版本存在模型穿模、运动观感不自然的问题，研磨操作区域的设置也不够合适。快慢控制的手感别扭，尤其难以稳定维持中速。</span></p><h3><span class="en">Keeping the blend, removing repeated grinding</span><span class="zh">保留混合，去掉重复研磨</span></h3>
-<p><span class="en">While revising the preparation steps, I kept the final assembly because the ingredients ultimately form one seasoning, but removed the requirement to grind the prepared powders again. Returning all prepared powders now completes the blend.</span><span class="zh">调整制作步骤时，我保留了最终汇合，因为不同食材最后需要组成同一种调料，但去掉了把已制备粉末再次研磨的要求。现在，放回所有已制备粉末即可完成混合。</span></p>
-<h3><span class="en">Speed threshold revision</span><span class="zh">调整速度判定范围</span></h3><p><span class="en">I adjusted the speed detection ranges, expanded the Slow and Fast ranges, and relaxed the evaluation tolerance. These changes made grinding feel more natural to me. The aim was to keep the challenge in understanding the recipe while making the required movement easier to express through the mouse.</span><span class="zh">我调整了速度识别区间，扩大 Slow 和 Fast 的范围，并放宽判定标准。调整后，我感觉研磨操作更自然。目标是让玩家通过鼠标更容易表达想要的操作，把挑战集中在对配方的理解上。</span></p></div></div></section>
-
-
-
-<section class="section-large" id="story-art"><div class="container project-section-layout">
-<div><p class="eyebrow section-category"><span class="en">Story &amp; Art</span><span class="zh">故事与美术</span></p><h2><span class="en">A Journey Like a Storybook</span><span class="zh">像翻阅童话书一样的旅程</span></h2></div>
-<div class="project-copy">
-<p><span class="en">I chose a grandmother as the protagonist because she can feel familiar and approachable. I hoped players could connect her with someone in their own family and find a personal way into her search for remembered flavors.</span><span class="zh">我选择奶奶作为主人公，是因为奶奶是一个让人感到亲切的形象。我希望玩家能从她身上想到自己的家人，对她寻找记忆中味道的旅程产生共鸣。</span></p>
-<p><span class="en">The game offers two ways of relating to her. During the recipe levels, players take her first-person perspective, handling ingredients and reconstructing the preparation themselves. In the story scenes, they watch her journey from outside, almost as a grandchild following a loved one's search for familiar recipes.</span><span class="zh">游戏里有两种与她相处的视角。进入配方关卡时，玩家代入奶奶，以第一人称亲手处理食材、还原做法；在故事画面中，玩家又从第三人称观看她的旅程，像是她的孙辈，跟随一位亲人寻找记忆中的配方。</span></p>
-<p><span class="en">I wanted players both to take part in her work and to feel close to her as a family member. I drew the story artwork myself, using a picture-book style to tell her journey through Guangdong.</span><span class="zh">我希望玩家既能亲自参与她的寻味过程，也能带着家人的感情看待这段旅程。我亲手绘制故事美术，用绘本的形式呈现她走访广东的经历。</span></p>
-</div></div><div class="container taste-story-evidence"><figure class="taste-evidence-figure"><a href="../images/taste-grandmother-storybook.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-grandmother-storybook.png" alt="Illustrated introduction before Level 4 showing the grandmother with peanut and black sesame, the ingredients used in that level" width="1905" height="1063" loading="lazy"></a><figcaption><span class="en">The introduction before Level 4 connects the story to the next recipe: peanut and black sesame are the ingredients players will use, while the background architecture refers to the city the grandmother is visiting. The page leads into the level’s separate-batch preparation.</span><span class="zh">第四关开始前的引导页。花生与黑芝麻是本关会用到的食材，背景建筑则对应奶奶所在的城市。这页把城市、故事和下一关的食材联系起来，再衔接到分批处理的玩法。</span></figcaption></figure></div></section>
-        <section class="section-large" id="development-outlook">
-            <div class="container project-section-layout">
-                <div>
-
-                    <p class="eyebrow section-category"><span class="en">Development &amp; Outlook</span><span class="zh">开发与展望</span></p><h2><span class="en">Development</span><span class="zh">开发实现</span></h2>
-                </div>
-                <div class="project-copy">
-                    <p>
-                        <span class="en">I made this project in Unity 6 with URP over four months. I worked on the gameplay, levels, hints, experiment log, and UI.</span><span class="zh">这个项目由我独立制作，使用 Unity 6 和 URP，历时四个月。我负责玩法、关卡、提示、实验日志和 UI。</span>
-                    </p>
-                    <p>
-                        <span class="en">The current version contains twelve formal levels, one experiment-log practice level, and fifteen primary ingredients. I used Hyper3D to generate 3D models for ingredients, bowls, and the table because I did not have 3D modeling skills. These assets were integrated into the interactive tabletop environment.</span>
-                        <span class="zh">当前版本包含十二个正式关卡、一个实验日志练习关和十五种主要食材。由于我不会 3D 建模，我使用 Hyper3D 生成食材、碗和桌子等模型，并将这些素材整合进可交互的桌面场景。</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-large">
-<div class="container project-section-layout">
-<div><h2><span class="en">Future Outlook</span><span class="zh">未来展望</span></h2></div>
-<div class="project-copy">
-<p><span class="en">I would like later levels to open up more dimensions, including grinding time, and ask players to combine more of the ingredient clues they have collected. Some existing clues have not yet been used. I want to bring them into a larger puzzle that draws on discoveries from across the journey.</span><span class="zh">我希望在后续关卡开放更多维度，例如加入研磨时间，让玩家综合运用前面收集的食材线索。目前还有一些线索没有被利用到，我想把它们串联起来，做成一个贯穿旅程的大型解谜挑战。</span></p>
-<p><span class="en">The story still feels fragmented in places. I want the grandmother's experiences in different cities and the recipe puzzles to connect more closely, so earlier discoveries matter as her journey continues.</span><span class="zh">现在的故事仍有些碎片化。我希望把奶奶在不同城市的经历与配方谜题更紧密地连接起来，让前面的发现能在后面的旅程中继续发挥作用。</span></p>
-<p><span class="en">I also want to expand the Experiment Log beyond recording correct and incorrect attempts. It could keep discoveries related to hidden levels and other clues outside the main recipe path, giving players more to revisit and investigate.</span><span class="zh">我也想扩展实验日志的功能，让它不只记录尝试的对错，还能保存与隐藏关卡有关的发现，以及主线配方之外的线索，供玩家回查和继续探索。</span></p>
+<section class="section-large" id="story-art"><div class="container project-section-layout"><div><h2><span class="en">Story and Art</span><span class="zh">故事与美术</span></h2></div><div class="project-copy">
+<p><span class="en">I chose a grandmother as the protagonist so players might think of someone in their own family.</span><span class="zh">我选择奶奶作为主人公，希望玩家能从她身上想到自己的家人。</span></p>
+<p><span class="en">Recipe levels use a first-person perspective to let players participate in her search. Story scenes show her journey from outside, like a grandchild accompanying a loved one in search of familiar flavors.</span><span class="zh">配方关卡采用第一人称，让玩家亲手参与寻味；故事画面则从外部呈现她的旅程，像是孙辈跟随一位亲人寻找熟悉的味道。</span></p>
+<p><span class="en">I illustrated the story in a picture-book style. Introductory scenes bring the city, ingredients, and upcoming recipe together, connecting the journey with the puzzles.</span><span class="zh">故事美术由我绘制，采用绘本风格。城市、食材与下一关的配方会出现在同一幅引导画面中，把旅程和解谜连接起来。</span></p>
+</div></div><div class="container taste-story-evidence"><figure class="taste-evidence-figure"><a href="../images/taste-grandmother-storybook.png" class="image-preview-link" aria-haspopup="dialog"><img src="../images/taste-grandmother-storybook.png" alt="Illustrated introduction before Level 4 showing the grandmother with peanut and black sesame, the ingredients used in that level" width="1905" height="1063" loading="lazy"></a><figcaption><span class="en">The introduction before Level 4 connects the story to the next recipe: peanut and black sesame are the ingredients players will use, while the background architecture refers to the city the grandmother is visiting. The page leads into the level’s separate-batch tutorial.</span><span class="zh">第四关开始前的引导页。花生与黑芝麻是本关会用到的食材，背景建筑则对应奶奶所在的城市。这页把城市、故事和下一关的食材联系起来，再衔接到独立分批教学。</span></figcaption></figure></div></section>
+<section class="section-large" id="development-outlook"><div class="container project-section-layout"><div><h2><span class="en">Development and Outlook</span><span class="zh">开发与未来展望</span></h2></div><div class="project-copy">
+<p><span class="en">I made this project independently in Unity 6 with URP over four months, covering gameplay, levels, programming, hints, the Experiment Log, UI, and story illustrations. I generated 3D assets including ingredients, bowls, and the table with Hyper3D and integrated them into the interactive scene.</span><span class="zh">项目由我独立制作，使用 Unity 6 与 URP，历时四个月。我负责玩法、关卡、程序、提示系统、实验日志、UI 与故事绘图；食材、碗和桌子等 3D 模型使用 Hyper3D 生成后整合进可交互场景。</span></p>
+<p><span class="en">The current version contains twelve main levels, one log practice level, and fifteen primary ingredients.</span><span class="zh">当前版本包含十二个正式关卡、一个日志练习关和十五种主要食材。</span></p>
+<p><span class="en">I want to connect city stories more closely with recipe puzzles and use remaining ingredient clues in a larger puzzle spanning the journey. The log could also preserve hidden discoveries for exploration beyond the main recipes.</span><span class="zh">后续我希望让城市故事与配方谜题联系得更紧密，并利用尚未使用的食材线索，设计贯穿旅程的解谜内容。实验日志也可以进一步保存隐藏发现，支持主线之外的探索。</span></p>
 </div></div></section>
 <section class="section-large">
             <div class="container">

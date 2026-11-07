@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waterline & NES Zelda | Joy Li</title>
+<meta name="description" content="Play Joy Li's Waterline prototype and NES Zelda recreation, built with Unity and C#.">
+<link rel="stylesheet" href="../style.css">
+<style>
+.course-nav{position:sticky;top:0;z-index:20;background:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--gray);padding:22px 0}
+.course-nav a{font-weight:600}.course-nav button{background:none;border:1px solid var(--gray);padding:8px 14px;color:var(--ink);cursor:pointer}
+.course-wrap{max-width:1200px;margin:auto;padding:0 28px 64px}.course-intro{padding:80px 0 48px;max-width:780px}
+.course-kicker{color:var(--vermilion);font-size:13px;letter-spacing:.15em;text-transform:uppercase}
+.course-intro h1{font-size:clamp(40px,6vw,72px);line-height:1.1;font-weight:400;margin:18px 0 24px}
+.course-project{padding:48px 0 64px;border-top:1px solid var(--gray)}.course-project h2{font-size:38px;font-weight:400;margin:10px 0}
+.course-project p{max-width:760px}.course-meta{color:#5a5753;font-size:14px}.course-actions{display:flex;flex-wrap:wrap;gap:24px;margin:24px 0}
+.course-actions a{text-decoration:underline;text-underline-offset:5px}.game-frame{display:block;width:100%;aspect-ratio:16/9;border:1px solid var(--gray);background:#292d4c}
+.game-frame.zelda{aspect-ratio:16/15;max-width:1024px}.mechanics{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:32px 0}
+.mechanics h3{font-size:18px;font-weight:600}.mechanics p{font-size:15px}.course-footer{border-top:1px solid var(--gray);padding-top:24px;font-size:14px}
+@media(max-width:680px){.mechanics{grid-template-columns:1fr;gap:4px}.course-intro{padding-top:48px}.course-wrap{padding-left:18px;padding-right:18px}.course-nav{flex-wrap:wrap}}
+</style></head>
+<body><div class="course-wrap">
+<nav class="course-nav" aria-label="Portfolio"><a href="../">JOY LI</a><a href="#waterline">Waterline</a><a href="#zelda">NES Zelda</a>
+<button id="language" type="button" aria-label="Switch language">中文</button></nav>
+<header class="course-intro"><p class="course-kicker"><span class="en">Game prototypes · Unity / C#</span><span class="zh">游戏原型 · Unity / C#</span></p>
+<h1><span class="en">Rules you can<br>learn through play.</span><span class="zh">在游玩中，<br>理解规则。</span></h1>
+<p><span class="en">I'm Joy Li. These two course projects explore how physical drawing and connected gameplay systems turn simple rules into playable experiences.</span><span class="zh">我是 Joy Li。这两个课程项目分别通过物理画线和相互连接的玩法系统，探索简单规则如何形成完整的游戏体验。</span></p></header>
+<main><section class="course-project" id="waterline"><p class="course-kicker"><span class="en">Project 2 · Updated Prototype</span><span class="zh">项目 2 · 改进原型</span></p><h2>Waterline</h2>
+<p class="course-meta"><span class="en">Single-player physics puzzle · Unity 6 · C# · 2D physics · WebGL</span><span class="zh">单人 · 物理解谜 · Unity 6 · C# · 2D 物理 · WebGL</span></p>
+<p><span class="en">Draw a route for falling water, then keep it alive. Each line lasts six seconds. Three short levels move from a simple ramp to connected routes and a moving destination.</span><span class="zh">画线引导下落的水滴，并维护不断消失的路径。每条线持续六秒，三个短关卡依次探索基础斜坡、接力路线和移动终点。</span></p>
+<p><strong><span class="en">My contributions:</span><span class="zh">我的工作：</span></strong>
+<span class="en">mechanic design, C# gameplay scripting, level layouts, playtest analysis, feedback iteration, interface feedback, and builds.</span><span class="zh">机制设计、C# 玩法脚本、关卡布局、试玩分析、反馈迭代、界面反馈及构建。</span></p>
+<div class="course-actions"><a href="play/" target="_blank" rel="noopener"><span class="en">Play full size ↗</span><span class="zh">全尺寸试玩 ↗</span></a>
+<a href="downloads/Waterline-Source.zip"><span class="en">Download Unity source</span><span class="zh">下载 Unity 源码</span></a></div>
+<iframe class="game-frame" src="play/" title="Play Waterline - updated prototype" allow="fullscreen" allowfullscreen></iframe>
+<p class="course-meta"><span class="en">Desktop mouse and keyboard. Hold left mouse and drag to draw; R retries the current level. Water waits for your first stroke. The game explains the remaining rules.</span><span class="zh">使用电脑鼠标和键盘：按住左键拖动画线，R 重试当前关卡。水滴在首次画线后开始释放，其余规则会在游戏内说明。</span></p>
+<div class="mechanics"><article><h3><span class="en">01 / First Flow</span><span class="zh">01 / 初次导流</span></h3><p><span class="en">A pale ramp introduces physical drawing. Collect three of five droplets.</span><span class="zh">淡色斜坡示意引导玩家学习画线，收集五滴水中的三滴。</span></p></article>
+<article><h3><span class="en">02 / Relay</span><span class="zh">02 / 接力导流</span></h3><p><span class="en">Connect strokes beneath a barrier to reach a cup beyond one line's length.</span><span class="zh">杯子超出单条线的长度，需要在障碍下方连接并维护路线。</span></p></article>
+<article><h3><span class="en">03 / Right on Time</span><span class="zh">03 / 把握时机</span></h3><p><span class="en">Anticipate a moving cup. Experiment with holding water and releasing it as supports vanish.</span><span class="zh">预判移动杯子的位置，尝试暂存水滴，并利用支撑线消失后的时机释放。</span></p></article></div>
+<p><span class="en">Four first-prototype survey responses guided the update: clearer disappearance warnings, more time to act, a gentler introduction, less droplet pushing, and visible water accumulation.</span><span class="zh">四份初版试玩问卷推动了本次改进：更明确的消失预警、更充裕的操作时间、更平缓的教学、减少水滴推挤，以及可见的蓄水进度。</span></p>
+</section>
+<section class="course-project" id="zelda"><p class="course-kicker"><span class="en">Project 1 · Final Build</span><span class="zh">项目 1 · 最终版</span></p><h2>NES Zelda</h2>
+<p class="course-meta"><span class="en">Dungeon recreation & Gold mechanic extension · Unity · C# · WebGL</span><span class="zh">地牢复刻与 Gold 机制扩展 · Unity · C# · WebGL</span></p>
+<p><span class="en">A team recreation of an NES dungeon, combining exploration, weapons, enemies, rewards, and room progression. Gold extends the dungeon with color-based gates and teleportation.</span><span class="zh">团队复刻 NES 地牢，将探索、武器、敌人、奖励与房间进程连接起来。Gold 扩展通过颜色门和传送机制探索新规则。</span></p>
+<p><strong><span class="en">My contributions:</span><span class="zh">我的工作：</span></strong><span class="en">gameplay systems and Gold mechanic design and scripting. Original game artwork is by Nintendo; additional credits and contribution details are on the project page.</span><span class="zh">玩法系统及 Gold 机制设计与脚本实现。原版游戏美术来自任天堂，详细贡献及素材说明见项目介绍页。</span></p>
+<div class="course-actions"><a href="https://joycceeii.github.io/4980-Zelda_NES-WebGL/" target="_blank" rel="noopener"><span class="en">Play full size ↗</span><span class="zh">全尺寸试玩 ↗</span></a><a href="../nes-zelda/"><span class="en">Project & credits ↗</span><span class="zh">项目介绍与素材说明 ↗</span></a></div>
+<iframe class="game-frame zelda" loading="lazy" src="https://joycceeii.github.io/4980-Zelda_NES-WebGL/" title="Play NES Zelda - final build" allow="fullscreen" allowfullscreen></iframe>
+</section></main><footer class="course-footer">Joy Li · <a href="../"><span class="en">Portfolio</span><span class="zh">作品集</span></a> · <a href="../aboutme/"><span class="en">About me</span><span class="zh">关于我</span></a></footer>
+</div><script>document.getElementById('language').addEventListener('click',function(){const zh=document.body.classList.toggle('lang-zh');document.documentElement.lang=zh?'zh-CN':'en';this.textContent=zh?'English':'中文';});</script></body></html>

@@ -6,6 +6,18 @@
     <title>Let&#8217;s Go to Xinjiang | Joy Li</title>
     <link rel="stylesheet" href="../style.css?v=20261101-projects-about">
     <link rel="canonical" href="https://joycceeii.github.io/MyGamePortfolio/xinjiang/">
+    <style>
+        .trip-gallery { margin-top: var(--l); }
+        .trip-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--m); align-items: center; }
+        .trip-gallery-grid a { display: block; }
+        .trip-gallery-grid img { display: block; width: 100%; height: auto; }
+        .trip-gallery-grid .trip-family { width: 75%; justify-self: center; }
+        .trip-gallery figcaption { margin-top: var(--m); }
+        @media (max-width: 680px) {
+            .trip-gallery-grid { grid-template-columns: minmax(0, 1fr); }
+            .trip-gallery-grid .trip-family { width: 100%; }
+        }
+    </style>
 </head>
 <body class="project-detail xinjiang-project">
     <nav class="site-nav" aria-label="Primary navigation">
@@ -69,6 +81,15 @@
                     <p><span class="en">I chose a tabletop format so everyone could sit around the same map, make suggestions, and vote. Each role has reasons to advocate for different stops. When fuel is tight or an event changes the plan, I want to see who makes a case for a detour, who yields, and whether someone finds a route everyone can get behind. Different groups should come away with different trips and remember who changed their minds along the way.</span><span class="zh">我选择桌游，让大家围着同一张地图提议、讨论和投票。每个角色都有理由争取不同的目的地。油量紧张或事件打乱计划时，我想看到谁会争取绕路、谁愿意让步，以及有没有人能找到大家都愿意走的路线。同一张地图应该能走出不同的行程，让玩家也记得是谁改变了全车人的主意。</span></p>
                 </div>
             </div>
+            <figure class="container trip-gallery">
+                <div class="trip-gallery-grid">
+                    <a href="../images/xinjiang-trip-lake-1920.webp"><img src="../images/xinjiang-trip-lake-720.webp" srcset="../images/xinjiang-trip-lake-720.webp 720w, ../images/xinjiang-trip-lake-1920.webp 1920w" sizes="(max-width: 680px) 92vw, 48vw" width="1920" height="1440" loading="lazy" decoding="async" alt="Deep blue lake with mountains along the horizon"></a>
+                    <a class="trip-family" href="../images/xinjiang-trip-family-1080.webp"><img src="../images/xinjiang-trip-family-720.webp" srcset="../images/xinjiang-trip-family-720.webp 720w, ../images/xinjiang-trip-family-1080.webp 1080w" sizes="(max-width: 680px) 92vw, 36vw" width="1080" height="1080" loading="lazy" decoding="async" alt="My family reflected in a round mirror by the lake"></a>
+                    <a href="../images/xinjiang-trip-bazaar-1920.webp"><img src="../images/xinjiang-trip-bazaar-720.webp" srcset="../images/xinjiang-trip-bazaar-720.webp 720w, ../images/xinjiang-trip-bazaar-1920.webp 1920w" sizes="(max-width: 680px) 92vw, 48vw" width="1920" height="1440" loading="lazy" decoding="async" alt="The Grand Bazaar entrance lit up at dusk"></a>
+                    <a href="../images/xinjiang-trip-grasslands-1920.webp"><img src="../images/xinjiang-trip-grasslands-720.webp" srcset="../images/xinjiang-trip-grasslands-720.webp 720w, ../images/xinjiang-trip-grasslands-1920.webp 1920w" sizes="(max-width: 680px) 92vw, 48vw" width="1920" height="1440" loading="lazy" decoding="async" alt="A road crossing the grasslands below a mountain range"></a>
+                </div>
+                <figcaption><span class="en">Photos from the family road trip that inspired the game.</span><span class="zh">这趟家庭自驾旅行给了我做这款游戏的灵感。</span></figcaption>
+            </figure>
         </section>
 
         <section class="section-large" id="gameplay">

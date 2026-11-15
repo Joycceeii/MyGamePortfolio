@@ -58,11 +58,16 @@
         .design-gallery figure, .design-prototype { margin: 0; }
         .overview-layout {
             display: grid;
-            grid-template-columns: minmax(0, 440px) minmax(0, 310px);
-            gap: clamp(24px, 5vw, 64px);
-            align-items: center;
+            grid-template-columns: minmax(0, 440px) minmax(0, 280px);
+            gap: clamp(24px, 4vw, 48px);
+            align-items: start;
         }
-        .overview-setup { max-width: 310px; }
+        .overview-setup { max-width: 280px; }
+        .design-prototype.overview-setup figcaption {
+            margin-top: 10px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
         @media (max-width: 680px) {
             .overview-layout { grid-template-columns: minmax(0, 1fr); }
         }

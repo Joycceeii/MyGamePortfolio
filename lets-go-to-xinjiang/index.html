@@ -58,14 +58,14 @@
         .design-gallery figure, .design-prototype { margin: 0; }
         .overview-layout {
             display: grid;
-            grid-template-columns: minmax(0, 440px) minmax(0, 280px);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             column-gap: clamp(24px, 4vw, 48px);
             row-gap: var(--m);
             align-items: start;
         }
-        .overview-setup { width: 100%; max-width: 280px; }
+        .project-section-layout .overview-layout h2 { margin-bottom: 24px; }
+        .overview-setup { width: 100%; max-width: 420px; }
         .overview-caption {
-            grid-column: 1 / -1;
             margin: 0;
             font-size: 0.875rem;
             line-height: 1.5;
@@ -173,16 +173,16 @@
 
         <section class="section-large" id="overview">
             <div class="container project-section-layout">
-                <div><h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2></div>
                 <div class="overview-layout">
-                  <div class="project-copy">
-                    <p><span class="en">Let&#8217;s Go to Xinjiang is a tabletop board game about a road trip through Xinjiang. Players share a car, discuss routes, vote on the next stop, and respond to events along the way. Everyone shares the car&#8217;s fuel, while each player manages their own money and stamina and pursues a hidden objective.</span><span class="zh">《Let&#8217;s Go to Xinjiang》是一款以新疆自驾为主题的实体桌游。玩家同乘一辆车，商量路线、投票决定下一站，并应对沿途事件。汽车油量由大家共享，每个人管理自己的金钱和体力，同时争取完成隐藏目标。</span></p>
-                    <p><span class="en">I wanted the discussion to feel like planning a trip with friends. One person wants to squeeze in another stop. Someone else asks, “Do we have enough gas to get back if we make one more stop?” The route depends on what the group agrees to, how much they have left, and what happens on the road.</span><span class="zh">我希望玩家像一群朋友做旅行攻略一样讨论。有人想多去一个景点，有人担心油量不够返程。最终路线取决于大家怎样商量，以及剩余资源和途中发生的事。</span></p>
-                  </div>
+                    <div class="project-copy">
+                        <h2><span class="en">Project Overview</span><span class="zh">项目概览</span></h2>
+                        <p><span class="en">Let&#8217;s Go to Xinjiang is a tabletop board game about a road trip through Xinjiang. Players share a car, discuss routes, vote on the next stop, and respond to events along the way. Everyone shares the car&#8217;s fuel, while each player manages their own money and stamina and pursues a hidden objective.</span><span class="zh">《Let&#8217;s Go to Xinjiang》是一款以新疆自驾为主题的实体桌游。玩家同乘一辆车，商量路线、投票决定下一站，并应对沿途事件。汽车油量由大家共享，每个人管理自己的金钱和体力，同时争取完成隐藏目标。</span></p>
+                        <p><span class="en">I wanted the discussion to feel like planning a trip with friends. One person wants to squeeze in another stop. Someone else asks, “Do we have enough gas to get back if we make one more stop?” The route depends on what the group agrees to, how much they have left, and what happens on the road.</span><span class="zh">我希望玩家像一群朋友做旅行攻略一样讨论。有人想多去一个景点，有人担心油量不够返程。最终路线取决于大家怎样商量，以及剩余资源和途中发生的事。</span></p>
+                        <p class="overview-caption" id="overview-setup-caption"><strong><span class="en">Game Setup</span><span class="zh">游戏设置</span></strong> <span class="en">Players sit around one map with their own money, stamina, and voting cards. The group shares the car and its fuel.</span><span class="zh">玩家围坐在同一张地图旁，各自持有金钱、体力和投票牌，共用一辆车和车上的油量。</span></p>
+                    </div>
                     <div class="design-prototype overview-setup">
                         <a href="../images/xinjiang-game-setup.webp"><img src="../images/xinjiang-game-setup.webp" width="1531" height="1812" decoding="async" aria-describedby="overview-setup-caption" alt="Game setup diagram showing the shared map, player supplies, and cards"></a>
                     </div>
-                    <p class="overview-caption" id="overview-setup-caption"><strong><span class="en">Game Setup</span><span class="zh">游戏设置</span></strong> <span class="en">Players sit around one map with their own money, stamina, and voting cards. The group shares the car and its fuel.</span><span class="zh">玩家围坐在同一张地图旁，各自持有金钱、体力和投票牌，共用一辆车和车上的油量。</span></p>
                 </div>
             </div>
         </section>

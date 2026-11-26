@@ -1324,3 +1324,41 @@ h3 {
 .zelda-feature-figure figcaption { margin-top: 12px; color: #686158; }
 #asset-credits a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 640px) { .zelda-feature-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Xinjiang: selected component artwork and complete PDF collections. */
+.xinjiang-project .packaging-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: var(--l); }
+.packaging-layout figure { margin: 0; min-width: 0; }
+.packaging-layout figure > a { display: flex; justify-content: center; align-items: center; padding: 24px; background: #eeece7; height: 520px; }
+.packaging-layout img { width: 100%; height: 100%; object-fit: contain; }
+.packaging-layout figcaption { margin-top: 12px; font-size: 14px; }
+.packaging-copy { grid-column: 1 / -1; max-width: 900px; }
+.component-library { margin-top: var(--l); }
+.component-library-heading { margin-bottom: 32px; }
+.component-family { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 16px 48px; border-top: 1px solid var(--gray); padding-block: 40px; }
+.component-family-heading h3 { margin: 0 0 16px; }
+.component-family-heading p { margin: 0; }
+.component-strip { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: #eeece7; min-width: 0; }
+.component-strip a { display: flex; flex: 1; min-width: 0; justify-content: center; align-items: center; }
+.component-strip img { display: block; width: 100%; max-height: 250px; object-fit: contain; }
+.token-strip { flex-wrap: wrap; }
+.token-strip a { flex: 0 1 80px; }
+.token-strip img { max-height: 80px; }
+.money-strip { flex-wrap: wrap; }
+.money-strip a { flex: 0 1 110px; }
+.component-pdf { grid-column: 2; margin: 0; font-size: 15px; }
+.component-zoom { cursor: zoom-in; }
+.component-zoom:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 5px; }
+.component-dialog { width: min(94vw, 1050px); max-width: 94vw; max-height: 92dvh; padding: 0; margin: auto; border: 1px solid var(--gray); background: var(--paper); color: var(--ink); }
+.component-dialog::backdrop { background: rgba(0,0,0,.78); }
+.component-dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px; position: sticky; top: 0; background: var(--paper); }
+.component-dialog-toolbar h2 { font: inherit; margin: 0; }
+.component-dialog-toolbar button { font: inherit; color: inherit; background: transparent; border: 1px solid currentColor; padding: 8px 16px; cursor: pointer; min-height: 44px; }
+.component-dialog-image { display: block; margin: 0 auto; width: auto; max-width: 100%; max-height: 75dvh; object-fit: contain; padding: 16px; }
+@media (max-width: 760px) {
+ .xinjiang-project .packaging-layout { gap: 24px 16px; }
+ .packaging-layout figure > a { height: 340px; padding: 12px; }
+ .component-family { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 32px; }
+ .component-pdf { grid-column: 1; }
+ .component-strip { padding: 20px 12px; gap: 12px; }
+}
+@media (max-width: 420px) { .packaging-layout figure > a { height: 240px; } }

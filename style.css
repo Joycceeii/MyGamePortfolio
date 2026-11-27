@@ -1363,3 +1363,8 @@ h3 {
  .component-strip { padding: 20px 12px; gap: 12px; }
 }
 @media (max-width: 420px) { .packaging-layout figure > a { height: 240px; } }
+
+/* Labels identify each selected Xinjiang token. */
+.token-strip .token-item { flex: 0 1 90px; margin: 0; text-align: center; min-width: 0; }
+.token-item a { display: block; }
+.token-item figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
